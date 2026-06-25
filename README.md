@@ -14,9 +14,9 @@ El proyecto reúne los entregables del curso de Métodos de Investigación e Int
 
 - `01_paradigm/`: justificación del paradigma de investigación.
 - `02_method/`: comparación de métodos y matriz de ajuste metodológico.
-- `03_protocol/`: borradores del protocolo de investigación.
+- `03_protocol/`: protocolo de investigación y su versión base de trabajo.
 - `04_literature/`: revisión sistemática preliminar, análisis de vacíos y diagrama PRISMA.
-- `05_pipeline/`: base para el componente reproducible del proyecto.
+- `05_pipeline/`: diseño documental del pipeline reproducible y sus artefactos mínimos.
 
 ## Enfoque del estudio
 

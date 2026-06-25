@@ -22,13 +22,13 @@ El problema de investigación surge, entonces, de una insuficiencia de evidencia
 
 ### Relevancia del estudio
 
-Este problema es relevante por razones académicas y prácticas. En el plano académico, permite aportar evidencia sobre una relación que suele mencionarse en la literatura de seguridad y desarrollo seguro, pero que con frecuencia se aborda de forma fragmentada. En el plano aplicado, los hallazgos pueden orientar decisiones sobre gobierno de accesos, resguardo del código fuente, auditoría, cumplimiento y fortalecimiento de capacidades internas en organizaciones que desarrollan software como parte de su negocio principal o de sus servicios tecnológicos.
+Este problema es relevante por razones académicas y prácticas. En el plano académico, permite aportar evidencia sobre una relación que suele mencionarse en la literatura de seguridad y desarrollo seguro, pero que con frecuencia se aborda de forma fragmentada. En el plano aplicado, los hallazgos pueden orientar decisiones sobre gobierno de accesos, resguardo del código fuente, auditoría, cumplimiento y fortalecimiento de capacidades internas en empresas peruanas de desarrollo de software.
 
 ## 3.4. Revisión breve de literatura
 
 La revisión preliminar sugiere cuatro ideas consistentes. Primero, el desarrollo seguro de software sigue enfrentando dificultades para integrar la seguridad a lo largo de todo el ciclo de vida, en lugar de tratarla como una actividad tardía o reactiva. Segundo, la gestión de riesgos adquiere un papel central en entornos ágiles y DevOps, donde la velocidad operativa puede ampliar la exposición si no existe una gobernanza clara. Tercero, la eficacia de los controles no depende únicamente de herramientas o políticas, sino también de factores como cultura organizacional, formación, liderazgo y disciplina operativa. Cuarto, aún existe una necesidad de estudios que articulen medición e interpretación para explicar por qué algunas organizaciones convierten la gestión de riesgos en prácticas efectivas, mientras otras mantienen una adopción más superficial.
 
-En esta línea, Khan et al. (2021) advierten que muchas organizaciones todavía no integran la seguridad de forma transversal en el desarrollo de software. Kolisnichenko et al. (2022) sostienen que la gestión de riesgos debe atravesar todas las etapas de DevOps para evitar que la aceleración operativa incremente la exposición. Valdés-Rodríguez et al. (2023) muestran que la incorporación de prácticas de seguridad en entornos ágiles sigue siendo un reto importante. Finalmente, Tsai et al. (2025) proponen líneas base de desempeño para secure software development que vinculan la gestión proactiva y reactiva de la seguridad con resultados más sólidos.
+En esta línea, Khan et al. (2022) advierten que muchas organizaciones todavía no integran la seguridad de forma transversal en el desarrollo de software. Kolisnichenko et al. (2022) sostienen que la gestión de riesgos debe atravesar todas las etapas de DevOps para evitar que la aceleración operativa incremente la exposición. Valdés-Rodríguez et al. (2023) muestran que la incorporación de prácticas de seguridad en entornos ágiles sigue siendo un reto importante. Finalmente, Tsai et al. (2025) proponen líneas base de desempeño para secure software development que vinculan la gestión proactiva y reactiva de la seguridad con resultados más sólidos.
 
 ## 3.5. Preguntas de investigación y objetivos
 
@@ -39,7 +39,7 @@ En esta línea, Khan et al. (2021) advierten que muchas organizaciones todavía 
 ### Preguntas específicas
 
 - ¿Qué dimensiones de la gestión de riesgos de seguridad de la información muestran mayor relación con la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software?
-- ¿Qué diferencias se observan entre empresas o equipos con distintos niveles de madurez en la gestión de riesgos?
+- ¿Qué diferencias se observan entre empresas participantes con distintos niveles de madurez en la gestión de riesgos?
 - ¿Cómo explican desarrolladores, líderes técnicos y responsables de seguridad las brechas entre controles formales y prácticas reales dentro del proceso de desarrollo?
 - ¿Qué factores organizacionales y operativos ayudan a explicar los resultados cuantitativos observados?
 
@@ -66,7 +66,7 @@ El estudio tendrá un alcance **explicativo** y un enfoque aplicado. No busca di
 
 ### Contexto, población y muestra
 
-La población de interés estará conformada por empresas peruanas de desarrollo de software o por equipos internos de desarrollo que gestionen repositorios, accesos y procesos de trazabilidad como parte de su operación habitual. Para esta etapa preliminar se considera priorizar organizaciones ubicadas en Lima Metropolitana o con operación formal en el país y trabajo bajo enfoques ágiles, DevOps o integración continua.
+La población de interés estará conformada por empresas peruanas de desarrollo de software que gestionen repositorios, accesos y procesos de trazabilidad como parte de su operación habitual. Para esta etapa preliminar se considera priorizar empresas ubicadas en Lima Metropolitana o con operación formal en el país y trabajo bajo enfoques ágiles, DevOps o integración continua.
 
 En la fase cuantitativa se empleará un muestreo no probabilístico intencional. Se proyecta recopilar información de aproximadamente **50 a 80 participantes** entre desarrolladores, líderes técnicos, perfiles DevOps, responsables de calidad y responsables de seguridad, distribuidos en **6 a 10 organizaciones**. En la fase cualitativa se seleccionará un subconjunto de **10 a 15 informantes clave** a partir de los resultados cuantitativos, buscando contrastar perfiles, niveles de madurez y situaciones donde aparezcan patrones especialmente consistentes o contradictorios.
 
@@ -125,7 +125,7 @@ El estudio es metodológicamente factible, pero depende de dos condiciones crít
 
 ## 3.10. Bibliografía preliminar
 
-Khan, R., Khan, S., Khan, H., e Ilyas, M. (2021). *Systematic literature review on security risks and its practices in secure software development*. IEEE Access.
+Khan, R. A., Khan, S. U., Khan, H. U., e Ilyas, M. (2022). *Systematic Literature Review on Security Risks and Its Practices in Secure Software Development*. IEEE Access, 10, 5456-5481.
 
 Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software security risk management in DEVOPS methodology*.
 
