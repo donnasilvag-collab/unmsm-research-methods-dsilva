@@ -63,3 +63,9 @@ Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software security risk m
 Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing performance baselines for secure software development*. IET Information Security.
 
 Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2023). *Towards the integration of security practices in agile software development: A systematic mapping review*. Applied Sciences, 13, 4578.
+
+Souppaya, M., Scarfone, K., y Dodson, D. (2022). *Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities* (NIST SP 800-218). National Institute of Standards and Technology.
+
+OWASP Foundation. (2020). *OWASP SAMM v2*.
+
+Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mäder, P., y Zisman, A. (2014). *Software traceability: Trends and future directions*. En *Future of Software Engineering, FOSE 2014 Proceedings* (pp. 55-69).
