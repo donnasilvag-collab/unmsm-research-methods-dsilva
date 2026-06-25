@@ -4,7 +4,7 @@
 
 La pregunta de investigación se reformula en un nivel más operativo para facilitar la elección del método:
 
-**¿Cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad de las actividades de desarrollo en empresas de desarrollo de software?**
+**¿Cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas?**
 
 Esta formulación es metodológicamente más precisa por tres razones. Primero, delimita con claridad la **variable explicativa**: la madurez de la gestión de riesgos de seguridad de la información. Segundo, define tres **dimensiones de resultado** observables dentro del proceso de desarrollo: control de acceso, protección del código fuente y trazabilidad. Tercero, permite trabajar tanto con evidencia cuantitativa, para estimar asociaciones o patrones, como con evidencia cualitativa, para explicar por qué esos patrones se sostienen o se debilitan en la práctica organizacional.
 

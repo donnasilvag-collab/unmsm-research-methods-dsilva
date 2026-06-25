@@ -6,9 +6,9 @@
 
 ## 3.2. Resumen
 
-En las empresas de desarrollo de software, la seguridad de la información ya no puede tratarse como una revisión tardía ni como un requisito aislado del trabajo técnico. Los repositorios de código, los accesos privilegiados, los pipelines de integración y despliegue, y los registros de actividad forman parte de una superficie de riesgo cada vez más compleja. Aunque muchas organizaciones declaran aplicar prácticas de gestión de riesgos, todavía existe poca evidencia empírica sobre cómo esa gestión influye realmente en tres dimensiones críticas del desarrollo seguro: el control de acceso, la protección del código fuente y la trazabilidad de las actividades de desarrollo.
+En las empresas peruanas de desarrollo de software, la seguridad de la información ya no puede tratarse como una revisión tardía ni como un requisito aislado del trabajo técnico. Los repositorios de código, los accesos privilegiados, los pipelines de integración y despliegue, y los registros de actividad forman parte de una superficie de riesgo cada vez más compleja. Aunque muchas organizaciones declaran aplicar prácticas de gestión de riesgos, todavía existe poca evidencia empírica sobre cómo esa gestión influye realmente en tres dimensiones críticas del desarrollo seguro: el control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software.
 
-Esta investigación propone un estudio de métodos mixtos con diseño secuencial explicativo en empresas peruanas de desarrollo de software. En una primera fase cuantitativa se evaluará la relación entre la madurez de la gestión de riesgos de seguridad de la información y la eficacia de los controles vinculados a acceso, resguardo del código y trazabilidad. En una segunda fase cualitativa se buscará explicar, mediante entrevistas semiestructuradas y revisión documental, por qué esas relaciones se fortalecen o se debilitan en contextos organizacionales concretos. Se espera obtener una caracterización más sólida del problema, identificar factores técnicos y humanos que condicionan la efectividad de los controles y formular recomendaciones aplicables para fortalecer la seguridad del desarrollo de software.
+Esta investigación propone un estudio de métodos mixtos con diseño secuencial explicativo en empresas peruanas de desarrollo de software. En una primera fase cuantitativa se evaluará la relación entre la madurez de la gestión de riesgos de seguridad de la información y la eficacia de los controles vinculados a acceso, resguardo del código y trazabilidad. En una segunda fase cualitativa se buscará explicar, mediante entrevistas semiestructuradas y revisión documental, por qué esas relaciones se fortalecen o se debilitan en contextos organizacionales concretos del entorno peruano. Se espera obtener una caracterización más sólida del problema, identificar factores técnicos y humanos que condicionan la efectividad de los controles y formular recomendaciones aplicables para fortalecer la seguridad del desarrollo de software.
 
 ## 3.3. Introducción y planteamiento del problema
 
@@ -18,7 +18,7 @@ La transformación digital ha incrementado la dependencia de las organizaciones 
 
 La literatura reciente muestra que la seguridad todavía suele integrarse de forma desigual en el desarrollo de software. Persisten brechas entre política y ejecución, entre control documentado y comportamiento real, y entre madurez declarada y capacidad efectiva para prevenir incidentes o detectar desviaciones. En ese contexto, no basta con saber si una empresa tiene políticas o herramientas; también importa comprender si la gestión de riesgos influye de manera concreta en la calidad de sus controles sobre accesos, repositorios y trazabilidad operativa.
 
-El problema de investigación surge, entonces, de una insuficiencia de evidencia aplicada: todavía no está suficientemente claro cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información se relaciona con resultados verificables dentro del desarrollo de software, ni qué factores organizacionales explican las diferencias entre empresas con niveles de control aparentemente similares.
+El problema de investigación surge, entonces, de una insuficiencia de evidencia aplicada: todavía no está suficientemente claro cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información se relaciona con resultados verificables dentro del desarrollo de software en empresas peruanas, ni qué factores organizacionales explican las diferencias entre empresas con niveles de control aparentemente similares.
 
 ### Relevancia del estudio
 
@@ -34,23 +34,23 @@ En esta línea, Khan et al. (2021) advierten que muchas organizaciones todavía 
 
 ### Pregunta general de investigación
 
-**¿Cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad de las actividades de desarrollo en empresas peruanas de desarrollo de software?**
+**¿Cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas?**
 
 ### Preguntas específicas
 
-- ¿Qué dimensiones de la gestión de riesgos de seguridad de la información muestran mayor relación con la eficacia del control de acceso, la protección del código fuente y la trazabilidad?
+- ¿Qué dimensiones de la gestión de riesgos de seguridad de la información muestran mayor relación con la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software?
 - ¿Qué diferencias se observan entre empresas o equipos con distintos niveles de madurez en la gestión de riesgos?
 - ¿Cómo explican desarrolladores, líderes técnicos y responsables de seguridad las brechas entre controles formales y prácticas reales dentro del proceso de desarrollo?
 - ¿Qué factores organizacionales y operativos ayudan a explicar los resultados cuantitativos observados?
 
 ### Objetivo general
 
-Analizar cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad de las actividades de desarrollo en empresas peruanas de software.
+Analizar cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas.
 
 ### Objetivos específicos
 
 - Caracterizar el nivel de madurez de la gestión de riesgos de seguridad de la información en empresas peruanas de desarrollo de software.
-- Evaluar la relación entre dicha madurez y la eficacia de los controles asociados a acceso, protección del código fuente y trazabilidad.
+- Evaluar la relación entre dicha madurez y la eficacia de los controles asociados a acceso, protección del código fuente y trazabilidad del desarrollo de software.
 - Identificar factores organizacionales, humanos y operativos que expliquen diferencias entre los resultados observados en la fase cuantitativa.
 - Integrar la evidencia cuantitativa y cualitativa para formular recomendaciones orientadas al fortalecimiento del desarrollo seguro de software.
 
@@ -78,7 +78,7 @@ En la fase cuantitativa se empleará un muestreo no probabilístico intencional.
 
 ### Variables y dimensiones preliminares
 
-La **variable explicativa** será la madurez de la gestión de riesgos de seguridad de la información, observada a través de dimensiones como gobernanza, identificación de riesgos, evaluación, tratamiento, monitoreo, capacitación y seguimiento. Las **variables de resultado** serán: **eficacia del control de acceso**, **protección del código fuente** y **trazabilidad de las actividades de desarrollo**.
+La **variable explicativa** será la madurez de la gestión de riesgos de seguridad de la información, observada a través de dimensiones como gobernanza, identificación de riesgos, evaluación, tratamiento, monitoreo, capacitación y seguimiento. Las **variables de resultado** serán: **eficacia del control de acceso**, **protección del código fuente** y **trazabilidad del desarrollo de software**.
 
 ### Estrategia de análisis
 
@@ -95,7 +95,7 @@ Los datos serán anonimizados desde la recolección y se evitará identificar pe
 ## 3.8. Resultados esperados
 
 - Un diagnóstico preliminar sobre el nivel de madurez de la gestión de riesgos de seguridad de la información en empresas peruanas de desarrollo de software.
-- Evidencia sobre la relación entre dicha madurez y la eficacia del control de acceso, la protección del código fuente y la trazabilidad.
+- Evidencia sobre la relación entre dicha madurez y la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software.
 - Identificación de factores organizacionales y operativos que expliquen diferencias entre controles declarados y controles efectivamente sostenidos.
 - Recomendaciones aplicables para fortalecer prácticas de desarrollo seguro en contextos ágiles, DevOps o de integración continua.
 - Un repositorio reproducible con la documentación del proceso, los instrumentos utilizados y los productos académicos permitidos por las condiciones de confidencialidad.

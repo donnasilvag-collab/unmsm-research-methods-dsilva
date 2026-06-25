@@ -4,9 +4,9 @@
 
 La pregunta que guía esta revisión sistemática preliminar es la siguiente:
 
-**¿Qué evidencia reciente y pertinente muestra cómo la gestión de riesgos de seguridad de la información, las prácticas de desarrollo seguro, el control de acceso y la trazabilidad se relacionan con la protección efectiva del ciclo de vida del desarrollo de software?**
+**¿Qué evidencia reciente y pertinente permite comprender la influencia de la gestión de riesgos de seguridad de la información en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software, con especial interés en empresas peruanas?**
 
-Esta formulación permite concentrar la revisión en cuatro dimensiones directamente vinculadas con el estudio: **gestión de riesgos**, **control de acceso**, **protección del código y de los artefactos de desarrollo**, y **trazabilidad**.
+Esta formulación permite concentrar la revisión en cuatro dimensiones directamente vinculadas con el problema de investigación: **gestión de riesgos**, **control de acceso**, **protección del código y de los artefactos de desarrollo**, y **trazabilidad del desarrollo de software**.
 
 ## 4.2. Estrategia de búsqueda
 
@@ -37,7 +37,7 @@ La búsqueda se diseñó como una **búsqueda semilla de mini-review**, en líne
 - Estudios en inglés o español con texto completo disponible.
 - Artículos y conferencias arbitradas con relación directa con al menos una de las dimensiones del estudio: gestión de riesgos, desarrollo seguro, control de acceso, trazabilidad o protección de artefactos de desarrollo.
 - Revisiones sistemáticas, mapping reviews, estudios empíricos, marcos comparativos y trabajos metodológicos con aporte claro al ciclo de vida del desarrollo seguro.
-- Estudios cuya contribución sea transferible al contexto de empresas de desarrollo de software, incluso cuando no estén situados en Perú.
+- Estudios cuya contribución sea transferible al contexto de empresas peruanas de desarrollo de software, incluso cuando no estén situados en Perú.
 
 **Criterios de exclusión:**
 
@@ -91,12 +91,12 @@ El diagrama correspondiente a este flujo se presenta en el archivo **`prisma_dia
 
 La revisión preliminar deja ver cinco patrones. Primero, la literatura coincide en que la seguridad sigue incorporándose con demasiada frecuencia de manera tardía, aun cuando existe suficiente evidencia sobre el costo de esa decisión. Segundo, la gestión de riesgos aparece como eje articulador del desarrollo seguro, pero muchas publicaciones se concentran más en marcos y prácticas que en evidencia empírica sobre su efectividad real. Tercero, la dimensión de **control de acceso** sí tiene estudios específicos, aunque la mayoría se orienta a modelado, detección de vulnerabilidades o entornos particulares, más que a su relación integrada con gestión de riesgos organizacional.
 
-Cuarto, la **trazabilidad** está bien sustentada como capacidad de aseguramiento y gobernanza, pero menos conectada, en la literatura revisada, con métricas de seguridad dentro de empresas de software convencionales. Quinto, la producción más reciente sobre DevSecOps y secure SDLC insiste en que los factores humanos y culturales siguen siendo una barrera persistente para consolidar prácticas seguras, incluso cuando las herramientas o marcos ya están disponibles.
+Cuarto, la **trazabilidad** está bien sustentada como capacidad de aseguramiento y gobernanza, pero menos conectada, en la literatura revisada, con métricas de seguridad aplicadas a empresas peruanas de desarrollo de software o a contextos organizacionales comparables. Quinto, la producción más reciente sobre DevSecOps y secure SDLC insiste en que los factores humanos y culturales siguen siendo una barrera persistente para consolidar prácticas seguras, incluso cuando las herramientas o marcos ya están disponibles.
 
 ## 4.7. Vacíos que justifican el estudio
 
 - La literatura ofrece abundante discusión sobre secure SDLC, pero menos evidencia que conecte directamente la **madurez de la gestión de riesgos** con resultados concretos en **control de acceso**, **protección del código** y **trazabilidad**.
-- Hay más trabajos sobre marcos, modelos o buenas prácticas que sobre cómo esas prácticas funcionan realmente dentro de empresas de desarrollo de software con restricciones operativas reales.
+- Hay más trabajos sobre marcos, modelos o buenas prácticas que sobre cómo esas prácticas funcionan realmente dentro de empresas peruanas de desarrollo de software o en contextos organizacionales comparables con restricciones operativas reales.
 - La dimensión de **protección del código fuente y de los artefactos de desarrollo** aparece menos desarrollada que la de acceso o la de prácticas generales de secure SDLC.
 - Persisten vacíos contextuales para organizaciones latinoamericanas y, de manera más específica, para empresas peruanas de desarrollo de software.
 
