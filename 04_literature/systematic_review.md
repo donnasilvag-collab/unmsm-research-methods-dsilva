@@ -70,6 +70,8 @@ La búsqueda se diseñó como una **búsqueda semilla de mini-review**, en líne
 
 **Nota:** este flujo corresponde a un **borrador PRISMA preliminar** construido para la presente entrega. Los conteos deberán validarse nuevamente cuando se ejecute la búsqueda definitiva sobre una base cerrada y única para la versión final de la revisión.
 
+El diagrama correspondiente a este flujo se presenta en el archivo **`prisma_diagram.png`** dentro de esta misma carpeta.
+
 ## 4.5. Los 10 estudios priorizados
 
 | N.° | Estudio priorizado | Eje principal | Razón de prioridad |
