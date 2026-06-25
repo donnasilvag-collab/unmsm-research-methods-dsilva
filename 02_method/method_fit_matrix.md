@@ -22,8 +22,6 @@ Antes de elegir un método principal, se consideran tres alternativas plausibles
 
 ## 2.3. Matriz de ajuste metodológico
 
-Se aplica una escala de **1 a 5**, donde **1 = ajuste bajo** y **5 = ajuste alto**, utilizando los cinco criterios trabajados en la sesión 2 del curso:
-
 - **Ajuste epistemológico:** qué tan bien responde el método a la naturaleza de la pregunta de investigación.
 - **Acceso y calidad de datos:** qué tan viable es obtener evidencia suficiente y útil con ese método.
 - **Factibilidad:** qué tan realista es ejecutarlo dentro del tiempo, recursos y acceso disponibles.
