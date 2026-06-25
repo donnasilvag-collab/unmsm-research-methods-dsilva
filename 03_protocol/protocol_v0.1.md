@@ -28,7 +28,7 @@ Este problema es relevante por razones académicas y prácticas. En el plano aca
 
 La revisión preliminar sugiere cuatro ideas consistentes. Primero, el desarrollo seguro de software sigue enfrentando dificultades para integrar la seguridad a lo largo de todo el ciclo de vida, en lugar de tratarla como una actividad tardía o reactiva. Segundo, la gestión de riesgos adquiere un papel central en entornos ágiles y DevOps, donde la velocidad operativa puede ampliar la exposición si no existe una gobernanza clara. Tercero, la eficacia de los controles no depende únicamente de herramientas o políticas, sino también de factores como cultura organizacional, formación, liderazgo y disciplina operativa. Cuarto, aún existe una necesidad de estudios que articulen medición e interpretación para explicar por qué algunas organizaciones convierten la gestión de riesgos en prácticas efectivas, mientras otras mantienen una adopción más superficial.
 
-En esta línea, Khan et al. (2022) advierten que muchas organizaciones todavía no integran la seguridad de forma transversal en el desarrollo de software. Kolisnichenko et al. (2022) sostienen que la gestión de riesgos debe atravesar todas las etapas de DevOps para evitar que la aceleración operativa incremente la exposición. Valdés-Rodríguez et al. (2024) muestran que la incorporación de prácticas de seguridad en entornos ágiles sigue siendo un reto importante. Finalmente, Tsai et al. (2025) proponen líneas base de desempeño para secure software development que vinculan la gestión proactiva y reactiva de la seguridad con resultados más sólidos.
+En esta línea, Khan et al. (2021) advierten que muchas organizaciones todavía no integran la seguridad de forma transversal en el desarrollo de software. Kolisnichenko et al. (2022) sostienen que la gestión de riesgos debe atravesar todas las etapas de DevOps para evitar que la aceleración operativa incremente la exposición. Valdés-Rodríguez et al. (2023) muestran que la incorporación de prácticas de seguridad en entornos ágiles sigue siendo un reto importante. Finalmente, Tsai et al. (2025) proponen líneas base de desempeño para secure software development que vinculan la gestión proactiva y reactiva de la seguridad con resultados más sólidos.
 
 ## 3.5. Preguntas de investigación y objetivos
 
@@ -131,7 +131,7 @@ Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software security risk m
 
 Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing performance baselines for secure software development*. IET Information Security.
 
-Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2024). *Analysis of strategies for the integration of security practices in agile software development: A sustainable SME approach*. IEEE Access.
+Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2023). *Towards the integration of security practices in agile software development: A systematic mapping review*. Applied Sciences, 13, 4578.
 
 CONCYTEC. (2024). *Código Nacional de Integridad Científica*. Resolución de Presidencia N.° 028-2024-CONCYTEC-P.
 
