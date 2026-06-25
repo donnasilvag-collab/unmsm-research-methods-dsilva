@@ -17,14 +17,6 @@ El proyecto reúne los entregables del curso de Métodos de Investigación e Int
 - `03_protocol/`: borradores del protocolo de investigación.
 - `04_literature/`: revisión sistemática preliminar, análisis de vacíos y diagrama PRISMA.
 - `05_pipeline/`: base para el componente reproducible del proyecto.
-- `06_repro_audit/`: auditoría preliminar de reproducibilidad.
-- `07_model_card/`: documentación del componente analítico y de los insumos de datos.
-- `09_ethics/`: protocolo ético preliminar del estudio.
-- `10_data_mgmt/`: plan de gestión de datos.
-- `11_bias_audit/`: identificación de sesgos potenciales y medidas de mitigación.
-- `12_integrity/`: lineamientos de integridad académica y uso responsable de IA.
-- `14_peer_review/`: guía breve para revisión por pares.
-- `reflections/`: bitácora reflexiva del proceso.
 
 ## Enfoque del estudio
 
