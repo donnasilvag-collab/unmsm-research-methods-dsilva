@@ -1,6 +1,8 @@
-# Pipeline reproducible del estudio
+# Métodos de Investigación de la UNMSM - Donna Silva
 
-**Problema de investigación:** Influencia de la gestión de riesgos de seguridad de la información en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas: protocolo de un estudio de métodos mixtos.
+**Autora:** Donna Silva
+
+**Tema de investigación:** Influencia de la gestión de riesgos de seguridad de la información en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas: protocolo de un estudio de métodos mixtos.
 
 ## Finalidad de esta carpeta
 
