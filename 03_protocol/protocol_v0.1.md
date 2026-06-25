@@ -127,9 +127,9 @@ El estudio es metodológicamente factible, pero depende de dos condiciones crít
 
 Khan, R. A., Khan, S. U., Khan, H. U., e Ilyas, M. (2022). *Systematic Literature Review on Security Risks and Its Practices in Secure Software Development*. IEEE Access, 10, 5456-5481.
 
-Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software security risk management in DEVOPS methodology*.
+Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software Security Risk Management in DEVOPS Methodology*. Theoretical and Applied Cybersecurity, 3(1).
 
-Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing performance baselines for secure software development*. IET Information Security.
+Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing Performance Baselines for Secure Software Development*. IET Information Security, 2025, 6139424.
 
 Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2023). *Towards the integration of security practices in agile software development: A systematic mapping review*. Applied Sciences, 13, 4578.
 
@@ -141,9 +141,9 @@ Pillitteri, V. (2022). *Assessing Security and Privacy Controls in Information S
 
 OWASP Foundation. (2020). *OWASP SAMM v2*.
 
-Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mäder, P., y Zisman, A. (2014). *Software traceability: Trends and future directions*. En *Future of Software Engineering, FOSE 2014 Proceedings* (pp. 55-69).
+Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mäder, P., y Zisman, A. (2014). *Software Traceability: Trends and Future Directions*. En *Future of Software Engineering, FOSE 2014 Proceedings* (pp. 55-69).
 
-Sánchez-Gordón, M.-L., y Colomo-Palacios, R. (2020). *Security as culture: A systematic literature review of DevSecOps*. En *Proceedings of the IEEE/ACM 42nd International Conference on Software Engineering Workshops* (pp. 266-269).
+Sánchez-Gordón, M.-L., y Colomo-Palacios, R. (2020). *Security as Culture: A Systematic Literature Review of DevSecOps*. En *Proceedings of the IEEE/ACM 42nd International Conference on Software Engineering Workshops* (pp. 266-269).
 
 CONCYTEC. (2024). *Código Nacional de Integridad Científica*. Resolución de Presidencia N.° 028-2024-CONCYTEC-P.
 

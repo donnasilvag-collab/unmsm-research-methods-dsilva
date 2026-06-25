@@ -28,7 +28,7 @@ Con base en ello, el problema de investigación se formula así: **la influencia
 
 La presente investigación adopta un **paradigma de métodos mixtos** con orientación **pragmática**, desarrollado mediante un **diseño secuencial explicativo**. La lógica general es primero identificar y medir relaciones entre variables y, después, interpretar con mayor profundidad por qué esas relaciones se manifiestan de determinada manera en contextos organizacionales concretos.
 
-Esta decisión se alinea con una idea central trabajada por la profesora en la Sesión 1: la elección del paradigma debe responder a la naturaleza del problema y no a una preferencia personal o a una costumbre disciplinar. En los materiales del curso se insiste, además, en que los métodos mixtos solo se justifican cuando un único paradigma no basta para comprender el fenómeno de estudio. En este caso, esa insuficiencia es real.
+Esta decisión responde a un criterio metodológico central del curso: la elección del paradigma debe derivarse de la naturaleza del problema y no de una preferencia personal o de una costumbre disciplinar. En ese marco, los métodos mixtos solo se justifican cuando un único enfoque resulta insuficiente para comprender el fenómeno de estudio. En este caso, esa insuficiencia es clara.
 
 No se adopta un paradigma **positivista puro** como paradigma principal, aunque la dimensión cuantitativa del estudio es indispensable. Un enfoque positivista permitiría medir variables, construir indicadores, estimar asociaciones y evaluar si una mayor madurez en la gestión de riesgos se relaciona con mejores resultados en control de acceso, protección del código fuente y trazabilidad. Esa mirada es necesaria porque el problema sí incluye dimensiones objetivables: políticas, mecanismos de control, prácticas formales, frecuencia de incidentes, uso de registros, auditoría de actividades y cumplimiento de procedimientos. Sin embargo, una lectura exclusivamente positivista dejaría sin responder una pregunta clave: por qué organizaciones con controles aparentemente semejantes obtienen resultados distintos. La literatura revisada sugiere que, en esa diferencia, pesan factores como la madurez organizacional, el entrenamiento, la resistencia al cambio, el liderazgo y la cultura de seguridad. Esos elementos no se agotan en una escala numérica.
 
@@ -58,9 +58,9 @@ La principal tensión metodológica del estudio está en el acceso y la calidad 
 
 Khan, R. A., Khan, S. U., Khan, H. U., e Ilyas, M. (2022). *Systematic Literature Review on Security Risks and Its Practices in Secure Software Development*. IEEE Access, 10, 5456-5481.
 
-Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software security risk management in DEVOPS methodology*.
+Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software Security Risk Management in DEVOPS Methodology*. Theoretical and Applied Cybersecurity, 3(1).
 
-Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing performance baselines for secure software development*. IET Information Security.
+Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing Performance Baselines for Secure Software Development*. IET Information Security, 2025, 6139424.
 
 Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2023). *Towards the integration of security practices in agile software development: A systematic mapping review*. Applied Sciences, 13, 4578.
 
@@ -68,4 +68,4 @@ Souppaya, M., Scarfone, K., y Dodson, D. (2022). *Secure Software Development Fr
 
 OWASP Foundation. (2020). *OWASP SAMM v2*.
 
-Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mäder, P., y Zisman, A. (2014). *Software traceability: Trends and future directions*. En *Future of Software Engineering, FOSE 2014 Proceedings* (pp. 55-69).
+Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mäder, P., y Zisman, A. (2014). *Software Traceability: Trends and Future Directions*. En *Future of Software Engineering, FOSE 2014 Proceedings* (pp. 55-69).
