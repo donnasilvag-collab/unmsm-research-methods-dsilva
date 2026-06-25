@@ -131,7 +131,7 @@ Kolisnichenko, O., Kolomytsev, M., y Nosok, S. (2022). *Software Security Risk M
 
 Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., y Tong, L.-I. (2025). *Establishing Performance Baselines for Secure Software Development*. IET Information Security, 2025, 6139424.
 
-Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2023). *Towards the integration of security practices in agile software development: A systematic mapping review*. Applied Sciences, 13, 4578.
+Valdés-Rodríguez, Y., Hochstetter-Diez, J., Díaz-Arancibia, J., y Cadena-Martínez, R. (2023). *Towards the Integration of Security Practices in Agile Software Development: A Systematic Mapping Review*. Applied Sciences, 13, 4578.
 
 Souppaya, M., Scarfone, K., y Dodson, D. (2022). *Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities* (NIST SP 800-218). National Institute of Standards and Technology.
 
