@@ -1,55 +1,55 @@
-# Pregunta de investigación + matriz de ajuste metodológico
+# Research Question and Methodological Fit Matrix
 
-## 2.1. Pregunta de investigación con precisión metodológica
+## 2.1. Research Question with Methodological Precision
 
-La pregunta de investigación se reformula en un nivel más operativo para facilitar la elección del método:
+The research question is reformulated at a more operational level in order to support method selection:
 
-**¿Cómo y en qué medida la madurez de la gestión de riesgos de seguridad de la información influye en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas?**
+**How and to what extent does the maturity of information security risk management influence the effectiveness of access control, source code protection, and software development traceability in Peruvian companies?**
 
-Esta formulación es metodológicamente más precisa por tres razones. Primero, delimita con claridad la **variable explicativa**: la madurez de la gestión de riesgos de seguridad de la información. Segundo, define tres **dimensiones de resultado** observables dentro del proceso de desarrollo: control de acceso, protección del código fuente y trazabilidad. Tercero, permite trabajar tanto con evidencia cuantitativa, para estimar asociaciones o patrones, como con evidencia cualitativa, para explicar por qué esos patrones se sostienen o se debilitan en la práctica organizacional.
+This formulation is methodologically more precise for three reasons. First, it clearly delimits the **explanatory variable**: the maturity of information security risk management. Second, it defines three observable **outcome dimensions** within the development process: access control, source code protection, and traceability. Third, it makes it possible to work with both quantitative evidence, in order to estimate associations or patterns, and qualitative evidence, in order to explain why those patterns hold or weaken in organizational practice.
 
-En coherencia con el paradigma adoptado en la sección anterior, la pregunta no busca solo describir prácticas de seguridad, sino comprender una relación de influencia que tiene una dimensión técnica y otra organizacional.
+In line with the paradigm adopted in the previous section, the question does not seek only to describe security practices, but to understand a relationship of influence that has both a technical and an organizational dimension.
 
-## 2.2. Tres métodos candidatos
+## 2.2. Three Candidate Methods
 
-Antes de elegir un método principal, se consideran tres alternativas plausibles para responder la pregunta:
+Before selecting a primary method, three plausible alternatives are considered for answering the question:
 
-| Método candidato | Descripción breve | Fortalezas para este estudio | Limitaciones principales |
+| Candidate method | Brief description | Strengths for this study | Main limitations |
 | --- | --- | --- | --- |
-| **Diseño secuencial explicativo de métodos mixtos** | Inicia con una fase cuantitativa para identificar relaciones entre variables y continúa con una fase cualitativa para explicar los resultados. | Permite medir la influencia de la gestión de riesgos y, a la vez, interpretar factores humanos, organizacionales y operativos que ayudan a explicar los hallazgos. | Exige más tiempo, mayor organización del trabajo de campo y una integración rigurosa entre ambas fases. |
-| **Estudio de casos múltiples** | Analiza en profundidad varias empresas de desarrollo para comprender cómo gestionan los riesgos y cómo operan sus controles de seguridad. | Ofrece una comprensión rica del contexto, de la cultura de seguridad y de las tensiones entre normas formales y práctica real. | Tiene menor capacidad para estimar magnitud de relaciones entre variables y depende mucho del acceso a organizaciones dispuestas a abrir información sensible. |
-| **Estudio cuantitativo correlacional de corte transversal** | Recolecta datos mediante encuesta o instrumento estructurado para analizar asociaciones entre madurez de gestión de riesgos y resultados de seguridad. | Es más eficiente en tiempo, facilita comparaciones entre organizaciones y permite producir resultados estadísticos claros. | Puede quedar corto para explicar por qué aparecen ciertas asociaciones y corre el riesgo de depender demasiado de datos autodeclarados. |
+| **Explanatory sequential mixed methods design** | Begins with a quantitative phase to identify relationships between variables and continues with a qualitative phase to explain the results. | Makes it possible to measure the influence of risk management and, at the same time, interpret the human, organizational, and operational factors that help explain the findings. | Requires more time, stronger fieldwork organization, and rigorous integration between both phases. |
+| **Multiple case study** | Examines several development companies in depth to understand how they manage risks and how their security controls operate in practice. | Provides a rich understanding of context, security culture, and tensions between formal rules and actual practice. | Has less capacity to estimate the magnitude of relationships between variables and depends heavily on access to organizations willing to share sensitive information. |
+| **Cross-sectional quantitative correlational study** | Collects data through a survey or structured instrument in order to analyze associations between risk management maturity and security outcomes. | Is more time-efficient, facilitates comparison across organizations, and can generate clear statistical results. | May be insufficient for explaining why specific associations appear and may depend too strongly on self-reported data. |
 
-## 2.3. Matriz de ajuste metodológico
+## 2.3. Methodological Fit Matrix
 
-- **Ajuste epistemológico:** qué tan bien responde el método a la naturaleza de la pregunta de investigación.
-- **Acceso y calidad de datos:** qué tan viable es obtener evidencia suficiente y útil con ese método.
-- **Factibilidad:** qué tan realista es ejecutarlo dentro del tiempo, recursos y acceso disponibles.
-- **Contribución esperada:** qué tanto puede aportar resultados sólidos y defendibles para el problema planteado.
-- **Ajuste al tipo de publicación o evaluación académica:** qué tan presentable y convincente resulta el diseño para un trabajo de investigación del curso.
+- **Epistemological fit:** how well the method responds to the nature of the research question.
+- **Data access and quality:** how viable it is to obtain sufficient and useful evidence through that method.
+- **Feasibility:** how realistic it is to execute the method within the available time, resources, and level of access.
+- **Expected contribution:** how strongly it can produce solid and defensible results for the problem under study.
+- **Academic fit:** how presentable and convincing the design is for a course-based research deliverable.
 
-| Método | Ajuste epistemológico | Acceso y calidad de datos | Factibilidad | Contribución esperada | Ajuste académico | Total |
+| Method | Epistemological fit | Data access and quality | Feasibility | Expected contribution | Academic fit | Total |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| **Diseño secuencial explicativo de métodos mixtos** | 5 | 4 | 4 | 5 | 5 | **23** |
-| **Estudio de casos múltiples** | 4 | 3 | 3 | 4 | 4 | **18** |
-| **Estudio cuantitativo correlacional de corte transversal** | 3 | 4 | 5 | 3 | 4 | **19** |
+| **Explanatory sequential mixed methods design** | 5 | 4 | 4 | 5 | 5 | **23** |
+| **Multiple case study** | 4 | 3 | 3 | 4 | 4 | **18** |
+| **Cross-sectional quantitative correlational study** | 3 | 4 | 5 | 3 | 4 | **19** |
 
-## 2.4. Defensa del método elegido
+## 2.4. Defense of the Selected Method
 
-El método que mejor se ajusta al problema es el **diseño secuencial explicativo de métodos mixtos**.
+The method that best fits the problem is the **explanatory sequential mixed methods design**.
 
-La razón principal es que la pregunta de investigación exige responder dos planos al mismo tiempo. Por un lado, interesa conocer si existe una relación observable entre la madurez de la gestión de riesgos y la eficacia de ciertos controles críticos dentro del desarrollo de software. Ese componente pide una fase cuantitativa, porque obliga a operacionalizar variables, construir indicadores y analizar patrones de asociación. Por otro lado, también es necesario comprender por qué organizaciones con controles aparentemente similares pueden obtener resultados distintos. Ahí entran variables como cultura de seguridad, liderazgo, presión por entregas, disciplina documental, entrenamiento y prácticas reales de los equipos, dimensiones que difícilmente pueden comprenderse solo con números.
+The main reason is that the research question requires answers at two levels at the same time. On the one hand, the study needs to determine whether there is an observable relationship between the maturity of risk management and the effectiveness of critical controls within software development. That component requires a quantitative phase because it demands variable operationalization, indicator construction, and the analysis of patterns of association. On the other hand, the study also needs to understand why organizations with apparently similar controls can still produce different outcomes. At that point, variables such as security culture, leadership, delivery pressure, documentation discipline, training, and actual team practices become central, and such dimensions cannot be adequately understood through numbers alone.
 
-El diseño secuencial explicativo permite resolver esa necesidad sin fragmentar el estudio. La fase cuantitativa puede ofrecer una visión inicial de los niveles de madurez y de su relación con control de acceso, protección del código fuente y trazabilidad. Después, la fase cualitativa puede profundizar en los casos, perfiles o patrones que necesiten explicación adicional. Esa lógica es consistente con el criterio metodológico adoptado en el curso: no se trata de mezclar técnicas por amplitud, sino de justificar por qué un único enfoque no basta para responder adecuadamente la pregunta.
+The explanatory sequential design addresses that need without fragmenting the study. The quantitative phase can provide an initial view of maturity levels and of their relationship with access control, source code protection, and traceability. The qualitative phase can then deepen the cases, profiles, or patterns that require further explanation. This logic is consistent with the methodological principle adopted in the course: the point is not to mix techniques merely for breadth, but to justify why a single approach is insufficient for answering the question properly.
 
-Además, este método evita dos problemas frecuentes. El primero es caer en un estudio exclusivamente cuantitativo que mida prácticas declaradas pero no explique su funcionamiento real. El segundo es quedarse en una comprensión cualitativa rica, pero insuficiente para sostener la idea de influencia entre variables. Frente a esas limitaciones, el diseño mixto ofrece un equilibrio más robusto entre medición, interpretación y utilidad académica.
+In addition, this method avoids two frequent problems. The first is falling into an exclusively quantitative study that measures declared practices but does not explain how they function in reality. The second is remaining in a rich qualitative understanding that is nevertheless insufficient to support the idea of influence between variables. Against those limitations, the mixed design offers a stronger balance between measurement, interpretation, and academic usefulness.
 
-## 2.5. Por qué se descartan las otras opciones
+## 2.5. Why the Other Options Are Not Selected
 
-El **estudio de casos múltiples** es una opción seria y útil, sobre todo porque el problema tiene una fuerte dimensión organizacional. Sin embargo, se descarta como método principal porque la pregunta no busca únicamente comprender experiencias o prácticas, sino también estimar en qué medida la gestión de riesgos se relaciona con resultados concretos de seguridad. Un estudio de casos podría explicar muy bien el contexto, pero quedaría más limitado para sostener una afirmación de influencia con un nivel comparativo suficiente.
+The **multiple case study** is a serious and useful option, especially because the problem has a strong organizational dimension. However, it is not selected as the primary method because the question does not seek only to understand experiences or practices; it also seeks to estimate the extent to which risk management is related to concrete security outcomes. A case study could explain context very well, but it would be more limited in supporting a claim of influence with a sufficient comparative basis.
 
-El **estudio cuantitativo correlacional de corte transversal** también resulta viable, especialmente por su factibilidad y por la posibilidad de abarcar más organizaciones en menos tiempo. No obstante, se descarta como mejor opción porque el tema involucra información sensible y prácticas que muchas veces no se reflejan de forma completa en encuestas o instrumentos autodeclarados. Si se eligiera solo este método, el trabajo podría terminar describiendo percepciones formales de madurez, pero sin explicar las brechas entre política, práctica y comportamiento organizacional.
+The **cross-sectional quantitative correlational study** is also viable, particularly because of its feasibility and its potential to cover more organizations in less time. Nevertheless, it is not the strongest option because the topic involves sensitive information and practices that are often not fully reflected in surveys or self-reported instruments. If only this method were chosen, the study might end up describing formal perceptions of maturity without explaining the gap between policy, practice, and organizational behavior.
 
-## 2.6. Una tensión metodológica abierta
+## 2.6. An Open Methodological Tension
 
-La principal tensión no está en la elección del método, sino en su ejecución. El diseño secuencial explicativo exige acceso a evidencia suficiente en ambas fases: datos cuantitativos que no sean meramente declarativos y, luego, participantes dispuestos a hablar con cierta honestidad sobre controles, fallas, restricciones y decisiones internas. En estudios sobre seguridad de la información, esa apertura no siempre es sencilla. Por ello, un desafío importante será diseñar instrumentos que protejan la confidencialidad y, al mismo tiempo, permitan captar evidencia creíble sobre prácticas reales.
+The main tension lies not in method selection, but in execution. The explanatory sequential design requires access to sufficient evidence in both phases: quantitative data that are not merely declarative and, later, participants willing to speak with reasonable openness about controls, failures, constraints, and internal decisions. In studies of information security, that openness is not always easy to obtain. For this reason, an important challenge will be designing instruments that protect confidentiality while still capturing credible evidence about actual practices.

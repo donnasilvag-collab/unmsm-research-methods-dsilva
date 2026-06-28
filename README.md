@@ -1,29 +1,31 @@
-# Métodos de Investigación e Integridad Científica en IA
+# UNMSM Research Methods and Scientific Integrity in AI
 
-## Tema central del proyecto
+**Author:** Donna Silva
 
-Este repositorio organiza los avances del curso alrededor del siguiente problema de investigación:
+## Project Focus
 
-**Influencia de la gestión de riesgos de seguridad de la información en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas: protocolo de un estudio de métodos mixtos**
+This repository organizes the course deliverables around the following research topic:
 
-## Propósito académico
+**Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study**
 
-El proyecto reúne los entregables del curso de Métodos de Investigación e Integridad Científica en IA y Tecnologías Avanzadas. La estructura sigue la secuencia de trabajo del curso: definición del paradigma, selección metodológica, elaboración del protocolo, revisión sistemática de literatura y construcción de un pipeline reproducible.
+## Academic Purpose
 
-## Estructura del repositorio
+This project brings together the main deliverables for the course *Research Methods and Scientific Integrity in AI and Advanced Technologies*. The repository follows the sequence of the course: paradigm selection, method choice, protocol drafting, systematic literature review, and reproducible pipeline design.
 
-- `01_paradigm/`: justificación del paradigma de investigación.
-- `02_method/`: comparación de métodos y matriz de ajuste metodológico.
-- `03_protocol/`: protocolo de investigación y su versión base de trabajo.
-- `04_literature/`: revisión sistemática preliminar, análisis de vacíos y diagrama PRISMA.
-- `05_pipeline/`: diseño documental del pipeline reproducible y sus artefactos mínimos.
+## Repository Structure
 
-## Enfoque del estudio
+- `01_paradigm/`: research paradigm justification.
+- `02_method/`: method comparison and methodological fit matrix.
+- `03_protocol/`: core research protocol.
+- `04_literature/`: preliminary systematic review, gap analysis, and PRISMA diagram.
+- `05_pipeline/`: documentary design of the reproducible pipeline and its minimum artifacts.
 
-La investigación se orienta a comprender cómo la madurez de la gestión de riesgos de seguridad de la información se relaciona con tres capacidades críticas dentro del desarrollo de software:
+## Study Focus
 
-- la eficacia del control de acceso,
-- la protección del código fuente,
-- la trazabilidad del desarrollo de software.
+The study is designed to understand how the maturity of information security risk management relates to three critical capabilities in software development:
 
-El alcance aplicado del estudio se sitúa en **empresas peruanas de desarrollo de software**, con especial interés en entornos ágiles, DevOps o de integración continua.
+- access control effectiveness;
+- source code protection;
+- software development traceability.
+
+The applied scope of the study is situated in **Peruvian software development companies**, with particular interest in agile, DevOps, or continuous integration environments.

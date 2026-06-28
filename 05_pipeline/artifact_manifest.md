@@ -1,21 +1,21 @@
-# Inventario mínimo de artefactos del pipeline
+# Minimum Pipeline Artifact Inventory
 
-## Propósito
+## Purpose
 
-Este documento define los artefactos mínimos que deberá contener el pipeline reproducible cuando el estudio avance de la fase documental a la fase de ejecución analítica.
+This document defines the minimum artifacts that the reproducible pipeline should contain once the study moves from the documentary stage to the analytical execution stage.
 
-## Artefactos previstos
+## Planned Artifacts
 
-| Artefacto | Finalidad | Herramienta principal | Estado en esta entrega |
+| Artifact | Purpose | Main tool | Status in this delivery |
 | --- | --- | --- | --- |
-| Base cuantitativa anonimizada | Reunir respuestas estructuradas para el análisis cuantitativo | DVC | Definido |
-| Diccionario de variables | Precisar nombre, tipo, escala y significado de cada variable | Git | Definido |
-| Registro de transformaciones | Dejar rastro de limpieza, codificación y cambios sobre los datos | Git + DVC | Definido |
-| Corridas analíticas | Registrar parámetros, supuestos y salidas del análisis cuantitativo | MLflow | Definido |
-| Evidencia de integración | Relacionar resultados cuantitativos con hallazgos cualitativos y decisiones interpretativas | Git | Definido |
+| Anonymized quantitative dataset | To gather structured responses for quantitative analysis | DVC | Defined |
+| Variable dictionary | To specify the name, type, scale, and meaning of each variable | Git | Defined |
+| Transformation record | To preserve the trail of cleaning, coding, and changes applied to the data | Git + DVC | Defined |
+| Analytical runs | To record parameters, assumptions, and outputs of quantitative analysis | MLflow | Defined |
+| Integration evidence | To connect quantitative results with qualitative findings and interpretive decisions | Git | Defined |
 
-## Convenciones mínimas
+## Minimum Conventions
 
-- Los datos identificables no se almacenarán en el repositorio.
-- Todo artefacto analítico deberá tener fecha, versión y breve descripción.
-- Las transformaciones relevantes deberán poder rastrearse desde el insumo hasta el resultado reportado.
+- Identifiable data will not be stored in the repository.
+- Every analytical artifact should include a date, version, and brief description.
+- Relevant transformations should be traceable from the input to the reported result.

@@ -1,49 +1,49 @@
-# Métodos de Investigación de la UNMSM - Donna Silva
+# UNMSM Research Methods - Donna Silva
 
-**Autora:** Donna Silva
+**Author:** Donna Silva
 
-**Tema de investigación:** Influencia de la gestión de riesgos de seguridad de la información en la eficacia del control de acceso, la protección del código fuente y la trazabilidad del desarrollo de software en empresas peruanas: protocolo de un estudio de métodos mixtos.
+**Research topic:** Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study.
 
-## Finalidad de esta carpeta
+## Purpose of This Folder
 
-Esta carpeta presenta el entregable técnico-documental del paso 5 del curso. Su función no es alojar todavía datos reales ni scripts definitivos, sino dejar especificado de manera clara cómo se organizará el flujo reproducible del estudio cuando se incorporen insumos autorizados y anonimizados.
+This folder presents the technical-documentary deliverable for step 5 of the course. Its role is not yet to host real data or final scripts, but to specify clearly how the reproducible workflow of the study will be organized once authorized and anonymized inputs become available.
 
-## Alcance de esta entrega
+## Scope of This Delivery
 
-En esta etapa, el componente reproducible queda resuelto a nivel de diseño y trazabilidad. Por ello, la carpeta incluye:
+At this stage, the reproducible component is resolved at the level of design and traceability. For that reason, the folder includes:
 
-- una descripción explícita del flujo de trabajo reproducible;
-- un inventario mínimo de artefactos esperados;
-- una lista de verificación para asegurar consistencia entre datos, análisis y resultados;
-- criterios de uso de Git, DVC y MLflow coherentes con la naturaleza sensible del estudio.
+- an explicit description of the reproducible workflow;
+- a minimum inventory of expected artifacts;
+- a checklist to ensure consistency among data, analysis, and results;
+- basic criteria for using Git, DVC, and MLflow in a way that is coherent with the sensitive nature of the study.
 
-## Enfoque de reproducibilidad
+## Reproducibility Approach
 
-- **Git** se utilizará para versionar documentos, instrumentos, scripts y decisiones metodológicas.
-- **DVC** se reservará para versionar bases anonimizadas, matrices de variables, versiones de cuestionario y derivados tabulares que no conviene almacenar directamente en Git.
-- **MLflow** se empleará como bitácora de ejecuciones analíticas, sobre todo para registrar variantes del procesamiento cuantitativo, supuestos de análisis y resultados comparables.
+- **Git** will be used to version documents, instruments, scripts, and methodological decisions.
+- **DVC** will be reserved for versioning anonymized datasets, variable matrices, questionnaire versions, and tabular derivatives that should not be stored directly in Git.
+- **MLflow** will be used as a log of analytical executions, especially to record alternative quantitative processing configurations, analytical assumptions, and comparable results.
 
-## Flujo de trabajo reproducible
+## Reproducible Workflow
 
-1. Recolección o consolidación de datos anonimizados provenientes de encuesta, entrevistas y documentos institucionales autorizados.
-2. Versionado del insumo tabular y sus transformaciones mediante DVC.
-3. Limpieza, codificación y generación de variables analíticas.
-4. Ejecución del análisis cuantitativo y registro de parámetros, salidas y métricas en MLflow.
-5. Integración con hallazgos cualitativos y resguardo de evidencias trazables en el repositorio.
+1. Collection or consolidation of anonymized data from surveys, interviews, and authorized institutional documents.
+2. Versioning of the tabular input and its transformations through DVC.
+3. Cleaning, coding, and generation of analytical variables.
+4. Execution of the quantitative analysis and registration of parameters, outputs, and metrics in MLflow.
+5. Integration with qualitative findings and preservation of traceable evidence within the repository.
 
-## Artefactos mínimos del pipeline
+## Minimum Pipeline Artifacts
 
-- `README.md`: explica el propósito de la carpeta y el flujo general.
-- `artifact_manifest.md`: define qué archivos o productos deberán existir cuando el pipeline se ejecute con insumos reales.
-- `reproducibility_checklist.md`: resume los controles mínimos para mantener trazabilidad y consistencia.
+- `README.md`: explains the purpose of the folder and the overall workflow.
+- `artifact_manifest.md`: defines which files or products should exist when the pipeline is executed with real inputs.
+- `reproducibility_checklist.md`: summarizes the minimum controls required to maintain traceability and consistency.
 
-## Salidas esperadas
+## Expected Outputs
 
-- Base de datos cuantitativa anonimizada.
-- Diccionario de variables y criterios de codificación.
-- Registro de corridas analíticas reproducibles.
-- Evidencia de trazabilidad entre insumo, transformación, análisis y resultado.
+- An anonymized quantitative dataset.
+- A variable dictionary and coding criteria.
+- A record of reproducible analytical runs.
+- Traceability evidence linking input, transformation, analysis, and result.
 
-## Estado actual
+## Current Status
 
-El pipeline queda documentado como un diseño reproducible preliminar, suficiente para esta fase del curso. No se incorporan todavía datos reales, scripts ejecutables ni archivos `.dvc` porque el estudio aún no ha ingresado a trabajo de campo ni a procesamiento empírico; sin embargo, la estructura, el criterio de versionado y la lógica de trazabilidad ya están definidos.
+The pipeline is documented as a preliminary reproducible design, sufficient for this phase of the course. Real data, executable scripts, and `.dvc` files are not yet incorporated because the study has not entered fieldwork or empirical processing; however, the structure, versioning criteria, and traceability logic are already defined.

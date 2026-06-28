@@ -1,19 +1,19 @@
-# Lista de verificación de reproducibilidad
+# Reproducibility Checklist
 
-## Antes de incorporar datos
+## Before Adding Data
 
-- Confirmar que los insumos hayan sido anonimizados.
-- Separar con claridad datos brutos, datos procesados y resultados.
-- Registrar origen, fecha y versión de cada archivo relevante.
+- Confirm that all inputs have been anonymized.
+- Separate raw data, processed data, and results clearly.
+- Record the origin, date, and version of every relevant file.
 
-## Durante el análisis
+## During Analysis
 
-- Documentar supuestos, filtros y criterios de exclusión.
-- Mantener trazabilidad entre variables originales y variables derivadas.
-- Registrar cada corrida analítica relevante con parámetros comparables.
+- Document assumptions, filters, and exclusion criteria.
+- Maintain traceability between original variables and derived variables.
+- Register each relevant analytical run with comparable parameters.
 
-## Antes de reportar resultados
+## Before Reporting Results
 
-- Verificar que las tablas y hallazgos puedan vincularse con una versión identificable de los datos.
-- Revisar que no se exponga información sensible de empresas o participantes.
-- Confirmar consistencia entre resultados narrados, salidas analíticas y documentación metodológica.
+- Verify that tables and findings can be linked to an identifiable version of the data.
+- Review that no sensitive information about companies or participants is exposed.
+- Confirm consistency among narrated results, analytical outputs, and methodological documentation.
