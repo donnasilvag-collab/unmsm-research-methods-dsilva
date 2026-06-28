@@ -2,11 +2,11 @@
 
 ## 2.1. Research Question with Methodological Precision
 
-The research question is reformulated at a more operational level in order to support method selection:
+The research question is reformulated at a more operational level to support method selection:
 
 **How and to what extent does the maturity of information security risk management influence the effectiveness of access control, source code protection, and software development traceability in Peruvian companies?**
 
-This formulation is methodologically more precise for three reasons. First, it clearly delimits the **explanatory variable**: the maturity of information security risk management. Second, it defines three observable **outcome dimensions** within the development process: access control, source code protection, and traceability. Third, it makes it possible to work with both quantitative evidence, in order to estimate associations or patterns, and qualitative evidence, in order to explain why those patterns hold or weaken in organizational practice.
+This formulation is methodologically more precise for three reasons. First, it clearly defines the **explanatory variable**: the maturity of information security risk management. Second, it identifies three observable **outcome dimensions** within the development process: access control, source code protection, and traceability. Third, it makes it possible to work with both quantitative evidence, to estimate associations or patterns, and qualitative evidence, to explain why those patterns hold or weaken in organizational practice.
 
 In line with the paradigm adopted in the previous section, the question does not seek only to describe security practices, but to understand a relationship of influence that has both a technical and an organizational dimension.
 
@@ -18,7 +18,7 @@ Before selecting a primary method, three plausible alternatives are considered f
 | --- | --- | --- | --- |
 | **Explanatory sequential mixed methods design** | Begins with a quantitative phase to identify relationships between variables and continues with a qualitative phase to explain the results. | Makes it possible to measure the influence of risk management and, at the same time, interpret the human, organizational, and operational factors that help explain the findings. | Requires more time, stronger fieldwork organization, and rigorous integration between both phases. |
 | **Multiple case study** | Examines several development companies in depth to understand how they manage risks and how their security controls operate in practice. | Provides a rich understanding of context, security culture, and tensions between formal rules and actual practice. | Has less capacity to estimate the magnitude of relationships between variables and depends heavily on access to organizations willing to share sensitive information. |
-| **Cross-sectional quantitative correlational study** | Collects data through a survey or structured instrument in order to analyze associations between risk management maturity and security outcomes. | Is more time-efficient, facilitates comparison across organizations, and can generate clear statistical results. | May be insufficient for explaining why specific associations appear and may depend too strongly on self-reported data. |
+| **Cross-sectional quantitative correlational study** | Collects data through a survey or structured instrument to analyze associations between risk management maturity and security outcomes. | Is more time-efficient, facilitates comparison across organizations, and can generate clear statistical results. | May be insufficient for explaining why specific associations appear and may depend too strongly on self-reported data. |
 
 ## 2.3. Methodological Fit Matrix
 
@@ -40,7 +40,7 @@ The method that best fits the problem is the **explanatory sequential mixed meth
 
 The main reason is that the research question requires answers at two levels at the same time. On the one hand, the study needs to determine whether there is an observable relationship between the maturity of risk management and the effectiveness of critical controls within software development. That component requires a quantitative phase because it demands variable operationalization, indicator construction, and the analysis of patterns of association. On the other hand, the study also needs to understand why organizations with apparently similar controls can still produce different outcomes. At that point, variables such as security culture, leadership, delivery pressure, documentation discipline, training, and actual team practices become central, and such dimensions cannot be adequately understood through numbers alone.
 
-The explanatory sequential design addresses that need without fragmenting the study. The quantitative phase can provide an initial view of maturity levels and of their relationship with access control, source code protection, and traceability. The qualitative phase can then deepen the cases, profiles, or patterns that require further explanation. This logic is consistent with the methodological principle adopted in the course: the point is not to mix techniques merely for breadth, but to justify why a single approach is insufficient for answering the question properly.
+The explanatory sequential design addresses that need without fragmenting the study. The quantitative phase can provide an initial view of maturity levels and of their relationship with access control, source code protection, and traceability. The qualitative phase can then examine in greater depth the cases, profiles, or patterns that require further explanation. This logic is consistent with the methodological principle adopted in the course: the point is not to mix techniques merely for breadth, but to justify why a single approach is insufficient for answering the question properly.
 
 In addition, this method avoids two frequent problems. The first is falling into an exclusively quantitative study that measures declared practices but does not explain how they function in reality. The second is remaining in a rich qualitative understanding that is nevertheless insufficient to support the idea of influence between variables. Against those limitations, the mixed design offers a stronger balance between measurement, interpretation, and academic usefulness.
 

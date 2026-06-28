@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the minimum artifacts that the reproducible pipeline should contain once the study moves from the documentary stage to the analytical execution stage.
+This document defines the minimum artifacts that the reproducible pipeline should contain once the study moves from the planning stage to the analysis stage.
 
 ## Planned Artifacts
 

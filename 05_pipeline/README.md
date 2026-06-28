@@ -6,16 +6,16 @@
 
 ## Purpose of This Folder
 
-This folder presents the technical-documentary deliverable for step 5 of the course. Its role is not yet to host real data or final scripts, but to specify clearly how the reproducible workflow of the study will be organized once authorized and anonymized inputs become available.
+This folder contains the technical deliverable for step 5 of the course. Its purpose is not yet to host real data or final scripts, but to explain clearly how the study's reproducible workflow will be organized once authorized and anonymized inputs become available.
 
 ## Scope of This Delivery
 
-At this stage, the reproducible component is resolved at the level of design and traceability. For that reason, the folder includes:
+At this stage, the reproducible component is defined at the level of design and traceability. For that reason, the folder includes:
 
 - an explicit description of the reproducible workflow;
 - a minimum inventory of expected artifacts;
 - a checklist to ensure consistency among data, analysis, and results;
-- basic criteria for using Git, DVC, and MLflow in a way that is coherent with the sensitive nature of the study.
+- basic criteria for using Git, DVC, and MLflow in a way that fits the sensitive nature of the study.
 
 ## Reproducibility Approach
 
@@ -28,7 +28,7 @@ At this stage, the reproducible component is resolved at the level of design and
 1. Collection or consolidation of anonymized data from surveys, interviews, and authorized institutional documents.
 2. Versioning of the tabular input and its transformations through DVC.
 3. Cleaning, coding, and generation of analytical variables.
-4. Execution of the quantitative analysis and registration of parameters, outputs, and metrics in MLflow.
+4. Execution of the quantitative analysis and recording of parameters, outputs, and metrics in MLflow.
 5. Integration with qualitative findings and preservation of traceable evidence within the repository.
 
 ## Minimum Pipeline Artifacts
@@ -46,4 +46,4 @@ At this stage, the reproducible component is resolved at the level of design and
 
 ## Current Status
 
-The pipeline is documented as a preliminary reproducible design, sufficient for this phase of the course. Real data, executable scripts, and `.dvc` files are not yet incorporated because the study has not entered fieldwork or empirical processing; however, the structure, versioning criteria, and traceability logic are already defined.
+The pipeline is documented as a preliminary reproducible design, sufficient for this phase of the course. Real data, executable scripts, and `.dvc` files are not yet incorporated because the study has not yet reached fieldwork or data processing. Even so, the structure, versioning criteria, and traceability logic are already defined.

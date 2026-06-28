@@ -6,7 +6,7 @@ This preliminary audit evaluates whether the repository currently provides the m
 
 ## Overall Assessment
 
-The repository is well structured and clearly organized by course progression. The main documents from the root through `05_pipeline` define the research problem, methodological stance, protocol logic, literature base, and the intended reproducibility workflow. At the same time, the project remains at a documentary stage rather than an execution stage, which means reproducibility is currently defined by design and traceability rules rather than by runnable analytical artifacts.
+The repository is well structured and clearly organized according to the progression of the course. The main documents, from the root folder through `05_pipeline`, define the research problem, methodological stance, protocol logic, literature base, and intended reproducibility workflow. At the same time, the project remains at a documentary stage rather than an execution stage, which means reproducibility is currently defined by design and traceability rules rather than by runnable analytical artifacts.
 
 ## Strengths Identified
 
@@ -41,4 +41,4 @@ The repository is well structured and clearly organized by course progression. T
 
 ## Conclusion
 
-For the current academic stage, the repository meets the expectations of a well-documented methodological project and provides a credible reproducibility design. It should not yet be described as a fully operational reproducible pipeline, but it can be defended as a structured and traceable preparatory implementation.
+For the current academic stage, the repository meets the expectations of a well-documented methodological project and provides a credible reproducibility design. It should not yet be described as a fully operational reproducible pipeline, but it can reasonably be presented as a structured and traceable preparatory implementation.

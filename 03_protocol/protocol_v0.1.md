@@ -8,7 +8,7 @@
 
 In Peruvian software development companies, information security can no longer be treated as a late-stage review or as a requirement detached from technical work. Code repositories, privileged access, integration and deployment pipelines, and activity logs all form part of an increasingly complex risk surface. Although many organizations claim to apply risk management practices, there is still limited empirical evidence on how that management actually influences three critical dimensions of secure development: access control, source code protection, and software development traceability.
 
-This research proposes a mixed methods study with an explanatory sequential design in Peruvian software development companies. In the first, quantitative phase, the study will assess the relationship between the maturity of information security risk management and the effectiveness of controls related to access, code protection, and traceability. In the second, qualitative phase, it will seek to explain through semistructured interviews and document review why those relationships become stronger or weaker in specific Peruvian organizational contexts. The study is expected to produce a more solid characterization of the problem, identify technical and human factors that shape control effectiveness, and formulate applicable recommendations for strengthening software development security.
+This research proposes a mixed methods study with an explanatory sequential design in Peruvian software development companies. The first, quantitative phase will assess the relationship between the maturity of information security risk management and the effectiveness of controls related to access, code protection, and traceability. The second, qualitative phase will use semistructured interviews and document review to explain why those relationships become stronger or weaker in specific Peruvian organizational contexts. The study is expected to offer a clearer characterization of the problem, identify the technical and human factors that shape control effectiveness, and formulate practical recommendations for strengthening software development security.
 
 ## 3.3. Introduction and Problem Statement
 
@@ -26,9 +26,9 @@ This problem is relevant for both academic and practical reasons. On the academi
 
 ## 3.4. Brief Literature Review
 
-The preliminary review suggests four consistent ideas. First, secure software development continues to face difficulties in integrating security across the entire life cycle rather than treating it as a late or reactive activity. Second, risk management plays a central role in agile and DevOps settings, where operational speed can increase exposure in the absence of clear governance. Third, control effectiveness depends not only on tools or policies, but also on factors such as organizational culture, training, leadership, and operational discipline. Fourth, there remains a need for studies that combine measurement and interpretation in order to explain why some organizations convert risk management into effective practice while others sustain only a more superficial adoption.
+The preliminary review suggests four consistent ideas. First, secure software development still struggles to integrate security across the entire life cycle instead of treating it as a late or reactive activity. Second, risk management plays a central role in agile and DevOps settings, where operational speed can increase exposure in the absence of clear governance. Third, control effectiveness depends not only on tools or policies, but also on factors such as organizational culture, training, leadership, and operational discipline. Fourth, there remains a need for studies that combine measurement and interpretation to explain why some organizations turn risk management into effective practice while others achieve only superficial adoption.
 
-In this line of work, Khan et al. (2022) argue that many organizations still do not integrate security in a transversal way throughout software development. Kolisnichenko et al. (2022) maintain that risk management must cut across all stages of DevOps in order to prevent operational acceleration from increasing exposure. Valdes-Rodriguez et al. (2023) show that incorporating security practices into agile environments remains an important challenge. Finally, Tsai et al. (2025) propose performance baselines for secure software development that connect proactive and reactive security management with stronger outcomes.
+In this line of work, Khan et al. (2022) argue that many organizations still do not integrate security consistently across software development. Kolisnichenko et al. (2022) maintain that risk management must cut across all stages of DevOps to prevent operational acceleration from increasing exposure. Valdes-Rodriguez et al. (2023) show that incorporating security practices into agile environments remains an important challenge. Finally, Tsai et al. (2025) propose performance baselines for secure software development that connect proactive and reactive security management with stronger outcomes.
 
 ## 3.5. Research Questions and Objectives
 
@@ -52,13 +52,13 @@ To analyze how and to what extent the maturity of information security risk mana
 - To characterize the maturity level of information security risk management in Peruvian software development companies.
 - To evaluate the relationship between that maturity and the effectiveness of controls related to access, source code protection, and software development traceability.
 - To identify organizational, human, and operational factors that explain differences in the results observed during the quantitative phase.
-- To integrate quantitative and qualitative evidence in order to formulate recommendations aimed at strengthening secure software development.
+- To integrate quantitative and qualitative evidence to formulate recommendations aimed at strengthening secure software development.
 
 ## 3.6. Methodology
 
 ### Paradigm and Design
 
-The study will be developed under a **mixed methods paradigm** with a **pragmatic orientation**, through an **explanatory sequential design**. The first phase will be quantitative and will seek to identify patterns of relationship between variables. The second phase will be qualitative and will aim to explain those patterns in greater depth, especially in cases where distance exists between formal control and actual practice.
+The study will be developed under a **mixed methods paradigm** with a **pragmatic orientation**, through an **explanatory sequential design**. The first phase will be quantitative and will seek to identify patterns of relationship between variables. The second phase will be qualitative and will aim to explain those patterns in greater depth, especially in cases where a gap exists between formal control and actual practice.
 
 ### Scope of the Study
 
@@ -68,13 +68,13 @@ The study will have an **explanatory** scope and an applied orientation. It does
 
 The population of interest will consist of Peruvian software development companies that manage repositories, access mechanisms, and traceability processes as part of their routine operation. At this preliminary stage, the study will prioritize companies located in Metropolitan Lima or with formal operations in the country and working under agile, DevOps, or continuous integration approaches.
 
-In the quantitative phase, non-probabilistic purposive sampling will be used. The study is expected to gather information from approximately **50 to 80 participants** including developers, technical leaders, DevOps-oriented roles, quality practitioners, and security practitioners, distributed across **6 to 10 organizations**. In the qualitative phase, a subset of **10 to 15 key informants** will be selected from the quantitative results in order to contrast profiles, maturity levels, and cases where especially consistent or contradictory patterns emerge.
+In the quantitative phase, non-probabilistic purposive sampling will be used. The study is expected to gather information from approximately **50 to 80 participants**, including developers, technical leaders, DevOps-focused roles, quality practitioners, and security practitioners, distributed across **6 to 10 organizations**. In the qualitative phase, a subset of **10 to 15 key informants** will be selected from the quantitative results to contrast profiles, maturity levels, and cases where especially consistent or contradictory patterns emerge.
 
 ### Data Collection Techniques and Instruments
 
 - **Structured survey:** will be used to measure perceptions and practices related to risk identification, evaluation, treatment, and monitoring, as well as access control, source code protection, and traceability.
-- **Semistructured interviews:** will be conducted with key informants in order to deepen the understanding of decisions, tensions, adoption barriers, and differences between formal procedures and everyday practice.
-- **Focused document review:** when authorization is available, policies, guidelines, procedures, logs, or institutional evidence will be examined in order to contextualize the findings.
+- **Semistructured interviews:** will be conducted with key informants to deepen the understanding of decisions, tensions, adoption barriers, and differences between formal procedures and everyday practice.
+- **Targeted document review:** when authorization is available, policies, guidelines, procedures, logs, or institutional evidence will be examined to contextualize the findings.
 
 ### Preliminary Variables and Dimensions
 
@@ -90,7 +90,7 @@ In the qualitative phase, thematic analysis will be used to identify patterns of
 
 The study will address potentially sensitive information related to internal security practices, so confidentiality will be a central condition of the design. The research will not request access to proprietary source code or trade secrets; instead, it will focus on practices, perceptions, policies, and organizational evidence that can be analyzed without compromising critical assets. Participation will be voluntary and based on informed consent.
 
-Data will be anonymized from the moment of collection, and the study will avoid identifying people, teams, or organizations in public outputs unless explicit authorization is provided. The protocol will align with **Peruvian Law No. 29733 on Personal Data Protection** and with the **National Code of Scientific Integrity** approved by CONCYTEC through **Presidential Resolution No. 028-2024-CONCYTEC-P**. Before fieldwork begins, the corresponding review by the applicable committee or ethics body will be considered.
+Data will be anonymized from the moment of collection, and the study will avoid identifying people, teams, or organizations in public outputs unless explicit authorization is provided. The protocol will align with **Peruvian Law No. 29733 on Personal Data Protection** and with the **National Code of Scientific Integrity** approved by CONCYTEC through **Presidential Resolution No. 028-2024-CONCYTEC-P**. Before fieldwork begins, the protocol will be submitted to the relevant ethics or institutional review body if required.
 
 ## 3.8. Expected Results
 
@@ -114,7 +114,7 @@ Data will be anonymized from the moment of collection, and the study will avoid 
 
 ### Feasibility and Provisions
 
-The study is methodologically feasible, but it depends on two critical conditions: sufficient access to organizations willing to collaborate and the availability of participants to speak about security practices without compromising sensitive information. For that reason, the timeline includes margins for permission management, ethics review, instrument validation, and contingencies associated with fieldwork. It is considered necessary to reserve a reasonable buffer for delays related to institutional coordination, scheduling changes, or the need for complementary data collection.
+The study is methodologically feasible, but it depends on two critical conditions: sufficient access to organizations willing to collaborate and the availability of participants to speak about security practices without compromising sensitive information. For that reason, the timeline includes margins for permission management, ethics review, instrument validation, and contingencies associated with fieldwork. It also includes a reasonable buffer for delays related to institutional coordination, scheduling changes, or the need for complementary data collection.
 
 ### Preliminary Estimate of Resources
 
@@ -151,4 +151,4 @@ Peruvian Law No. 29733. *Personal Data Protection Law*.
 
 ---
 
-**AI support statement:** AI assistance was used to support draft organization, improve wording, and review formal clarity. The definition of the problem, the methodological decisions, the formulation of the objectives, and the intellectual structure of the protocol correspond to the author.
+**AI support statement:** AI tools were used to help organize the draft, refine the wording, and review formal clarity. The problem definition, methodological decisions, objectives, and overall intellectual structure of the protocol are the author's own work.

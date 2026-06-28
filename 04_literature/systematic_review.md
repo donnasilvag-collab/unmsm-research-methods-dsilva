@@ -6,7 +6,7 @@ The question guiding this preliminary systematic review is the following:
 
 **What recent and relevant evidence helps explain the influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability, with particular interest in Peruvian companies?**
 
-This formulation makes it possible to focus the review on four dimensions directly linked to the research problem: **risk management**, **access control**, **protection of code and development artifacts**, and **software development traceability**.
+This formulation makes it possible to focus the review on four dimensions directly linked to the research problem: **risk management**, **access control**, **source code and development artifact protection**, and **software development traceability**.
 
 ## 4.2. Search Strategy
 
@@ -27,7 +27,7 @@ AND ("risk management" OR "security risks" OR "threat modeling" OR "vulnerabilit
 AND ("access control" OR authorization OR traceability OR "source code" OR repository)
 ```
 
-The search was designed as a **seed mini-review**, following the logic developed in the course literature review unit. For that reason, in addition to the primary source, backward reference tracking was used in order not to miss foundational studies that remain relevant to the problem.
+The search was designed as a **seed mini-review**, following the logic developed in the course literature review unit. For that reason, in addition to the primary source, backward reference tracking was used to avoid overlooking foundational studies that remain relevant to the problem.
 
 ## 4.3. Inclusion and Exclusion Criteria
 
@@ -80,7 +80,7 @@ The diagram corresponding to this flow is presented in **`prisma_diagram.png`** 
 | 2 | **Valdes-Rodriguez, Y., Hochstetter-Diez, J., Diaz-Arancibia, J., and Cadena-Martinez, R. (2023). _Towards the Integration of Security Practices in Agile Software Development: A Systematic Mapping Review_. Applied Sciences, 13, 4578.** | Security integration in agile contexts | This study is central because it connects secure development with agile environments, where tensions often appear between speed, control discipline, and security maturity. |
 | 3 | **Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., and Tong, L.-I. (2025). _Establishing Performance Baselines for Secure Software Development_. IET Information Security, 2025, 6139424.** | Metrics and performance baselines | It offers a recent perspective on how to measure secure development capabilities, which is useful for translating risk management into observable indicators. |
 | 4 | **Humayun, M., Jhanjhi, N., Almufareh, M. F., and Khalil, M. I. (2022). _Security Threat and Vulnerability Assessment and Measurement in Secure Software Development_. Computers, Materials & Continua, 71(3), 5039-5059.** | Threat and vulnerability assessment | It strengthens the dimension of threat assessment and measurement within the SDLC and supports the quantifiable part of the study. |
-| 5 | **Basin, D., Guarnizo, J., Krstić, S., Nguyen, H., and Ochoa, M. (2023). _Is Modeling Access Control Worth It?_ In _Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23)_.** | Access control | This is one of the studies most directly aligned with the access control dimension and it compares implementation approaches using empirical evidence. |
+| 5 | **Basin, D., Guarnizo, J., Krstic, S., Nguyen, H., and Ochoa, M. (2023). _Is Modeling Access Control Worth It?_ In _Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23)_.** | Access control | This is one of the studies most directly aligned with the access control dimension, and it compares implementation approaches using empirical evidence. |
 | 6 | **Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mader, P., and Zisman, A. (2014). _Software Traceability: Trends and Future Directions_. In _Future of Software Engineering, FOSE 2014 Proceedings_ (pp. 55-69).** | Traceability | It functions as an anchor reference for the traceability dimension and helps justify traceability as a strategic capability, not merely as a documentation practice. |
 | 7 | **Othmane, L. B., Angin, P., Weffers, H., and Bhargava, B. (2014). _Extending the Agile Development Process to Develop Acceptably Secure Software_. IEEE Transactions on Dependable and Secure Computing, 11(6), 497-509.** | Secure development in agile processes | It is useful for explaining how security can be integrated without breaking the iterative logic of agile or continuous delivery teams. |
 | 8 | **Sanchez-Gordon, M.-L., and Colomo-Palacios, R. (2020). _Security as Culture: A Systematic Literature Review of DevSecOps_. In _Proceedings of the IEEE/ACM 42nd International Conference on Software Engineering Workshops_ (pp. 266-269).** | DevSecOps culture | It complements the technical view with an organizational and cultural dimension, which is especially relevant for explaining why equivalent controls may produce different outcomes. |
@@ -89,7 +89,7 @@ The diagram corresponding to this flow is presented in **`prisma_diagram.png`** 
 
 ## 4.6. Initial Synthesis of Findings
 
-The preliminary review reveals five broad patterns. First, the literature agrees that security is still incorporated too frequently at a late stage, even though there is already enough evidence about the cost of that decision. Second, risk management appears as a central organizing axis of secure development, yet many publications focus more on frameworks and practices than on empirical evidence of their actual effectiveness. Third, the **access control** dimension does have specific studies, although most of them are oriented toward modeling, vulnerability detection, or particular environments rather than toward its integrated relationship with organizational risk management.
+The preliminary review reveals five broad patterns. First, the literature agrees that security is still incorporated too frequently at a late stage, even though there is already ample evidence of the cost of that decision. Second, risk management appears as a central organizing axis of secure development, yet many publications focus more on frameworks and practices than on empirical evidence of their actual effectiveness. Third, the **access control** dimension is represented in the literature, although most studies focus on modeling, vulnerability detection, or particular environments rather than on its integrated relationship with organizational risk management.
 
 Fourth, **traceability** is well supported as an assurance and governance capability, but in the reviewed literature it is less connected to security metrics applied to Peruvian software development companies or to comparable organizational contexts. Fifth, the most recent work on DevSecOps and secure SDLC insists that human and cultural factors remain a persistent barrier to consolidating secure practices, even when tools or frameworks are already available.
 
@@ -109,4 +109,4 @@ The following references are not part of the ten prioritized studies, but they s
 
 ---
 
-**AI support statement:** AI assistance was used to organize the draft, review wording, and help structure the synthesis. The study selection, the interpretation of the gaps, and the methodological organization of the mini-review correspond to the author.
+**AI support statement:** AI tools were used to help organize the draft, review the wording, and structure the synthesis. The study selection, interpretation of the gaps, and methodological organization of the mini-review are the author's own work.

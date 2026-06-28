@@ -10,7 +10,7 @@ This repository organizes the course deliverables around the following research 
 
 ## Academic Purpose
 
-This project brings together the main deliverables for the course *Research Methods and Scientific Integrity in AI and Advanced Technologies*. The repository follows the sequence of the course: paradigm selection, method choice, protocol drafting, systematic literature review, and reproducible pipeline design.
+This repository brings together the main deliverables for the course *Research Methods and Scientific Integrity in AI and Advanced Technologies*. It follows the sequence of the course: paradigm selection, method choice, protocol drafting, systematic literature review, and reproducible pipeline design.
 
 ## Repository Structure
 
