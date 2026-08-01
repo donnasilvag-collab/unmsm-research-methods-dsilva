@@ -30,8 +30,18 @@ DIMENSIONS = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, required=True, help="Public source workbook.")
-    parser.add_argument("--output", type=Path, required=True, help="Derived CSV path.")
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=Path("data/raw/public_repo_security_peru_benchmark.xlsx"),
+        help="Public source workbook.",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("data/public_repo_security_benchmark.csv"),
+        help="Derived CSV path.",
+    )
     parser.add_argument("--sheet", default="Datos_repositorios", help="Workbook sheet to read.")
     return parser.parse_args()
 

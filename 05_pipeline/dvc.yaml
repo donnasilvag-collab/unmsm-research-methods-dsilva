@@ -1,6 +1,6 @@
 stages:
   prepare_public_benchmark:
-    cmd: python data/create_dataset.py --input data/raw/public_repo_security_peru_benchmark.xlsx --output data/public_repo_security_benchmark.csv
+    cmd: python data/create_dataset.py
     deps:
       - data/create_dataset.py
       - data/raw/public_repo_security_peru_benchmark.xlsx
