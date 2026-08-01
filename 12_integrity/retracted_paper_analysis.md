@@ -1,34 +1,60 @@
-# Retraction-screening record
+# Analysis of a retracted security study
 
-## Scope
+## 12.1. Article identified
 
-This record defines how the literature used in the protocol and systematic review will be checked for retractions, expressions of concern, and material corrections before final submission. It does not label a source as retracted without a verifiable notice from the publisher or an established bibliographic record.
+Chen, S. (2023). The design of network security protection trust management system based on an improved hidden Markov model. *EURASIP Journal on Information Security, 2023*, Article 10. https://doi.org/10.1186/s13635-023-00146-z
 
-## Current repository position
+The article was published on 23 November 2023 and retracted on 13 May 2024. The publisher's notice is:
 
-The working literature in `03_protocol/` and `04_literature/` must be screened again before the final submission because publication status can change after an article is added to a draft. A citation remains provisional until its title, authorship, venue, DOI or stable identifier, and current publication notice have been checked.
+Chen, S. (2024). Retraction note: The design of network security protection trust management system based on an improved hidden Markov model. *EURASIP Journal on Information Security, 2024*, Article 18. https://doi.org/10.1186/s13635-024-00167-2
 
-## Screening procedure
+A publisher-issued copy of the retraction notice is preserved in [retraction_note_network_security_trust_management.pdf](retraction_note_network_security_trust_management.pdf).
 
-| Step | Record required |
-| --- | --- |
-| Verify the bibliographic record | Confirm the title, authors, publication venue, year, and DOI or stable identifier against the publisher or an established index. |
-| Check publication notices | Review the publisher page for retraction, correction, expression of concern, or replacement notices. |
-| Assess the effect on this study | Decide whether the source should be removed, retained with a correction note, or discussed only as an integrity case. |
-| Update dependent material | Correct citations, synthesis tables, claims, and conclusions that relied on the affected source. |
-| Preserve the decision trail | Record the date, source checked, notice found, decision, and related commit or file update. |
+## 12.2. Documented reason for retraction
 
-## Decision rules
+The Editor-in-Chief and publisher retracted the article after an investigation into a guest-edited issue. The notice reports concerns that included compromised editorial handling and peer review, inappropriate or irrelevant references, and content that may not have been within the scope of the journal or guest-edited issue. Based on those findings, the Editor-in-Chief stated that confidence in the article's results and conclusions could no longer be maintained. The notice also records that the author did not respond to the publisher's correspondence about the retraction.
 
-- A retracted source will not support an empirical or methodological claim in the final protocol or review.
-- A corrected source may be retained only after the correction is read and its effect on the cited claim is assessed.
-- An expression of concern requires a documented judgment and should not be treated as an ordinary reference.
-- A source used to discuss research integrity must be identified as such and kept separate from the evidence base for the research question.
+These are the reasons documented by the publisher. This analysis does not infer misconduct, intent, or technical defects beyond what the notice establishes.
 
-## Screening log template
+## 12.3. Relevance to the present research
 
-| Date | Citation or identifier | Notice checked | Decision | Affected repository file |
+The retracted article concerns network-security protection, trust management, alarm data, and a predictive model. Those subjects are adjacent to information security risk management and control effectiveness. The overlap makes the article a useful integrity case because a title and abstract could initially appear relevant to a search on security governance or technical controls.
+
+Topical similarity is not sufficient for inclusion. Once an article is retracted and the publisher no longer has confidence in its results or conclusions, it cannot support an empirical, methodological, or theoretical claim in this study. It is retained here only to document the screening decision.
+
+## 12.4. Effect on the evidence base
+
+On 1 August 2026, the title, author, and DOI were searched across the repository. The article is not cited in the paradigm justification, method matrix, protocol, systematic review, pipeline documentation, reproducibility audit, or model documentation. No result, research objective, methodological decision, or literature-synthesis statement therefore needs to be withdrawn.
+
+The article will remain excluded from the systematic review and preliminary bibliography. The local PDF contains the retraction notice rather than evidence for the research question. This separation prevents an integrity exercise from being mistaken for endorsement of the retracted findings.
+
+## 12.5. Integrity assessment
+
+This case shows why publication status must be checked at the source rather than inferred from a citation export or a downloaded PDF. Three parts of the notice matter for the current project:
+
+- the editorial and peer-review process was compromised;
+- references or scope were considered inappropriate in the investigated issue;
+- the editor withdrew confidence in the results and conclusions.
+
+The retraction notice does not provide enough information to reproduce a technical investigation of the model or assign responsibility. The defensible decision is narrower: do not use the article as evidence and preserve the verified reason for exclusion.
+
+## 12.6. Controls for this repository
+
+Before final submission, each source used to support a claim will be checked against its publisher page or a stable bibliographic record. The review log will record the DOI or stable identifier, publication status, date checked, and decision. Retractions, expressions of concern, and material corrections will trigger a review of every dependent claim.
+
+AI-assisted search or drafting does not replace this check. AI tools may help locate a possible notice or improve wording, but the author must open the source, verify its status, and confirm that the repository reflects the decision. Sensitive research data must not be submitted to an external AI system, as specified in `ai_use_policy.md`.
+
+## 12.7. Screening record
+
+| Date checked | Identifier | Notice verified | Decision | Repository effect |
 | --- | --- | --- | --- | --- |
-| Pending final literature review | To be completed | To be completed | To be completed | To be completed |
+| 1 August 2026 | 10.1186/s13635-023-00146-z | Publisher retraction notice, 10.1186/s13635-024-00167-2 | Exclude from the evidence base; retain only as an integrity case | No dependent citation or claim found in folders 01-07 |
 
-This procedure supports transparent correction of the evidence base without creating unsupported claims about any publication.
+## Sources
+
+- Retracted article record: https://link.springer.com/article/10.1186/s13635-023-00146-z
+- Publisher retraction notice: https://link.springer.com/article/10.1186/s13635-024-00167-2
+
+---
+
+**AI support statement:** AI tools supported source discovery, language editing, and consistency checks. Donna Silva verified the publisher notice, confirmed the repository-wide citation search, and remains responsible for the exclusion decision.

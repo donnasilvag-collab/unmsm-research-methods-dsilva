@@ -1,5 +1,17 @@
-dimension,peru_repository_mean,benchmark_repository_mean,difference_peru_minus_benchmark,bootstrap_ci_95_lower,bootstrap_ci_95_upper,interpretation_limit
-risk_governance_observed,3.541667,7.239583,-3.697917,-6.218525,-1.316853,Public observability proxy; not a measure of an organization's internal control.
-access_control_observed,0.902778,2.638889,-1.736111,-2.986111,-0.476425,Public observability proxy; not a measure of an organization's internal control.
-source_code_protection_observed,1.000000,2.856342,-1.856342,-3.213644,-0.525141,Public observability proxy; not a measure of an organization's internal control.
-traceability_observed,3.196829,6.077083,-2.880254,-4.686846,-1.342862,Public observability proxy; not a measure of an organization's internal control.
+seed,dimension,point_difference,naive_ci_95_lower,naive_ci_95_upper,naive_ci_width,clustered_ci_95_lower,clustered_ci_95_upper,clustered_ci_width,width_change_clustered_minus_naive,peru_repository_count,peru_owner_count,benchmark_repository_count,bootstrap_iterations
+13,risk_governance_observed,-3.697917,-5.312760,-2.052083,3.260677,-6.150082,-1.207101,4.942981,1.682304,24,9,24,2000
+13,access_control_observed,-1.736111,-2.638889,-0.763889,1.875000,-2.917140,-0.547840,2.369301,0.494301,24,9,24,2000
+13,source_code_protection_observed,-1.856342,-2.829806,-0.859822,1.969984,-3.170491,-0.456280,2.714211,0.744227,24,9,24,2000
+13,traceability_observed,-2.880254,-3.936945,-1.731170,2.205775,-4.746797,-1.255151,3.491646,1.285870,24,9,24,2000
+21,risk_governance_observed,-3.697917,-5.385417,-1.895573,3.489844,-6.243832,-1.132002,5.111830,1.621986,24,9,24,2000
+21,access_control_observed,-1.736111,-2.777778,-0.833333,1.944444,-2.986585,-0.483583,2.503001,0.558557,24,9,24,2000
+21,source_code_protection_observed,-1.856342,-2.841850,-0.862358,1.979492,-3.187756,-0.438016,2.749739,0.770248,24,9,24,2000
+21,traceability_observed,-2.880254,-3.989659,-1.723742,2.265917,-4.682034,-1.318780,3.363254,1.097337,24,9,24,2000
+42,risk_governance_observed,-3.697917,-5.291927,-1.916406,3.375521,-6.302878,-1.319010,4.983868,1.608347,24,9,24,2000
+42,access_control_observed,-1.736111,-2.640625,-0.833333,1.807292,-3.055556,-0.509115,2.546441,0.739149,24,9,24,2000
+42,source_code_protection_observed,-1.856342,-2.841589,-0.852113,1.989477,-3.245111,-0.489459,2.755652,0.766175,24,9,24,2000
+42,traceability_observed,-2.880254,-3.964689,-1.766679,2.198011,-4.711868,-1.364085,3.347783,1.149772,24,9,24,2000
+87,risk_governance_observed,-3.697917,-5.333594,-1.999479,3.334115,-6.259416,-1.098653,5.160763,1.826648,24,9,24,2000
+87,access_control_observed,-1.736111,-2.638889,-0.833333,1.805556,-2.986111,-0.441344,2.544767,0.739212,24,9,24,2000
+87,source_code_protection_observed,-1.856342,-2.842960,-0.864390,1.978570,-3.198587,-0.467330,2.731257,0.752687,24,9,24,2000
+87,traceability_observed,-2.880254,-3.983694,-1.757171,2.226522,-4.660609,-1.371926,3.288684,1.062161,24,9,24,2000

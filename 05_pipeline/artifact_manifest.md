@@ -11,7 +11,7 @@
 | `results/benchmark_summary_seed_*.csv` | Per-seed descriptive summaries and confidence intervals | Git artifact | Generated |
 | `results/seed_stability.csv` | Compares estimates across the four seeded runs | Git artifact | Generated |
 | `docs/mlflow_runs.png` | Visual record of the latest seeded comparison | Git artifact | Generated |
-| `mlruns/` | Local MLflow run metadata, metrics, parameters, and artifacts | Git artifact | Generated and inspectable |
+| `mlruns/` | Local MLflow run metadata, metrics, parameters, and artifacts | Local MLflow store (ignored by Git) | Generated locally and inspectable; not committed |
 | `Dockerfile` and `requirements.txt` | Rebuild the execution environment | Git | Included |
 
 ## Data Boundary

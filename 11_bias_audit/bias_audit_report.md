@@ -4,7 +4,7 @@
 
 This report examines possible sources of bias in the public repository benchmark and in the planned mixed methods fieldwork for the study, *Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study*.
 
-The course bias-audit workshop uses classifiers, protected attributes, favorable outcomes, and before-and-after fairness metrics. Those elements do not exist in the current project. `05_pipeline/` contains a descriptive comparison of public repository signals, not a predictive model, risk score, automated decision, or person-level classification. The appropriate audit therefore focuses on representation, selection, measurement, aggregation, and interpretation rather than applying demographic-parity or equalized-odds metrics without a valid denominator.
+Conventional model bias audits use classifiers, protected attributes, favorable outcomes, and before-and-after fairness metrics. Those elements do not exist in the current project. `05_pipeline/` contains a descriptive comparison of public repository signals, not a predictive model, risk score, automated decision, or person-level classification. The appropriate audit therefore focuses on representation, selection, measurement, aggregation, and interpretation rather than applying demographic-parity or equalized-odds metrics without a valid denominator.
 
 This document has two parts. The first audits the data and claims that already exist in the public benchmark. The second sets review rules for the survey and interview components before fieldwork begins. It does not claim that the future fieldwork has already been collected or audited.
 
@@ -32,20 +32,29 @@ This limitation does not remove the need for scrutiny. A non-predictive dataset 
 
 ## 11.4. Measured descriptive differences
 
-The table below reproduces the repository-level means and the seed-42 clustered-bootstrap intervals in `05_pipeline/results/benchmark_summary_seed_42.csv`. The difference is Peru minus International benchmark. These values describe the bounded public snapshot. They are not estimates of company security maturity, causal effects, or national prevalence.
+The point differences below are Peru minus International benchmark. They describe the bounded public snapshot and remain fixed across bootstrap runs.
 
-| Observed dimension | Peru mean | International benchmark mean | Difference | 95% clustered-bootstrap interval |
-| --- | ---: | ---: | ---: | --- |
-| Risk governance | 3.541667 | 7.239583 | -3.697917 | -6.218525 to -1.316853 |
-| Access control | 0.902778 | 2.638889 | -1.736111 | -2.986111 to -0.476425 |
-| Source-code protection | 1.000000 | 2.856342 | -1.856342 | -3.213644 to -0.525141 |
-| Traceability | 3.196829 | 6.077083 | -2.880254 | -4.686846 to -1.342862 |
+| Observed dimension | Peru mean | International benchmark mean | Difference |
+| --- | ---: | ---: | ---: |
+| Risk governance | 3.541667 | 7.239583 | -3.697917 |
+| Access control | 0.902778 | 2.638889 | -1.736111 |
+| Source-code protection | 1.000000 | 2.856342 | -1.856342 |
+| Traceability | 3.196829 | 6.077083 | -2.880254 |
 
-All four dimensions have lower observed public means in the Peru stratum for this snapshot. The finding is not evidence that a Peruvian organization lacks an internal control. Public repositories vary in visibility, maintenance practices, open-source orientation, repository purpose, and whether a control is exposed in a default branch. The benchmark documents public observability, not the complete security posture of an organization.
+All four public means are lower in the Peru stratum for this snapshot. This does not show that a Peruvian organization lacks an internal control. Repositories differ in purpose, visibility, maintenance, open-source orientation, and the signals exposed on a default branch. The benchmark records public observability, not an organization's complete security posture.
 
-The result is stable in direction across the four seeded runs stored in `05_pipeline/results/seed_stability.csv`. The bootstrap seed changes the interval, not the fixed repository-level means. Stability across seeds does not solve selection bias or construct-validity limits.
+The before-and-after audit tests one specific analytical risk: treating repositories owned by the same organization as independent observations. The before estimate resamples individual Peru repository rows. The after estimate resamples Peru owners and retains all repositories associated with each selected owner. The International benchmark uses repository-level resampling in both cases so that the comparison isolates the treatment of dependence within the Peru stratum.
 
-`bias_audit.py` regenerates `bias_audit_splits.csv` and `before_after_chart.png` from the seed-42 result file. The chart filename follows the course template, but it compares the two repository strata. It is not a before-and-after fairness intervention chart.
+| Observed dimension | Mean naive 95% interval width | Mean owner-clustered 95% interval width | Change |
+| --- | ---: | ---: | ---: |
+| Risk governance | 3.365039 | 5.049860 | +1.684821 |
+| Access control | 1.858073 | 2.490878 | +0.632805 |
+| Source-code protection | 1.979381 | 2.737715 | +0.758334 |
+| Traceability | 2.224056 | 3.372842 | +1.148785 |
+
+The clustered intervals are wider in all four dimensions when averaged across seeds 13, 21, 42, and 87. The point estimates do not change. Wider intervals are not a worse result; they make the limited amount of independent organizational evidence more visible. This correction does not address selection bias, measurement bias, or the non-probabilistic comparison frame.
+
+`bias_audit.py` regenerates the 16 seed-by-dimension records in `bias_audit_splits.csv` and the comparison in `before_after_chart.png`. The chart is a before-and-after dependency correction, not a protected-group fairness intervention.
 
 ## 11.5. Bias-risk register for the public benchmark
 
@@ -62,15 +71,16 @@ The result is stable in direction across the four seeded runs stored in `05_pipe
 
 ## 11.6. Assessment of current controls
 
-The current public artifact does not need a model-level mitigation such as reweighing, threshold adjustment, or post-processing because it does not make a prediction. Instead, it has design controls that reduce avoidable misinterpretation:
+The current public artifact does not need a model-level mitigation such as reweighing, threshold adjustment, or post-processing because it does not make a prediction. It does require design and analysis controls that reduce avoidable misinterpretation:
 
 - the repository is explicit that the measures are public observability proxies;
 - the data preparation script keeps the original public indicators so a composite can be traced to its inputs;
-- the Peru stratum uses organization-clustered bootstrap resampling;
+- the before-and-after audit shows how row-level resampling understates uncertainty when one owner contributes several repositories;
+- the main analysis uses organization-clustered bootstrap resampling for the Peru stratum;
 - unavailable OpenSSF values remain missing rather than being converted to zero;
 - the model card, datasheet, ethics protocol, and data management plan prohibit causal, company-level, and reputational conclusions.
 
-These controls reduce specific risks, but they do not turn the dataset into a representative sample or a direct measure of internal security practice. No numerical "after" fairness table is reported because no fairness intervention has been run on a decision model.
+These controls reduce specific risks, but they do not turn the dataset into a representative sample or a direct measure of internal security practice. The numerical after table concerns dependence correction only. It is not evidence of improved demographic fairness, and it does not assess a decision model.
 
 ## 11.7. Audit plan for the future fieldwork
 
