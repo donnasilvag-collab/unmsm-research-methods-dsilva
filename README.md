@@ -22,6 +22,7 @@ This repository brings together the main deliverables for the course *Research M
 - `06_repro_audit/`: reproducibility audit of a relevant public AI and software-security experiment.
 - `07_model_card/`: analytical artifact card and datasheet for the public repository security benchmark.
 - `09_ethics/`: ethics protocol for the planned mixed methods fieldwork and the bounded public benchmark.
+- `10_data_mgmt/`: data management plan for public benchmark materials and planned fieldwork data.
 
 ## Study Focus
 
