@@ -45,6 +45,8 @@ All four dimensions have lower observed public means in the Peru stratum for thi
 
 The result is stable in direction across the four seeded runs stored in `05_pipeline/results/seed_stability.csv`. The bootstrap seed changes the interval, not the fixed repository-level means. Stability across seeds does not solve selection bias or construct-validity limits.
 
+`bias_audit.py` regenerates `bias_audit_splits.csv` and `before_after_chart.png` from the seed-42 result file. The chart filename follows the course template, but it compares the two repository strata. It is not a before-and-after fairness intervention chart.
+
 ## 11.5. Bias-risk register for the public benchmark
 
 | Risk mechanism | Evidence or reason for concern | Consequence if ignored | Existing control | Remaining action |

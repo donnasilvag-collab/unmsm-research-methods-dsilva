@@ -24,6 +24,7 @@ This repository brings together the main deliverables for the course *Research M
 - `09_ethics/`: ethics protocol for the planned mixed methods fieldwork and the bounded public benchmark.
 - `10_data_mgmt/`: data management plan for public benchmark materials and planned fieldwork data.
 - `11_bias_audit/`: bias audit of the public benchmark and safeguards for the planned fieldwork.
+- `12_integrity/`: research-integrity records, AI-use policy, and literature-screening controls.
 
 ## Study Focus
 

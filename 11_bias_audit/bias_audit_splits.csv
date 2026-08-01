@@ -1,0 +1,5 @@
+dimension,peru_repository_mean,benchmark_repository_mean,difference_peru_minus_benchmark,bootstrap_ci_95_lower,bootstrap_ci_95_upper,interpretation_limit
+risk_governance_observed,3.541667,7.239583,-3.697917,-6.218525,-1.316853,Public observability proxy; not a measure of an organization's internal control.
+access_control_observed,0.902778,2.638889,-1.736111,-2.986111,-0.476425,Public observability proxy; not a measure of an organization's internal control.
+source_code_protection_observed,1.000000,2.856342,-1.856342,-3.213644,-0.525141,Public observability proxy; not a measure of an organization's internal control.
+traceability_observed,3.196829,6.077083,-2.880254,-4.686846,-1.342862,Public observability proxy; not a measure of an organization's internal control.
