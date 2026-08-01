@@ -21,6 +21,7 @@ This repository brings together the main deliverables for the course *Research M
 - `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, with scripts, parameters, results, and reproducibility controls.
 - `06_repro_audit/`: reproducibility audit of a relevant public AI and software-security experiment.
 - `07_model_card/`: analytical artifact card and datasheet for the public repository security benchmark.
+- `09_ethics/`: ethics protocol for the planned mixed methods fieldwork and the bounded public benchmark.
 
 ## Study Focus
 
