@@ -23,6 +23,7 @@ This repository brings together the main deliverables for the course *Research M
 - `07_model_card/`: analytical artifact card and datasheet for the public repository security benchmark.
 - `09_ethics/`: ethics protocol for the planned mixed methods fieldwork and the bounded public benchmark.
 - `10_data_mgmt/`: data management plan for public benchmark materials and planned fieldwork data.
+- `11_bias_audit/`: bias audit of the public benchmark and safeguards for the planned fieldwork.
 
 ## Study Focus
 
