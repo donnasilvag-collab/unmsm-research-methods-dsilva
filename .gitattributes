@@ -3,7 +3,8 @@
 *.md text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
-*.lock text eol=lf
+# DVC rewrites its lock file with CRLF on the documented Windows workflow.
+*.lock text eol=crlf
 *.txt text eol=lf
 *.csv text eol=lf
 *.dvc text eol=lf

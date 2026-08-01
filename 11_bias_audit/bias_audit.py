@@ -125,7 +125,12 @@ def run_audit() -> pd.DataFrame:
             )
 
     result = pd.DataFrame(rows)
-    result.to_csv(OUTPUT_CSV, index=False, float_format="%.6f")
+    result.to_csv(
+        OUTPUT_CSV,
+        index=False,
+        float_format="%.6f",
+        lineterminator="\n",
+    )
     return result
 
 

@@ -88,7 +88,12 @@ def main() -> None:
             mlflow.log_artifact(str(output), artifact_path="results")
 
     summary = pd.concat(run_outputs, ignore_index=True)
-    summary.to_csv(results_dir / "seed_stability.csv", index=False, float_format="%.6f")
+    summary.to_csv(
+        results_dir / "seed_stability.csv",
+        index=False,
+        float_format="%.6f",
+        lineterminator="\n",
+    )
     make_plot(summary, ROOT / "docs" / "mlflow_runs.png")
     print("Completed four seeded MLflow runs.")
 

@@ -68,7 +68,12 @@ def main() -> None:
     # Keep every original public indicator so later checks can be traced to the workbook.
     frame = frame.sort_values("record_id").reset_index(drop=True)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    frame.to_csv(args.output, index=False, float_format="%.6f")
+    frame.to_csv(
+        args.output,
+        index=False,
+        float_format="%.6f",
+        lineterminator="\n",
+    )
 
     digest = hashlib.sha256(args.output.read_bytes()).hexdigest()
     print(f"Created {args.output} with {len(frame)} repositories.")

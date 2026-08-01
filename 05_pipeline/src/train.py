@@ -80,7 +80,12 @@ def main() -> None:
 
     result = pd.DataFrame(rows)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    result.to_csv(args.output, index=False, float_format="%.6f")
+    result.to_csv(
+        args.output,
+        index=False,
+        float_format="%.6f",
+        lineterminator="\n",
+    )
     print(f"Created {args.output} for seed {args.seed}.")
 
 
