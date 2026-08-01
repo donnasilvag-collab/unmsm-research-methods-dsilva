@@ -19,6 +19,7 @@ This repository brings together the main deliverables for the course *Research M
 - `03_protocol/`: core research protocol.
 - `04_literature/`: preliminary systematic review, gap analysis, and PRISMA diagram.
 - `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, with scripts, parameters, results, and reproducibility controls.
+- `06_repro_audit/`: reproducibility audit of a relevant public AI and software-security experiment.
 
 ## Study Focus
 
