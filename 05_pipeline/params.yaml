@@ -1,0 +1,20 @@
+dataset:
+  input_workbook: data/raw/public_repo_security_peru_benchmark.xlsx
+  output_csv: data/public_repo_security_benchmark.csv
+  sheet_name: Datos_repositorios
+
+analysis:
+  unit_of_analysis: repository
+  peru_label: Peru
+  benchmark_label: International benchmark
+  peru_cluster_column: owner
+  bootstrap_iterations: 2000
+  seeds: [13, 21, 42, 87]
+  dimensions:
+    - risk_governance_observed
+    - access_control_observed
+    - source_code_protection_observed
+    - traceability_observed
+
+reporting:
+  scope_note: Public repository benchmark; descriptive evidence only, not a causal or company-level estimate.

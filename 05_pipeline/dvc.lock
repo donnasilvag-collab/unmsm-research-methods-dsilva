@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  prepare_public_benchmark:
+    cmd: python data/create_dataset.py --input data/raw/public_repo_security_peru_benchmark.xlsx --output data/public_repo_security_benchmark.csv
+    deps:
+      - path: data/create_dataset.py
+        hash: md5
+        md5: aa9609122c6f6634bc1646da689aedb6
+        size: 2504
+      - path: data/raw/public_repo_security_peru_benchmark.xlsx
+        hash: md5
+        md5: 4a66534cc18e8256f9f19bb9130bc6b5
+        size: 77642
+    outs:
+      - path: data/public_repo_security_benchmark.csv
+        hash: md5
+        md5: 96ca9aba435884a433f095ef467a61f2
+        size: 30474

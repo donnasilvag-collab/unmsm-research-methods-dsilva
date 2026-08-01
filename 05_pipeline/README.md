@@ -1,49 +1,94 @@
 # UNMSM Research Methods - Donna Silva
 
 **Author:** Donna Silva
+**Research topic:** *Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study.*
 
-**Research topic:** Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study.
+## Purpose
 
-## Purpose of This Folder
+This folder implements the reproducibility component of the study. It follows the Git + DVC + MLflow + Docker architecture required for the course, while respecting the study's current stage: no internal company data, personal data, interview material, or confidential code is stored here.
 
-This folder contains the technical deliverable for step 5 of the course. Its purpose is not yet to host real data or final scripts, but to explain clearly how the study's reproducible workflow will be organized once authorized and anonymized inputs become available.
+The executable component analyzes a complementary, public benchmark of software repositories. It makes the data preparation and descriptive comparison reproducible; it does **not** test the study's causal question, estimate company-level risk-management maturity, or replace the planned mixed-methods fieldwork.
 
-## Scope of This Delivery
+## What Is Reproduced
 
-At this stage, the reproducible component is defined at the level of design and traceability. For that reason, the folder includes:
+The source workbook contains 48 public GitHub repositories: 24 linked to organization profiles that publicly declare Peru and 24 international benchmark repositories. The analytical unit is one repository. The preparation script retains the publicly observable indicators and four documented proxy dimensions:
 
-- an explicit description of the reproducible workflow;
-- a minimum inventory of expected artifacts;
-- a checklist to ensure consistency among data, analysis, and results;
-- basic criteria for using Git, DVC, and MLflow in a way that fits the sensitive nature of the study.
+| Dimension | Interpretation in this benchmark |
+| --- | --- |
+| `risk_governance_observed` | Public signals related to security policy, dependency updates, repository activity, and licensing. |
+| `access_control_observed` | Public signals related to CODEOWNERS, workflow permissions, and signed commits. |
+| `source_code_protection_observed` | Public signals related to automated scanning, dependency updates, signing, and action pinning. |
+| `traceability_observed` | Public signals related to activity, commit conventions, issue references, merge history, tests, and releases. |
 
-## Reproducibility Approach
+These are observability proxies, not direct measures of internal controls. A missing public signal means **not observed**, not that the control does not exist. Results are descriptive and are reported at the repository level. For the Peru stratum, uncertainty intervals use organization-clustered bootstrap resampling because several repositories may belong to the same organization.
 
-- **Git** will be used to version documents, instruments, scripts, and methodological decisions.
-- **DVC** will be reserved for versioning anonymized datasets, variable matrices, questionnaire versions, and tabular derivatives that should not be stored directly in Git.
-- **MLflow** will be used as a log of analytical executions, especially to record alternative quantitative processing configurations, analytical assumptions, and comparable results.
+## Folder Structure
 
-## Reproducible Workflow
+```text
+05_pipeline/
++-- .dvc/                         # DVC configuration for this subproject
++-- data/
+|   +-- raw/                      # Small public source workbook, tracked by Git
+|   +-- create_dataset.py          # Validates and derives the analysis-ready CSV
+|   `-- public_repo_security_benchmark.csv  # DVC output after `dvc repro`
++-- docs/                         # Reproducible run visualization
++-- results/                      # Summary tables produced by the experiments
++-- src/
+|   +-- train.py                  # Repository-level benchmark analysis
+|   `-- run_experiments.py        # Four seeded MLflow runs and summary artifacts
++-- dvc.yaml                      # Data-preparation stage
++-- params.yaml                   # Explicit, versioned analytical parameters
++-- requirements.txt              # Pinned runtime dependencies
+`-- Dockerfile                    # Isolated execution environment
+```
 
-1. Collection or consolidation of anonymized data from surveys, interviews, and authorized institutional documents.
-2. Versioning of the tabular input and its transformations through DVC.
-3. Cleaning, coding, and generation of analytical variables.
-4. Execution of the quantitative analysis and recording of parameters, outputs, and metrics in MLflow.
-5. Integration with qualitative findings and preservation of traceable evidence within the repository.
+`train.py` retains the conventional filename used in the course template, but it does not train a predictive model. It performs the parameterized benchmark analysis described above.
 
-## Minimum Pipeline Artifacts
+## Reproducible Execution
 
-- `README.md`: explains the purpose of the folder and the overall workflow.
-- `artifact_manifest.md`: defines which files or products should exist when the pipeline is executed with real inputs.
-- `reproducibility_checklist.md`: summarizes the minimum controls required to maintain traceability and consistency.
+Run the following commands from `05_pipeline/`.
 
-## Expected Outputs
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+dvc repro
+python src/run_experiments.py
+```
 
-- An anonymized quantitative dataset.
-- A variable dictionary and coding criteria.
-- A record of reproducible analytical runs.
-- Traceability evidence linking input, transformation, analysis, and result.
+This produces:
 
-## Current Status
+- `data/public_repo_security_benchmark.csv`, the validated analysis-ready dataset;
+- `results/benchmark_summary_seed_*.csv`, one clustered-bootstrap summary per seed;
+- `results/seed_stability.csv`, the cross-seed comparison;
+- `docs/mlflow_runs.png`, a visual summary of the latest run;
+- `mlruns/`, local MLflow metadata with parameters, metrics, and result artifacts.
 
-The pipeline is documented as a preliminary reproducible design, sufficient for this phase of the course. Real data, executable scripts, and `.dvc` files are not yet incorporated because the study has not yet reached fieldwork or data processing. Even so, the structure, versioning criteria, and traceability logic are already defined.
+To inspect the local experiment ledger, run:
+
+```powershell
+mlflow ui --backend-store-uri .\mlruns
+```
+
+## Docker Execution
+
+```powershell
+docker build -t unmsm-security-benchmark .
+docker run --rm unmsm-security-benchmark
+```
+
+The container runs `dvc repro` and then executes the four seeded analyses. It does not require credentials or network access because the small, public workbook is included in the repository.
+
+## Reproducibility Controls
+
+- **Git:** versions scripts, parameters, documentation, and the small public source workbook.
+- **DVC:** declares the derived CSV as a reproducible output of `dvc.yaml`; a fresh clone can rebuild it with `dvc repro` rather than relying on a private remote.
+- **MLflow:** records the seed, bootstrap iterations, analysis scope, summary metrics, and output artifacts for each run.
+- **Docker:** fixes the execution environment defined in `requirements.txt`.
+- **Four-seed rule:** the pipeline runs seeds `13`, `21`, `42`, and `87` to check that the bootstrap intervals are not an artifact of one random draw.
+
+## Limits and Responsible Use
+
+The workbook is a deliberately bounded public benchmark, not a probability sample of Peruvian companies. The location field is self-declared by public GitHub organization profiles; public repositories cannot reveal private governance processes; and repositories from the same organization are not independent observations. The workflow therefore avoids causal language, avoids imputing unavailable OpenSSF values as zero, and keeps the planned survey and interview evidence outside this public demonstration.
+
+See [artifact_manifest.md](artifact_manifest.md) and [reproducibility_checklist.md](reproducibility_checklist.md) for the expected artifacts and the final verification steps.

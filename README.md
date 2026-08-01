@@ -18,7 +18,7 @@ This repository brings together the main deliverables for the course *Research M
 - `02_method/`: method comparison and methodological fit matrix.
 - `03_protocol/`: core research protocol.
 - `04_literature/`: preliminary systematic review, gap analysis, and PRISMA diagram.
-- `05_pipeline/`: documentary design of the reproducible pipeline and its minimum artifacts.
+- `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, with scripts, parameters, results, and reproducibility controls.
 
 ## Study Focus
 
