@@ -34,7 +34,7 @@ Khan et al. (2022) describe persistent weaknesses in the consistent integration 
 
 ### General research question
 
-**How and to what extent does the maturity of information security risk management influence the effectiveness of access control, source code protection, and software development traceability in Peruvian companies?**
+**How and to what extent is information security risk-management maturity associated with the effectiveness of access control, source code protection, and software development traceability in Peruvian companies, and how do organizational, human, and operational factors help explain the observed relationships?**
 
 ### Specific research questions
 
@@ -45,7 +45,7 @@ Khan et al. (2022) describe persistent weaknesses in the consistent integration 
 
 ### General objective
 
-To analyze how and to what extent information security risk-management maturity influences the effectiveness of access control, source code protection, and software development traceability in Peruvian companies.
+To analyze the association between information security risk-management maturity and the effectiveness of access control, source code protection, and software development traceability in Peruvian companies, and to examine the organizational, human, and operational factors that help explain the observed relationships.
 
 ### Specific objectives
 

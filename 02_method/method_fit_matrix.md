@@ -4,11 +4,11 @@
 
 The research question is reformulated at a more operational level to support method selection:
 
-**How and to what extent does the maturity of information security risk management influence the effectiveness of access control, source code protection, and software development traceability in Peruvian companies?**
+**How and to what extent is information security risk-management maturity associated with the effectiveness of access control, source code protection, and software development traceability in Peruvian companies, and how do organizational, human, and operational factors help explain the observed relationships?**
 
 This formulation is methodologically more precise for three reasons. First, it clearly defines the **explanatory variable**: the maturity of information security risk management. Second, it identifies three observable **outcome dimensions** within the development process: access control, source code protection, and traceability. Third, it makes it possible to work with both quantitative evidence, to estimate associations or patterns, and qualitative evidence, to explain why those patterns hold or weaken in organizational practice.
 
-In line with the paradigm adopted in the previous section, the question does not seek only to describe security practices, but to understand a relationship of influence that has both a technical and an organizational dimension.
+In line with the paradigm adopted in the previous section, the question goes beyond describing security practices. It examines the relationship between organizational maturity and control effectiveness, together with the technical and organizational conditions that help explain it.
 
 ## 2.2. Three Candidate Methods
 
@@ -16,7 +16,7 @@ Before selecting a primary method, three plausible alternatives are considered f
 
 | Candidate method | Brief description | Strengths for this study | Main limitations |
 | --- | --- | --- | --- |
-| **Explanatory sequential mixed methods design** | Begins with a quantitative phase to identify relationships between variables and continues with a qualitative phase to explain the results. | Makes it possible to measure the influence of risk management and, at the same time, interpret the human, organizational, and operational factors that help explain the findings. | Requires more time, stronger fieldwork organization, and rigorous integration between both phases. |
+| **Explanatory sequential mixed methods design** | Begins with a quantitative phase to identify relationships between variables and continues with a qualitative phase to explain the results. | Makes it possible to estimate associations involving risk-management maturity and interpret the human, organizational, and operational factors that help explain the findings. | Requires more time, stronger fieldwork organization, and rigorous integration between both phases. |
 | **Multiple case study** | Examines several development companies in depth to understand how they manage risks and how their security controls operate in practice. | Provides a rich understanding of context, security culture, and tensions between formal rules and actual practice. | Has less capacity to estimate the magnitude of relationships between variables and depends heavily on access to organizations willing to share sensitive information. |
 | **Cross-sectional quantitative correlational study** | Collects data through a survey or structured instrument to analyze associations between risk management maturity and security outcomes. | Is more time-efficient, facilitates comparison across organizations, and can generate clear statistical results. | May be insufficient for explaining why specific associations appear and may depend too strongly on self-reported data. |
 
@@ -42,11 +42,11 @@ The main reason is that the research question requires answers at two levels at 
 
 The explanatory sequential design addresses that need without fragmenting the study. The quantitative phase can provide an initial view of maturity levels and of their relationship with access control, source code protection, and traceability. The qualitative phase can then examine in greater depth the cases, profiles, or patterns that require further explanation. This logic is consistent with the methodological principle adopted in the course: the point is not to mix techniques merely for breadth, but to justify why a single approach is insufficient for answering the question properly.
 
-In addition, this method avoids two frequent problems. The first is falling into an exclusively quantitative study that measures declared practices but does not explain how they function in reality. The second is remaining in a rich qualitative understanding that is nevertheless insufficient to support the idea of influence between variables. Against those limitations, the mixed design offers a stronger balance between measurement, interpretation, and academic usefulness.
+This method also avoids two frequent problems. An exclusively quantitative study could measure declared practices without explaining how they function in daily work. A qualitative study could provide a detailed account of that work but would offer a weaker basis for comparing relationships between variables across organizations. The mixed design balances measurement and interpretation while keeping the analysis tied to the research question.
 
 ## 2.5. Why the Other Options Are Not Selected
 
-The **multiple case study** is a serious and useful option, especially because the problem has a strong organizational dimension. However, it is not selected as the primary method because the question does not seek only to understand experiences or practices; it also seeks to estimate the extent to which risk management is related to concrete security outcomes. A case study could explain context very well, but it would be more limited in supporting a claim of influence with a sufficient comparative basis.
+The **multiple case study** is a serious and useful option, especially because the problem has a strong organizational dimension. However, it is not selected as the primary method because the question does not seek only to understand experiences or practices; it also seeks to estimate the extent to which risk-management maturity is related to concrete security outcomes. A case study could explain context very well, but it would provide a more limited comparative basis for examining those relationships across organizations.
 
 The **cross-sectional quantitative correlational study** is also viable, particularly because of its feasibility and its potential to cover more organizations in less time. Nevertheless, it is not the strongest option because the topic involves sensitive information and practices that are often not fully reflected in surveys or self-reported instruments. If only this method were chosen, the study might end up describing formal perceptions of maturity without explaining the gap between policy, practice, and organizational behavior.
 

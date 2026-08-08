@@ -6,7 +6,7 @@
 
 ## 3.2. Abstract
 
-In Peruvian software development companies, information security can no longer be treated as a late-stage review or as a requirement detached from technical work. Code repositories, privileged access, integration and deployment pipelines, and activity logs all form part of an increasingly complex risk surface. Although many organizations claim to apply risk management practices, there is still limited empirical evidence on how that management actually influences three critical dimensions of secure development: access control, source code protection, and software development traceability.
+In Peruvian software development companies, information security can no longer be treated as a late-stage review or as a requirement detached from technical work. Code repositories, privileged access, integration and deployment pipelines, and activity logs all form part of an increasingly complex risk surface. Although many organizations claim to apply risk-management practices, there is still limited empirical evidence on how the maturity of those practices is associated with three dimensions of secure development: access control, source code protection, and software development traceability.
 
 This research proposes a mixed methods study with an explanatory sequential design in Peruvian software development companies. The first, quantitative phase will assess the relationship between the maturity of information security risk management and the effectiveness of controls related to access, code protection, and traceability. The second, qualitative phase will use semistructured interviews and document review to explain why those relationships become stronger or weaker in specific Peruvian organizational contexts. The study is expected to offer a clearer characterization of the problem, identify the technical and human factors that shape control effectiveness, and formulate practical recommendations for strengthening software development security.
 
@@ -16,7 +16,7 @@ This research proposes a mixed methods study with an explanatory sequential desi
 
 Digital transformation has increased organizational dependence on software and, with it, exposure to risks associated with unauthorized access, source code leakage, loss of traceability, and weak change governance within the development cycle. In many companies, especially those working with agile, DevOps, or continuous integration approaches, pressure to deliver quickly may lead to security controls existing formally but not always being applied with equal strength in everyday practice.
 
-Recent literature shows that security is still integrated unevenly into software development. Gaps persist between policy and execution, between documented control and actual behavior, and between declared maturity and effective capability to prevent incidents or detect deviations. In that context, it is not enough to know whether a company has policies or tools; it is also necessary to understand whether risk management influences the actual quality of controls over access, repositories, and operational traceability.
+Recent literature shows that security is still integrated unevenly into software development. Gaps persist between policy and execution, between documented control and actual behavior, and between declared maturity and effective capability to prevent incidents or detect deviations. In that context, it is not enough to know whether a company has policies or tools. The study must examine whether higher risk-management maturity is associated with stronger controls over access, repositories, and operational traceability.
 
 The research problem therefore emerges from a lack of applied evidence: it is still not sufficiently clear how and to what extent the maturity of information security risk management is related to observable outcomes within software development in Peruvian companies, nor which organizational factors explain differences between companies with apparently similar levels of control.
 
@@ -34,7 +34,7 @@ In this line of work, Khan et al. (2022) argue that many organizations still do 
 
 ### General Research Question
 
-**How and to what extent does the maturity of information security risk management influence the effectiveness of access control, source code protection, and software development traceability in Peruvian companies?**
+**How and to what extent is information security risk-management maturity associated with the effectiveness of access control, source code protection, and software development traceability in Peruvian companies, and how do organizational, human, and operational factors help explain the observed relationships?**
 
 ### Specific Research Questions
 
@@ -45,7 +45,7 @@ In this line of work, Khan et al. (2022) argue that many organizations still do 
 
 ### General Objective
 
-To analyze how and to what extent the maturity of information security risk management influences the effectiveness of access control, source code protection, and software development traceability in Peruvian companies.
+To analyze the association between information security risk-management maturity and the effectiveness of access control, source code protection, and software development traceability in Peruvian companies, and to examine the organizational, human, and operational factors that help explain the observed relationships.
 
 ### Specific Objectives
 

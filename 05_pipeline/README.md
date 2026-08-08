@@ -7,7 +7,7 @@
 
 This folder implements the reproducibility component of the study. It follows the Git + DVC + MLflow + Docker architecture required for the course, while respecting the study's current stage: no internal company data, personal data, interview material, or confidential code is stored here.
 
-The executable component analyzes a complementary, public benchmark of software repositories. It makes the data preparation and descriptive comparison reproducible; it does **not** test the study's causal question, estimate company-level risk-management maturity, or replace the planned mixed-methods fieldwork.
+The executable component analyzes a complementary, public benchmark of software repositories. It makes the data preparation and descriptive comparison reproducible; it does **not** test the relationships proposed for the fieldwork, estimate company-level risk-management maturity, or replace the planned mixed-methods study.
 
 ## What Is Reproduced
 

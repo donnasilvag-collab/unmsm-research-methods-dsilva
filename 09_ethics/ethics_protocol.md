@@ -2,7 +2,7 @@
 
 ## 9.1. Purpose and Scope
 
-This ethics protocol supports the planned study, **Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**. It translates the methodological commitments in `03_protocol/protocol_v0.1.md` into practical safeguards for fieldwork, data handling, reporting, and the use of public evidence.
+This ethics protocol supports the planned study, **Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**. It translates the methodological commitments in `03_protocol/protocol_v1.0.md` into practical safeguards for fieldwork, data handling, reporting, and the use of public evidence.
 
 The research has two clearly separated components:
 
