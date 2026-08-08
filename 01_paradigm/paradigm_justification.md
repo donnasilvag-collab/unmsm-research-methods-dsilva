@@ -10,7 +10,7 @@ Even so, recent literature continues to show a substantial gap between that idea
 
 The problem is not exclusively technical. Course materials and the reviewed studies converge on the idea that the effective adoption of secure development practices also depends on organizational variables such as security culture, leadership, governance, training, metrics, and maturity level. Tsai et al. (2025), for example, propose performance baselines for secure software development that combine proactive security awareness with reactive risk management. That dual perspective is especially useful for this study because it suggests that the effectiveness of access control, source code protection, and software development traceability depends not only on the existence of formal controls, but also on how those controls are understood, applied, and sustained in practice.
 
-From that starting point, the research problem is formulated as follows: **the influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies**, with particular interest in agile, DevOps, and continuous integration contexts.
+From that starting point, the research problem is formulated under the title **Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**, with particular interest in access control, source code protection, and traceability in agile, DevOps, and continuous integration contexts.
 
 ### 1.2. Preliminary Research Question
 

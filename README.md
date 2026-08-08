@@ -6,7 +6,7 @@
 
 This repository organizes the course deliverables around the following research topic:
 
-**Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study**
+**Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**
 
 ## Academic Purpose
 

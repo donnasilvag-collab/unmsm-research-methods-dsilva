@@ -2,7 +2,7 @@
 
 ## 9.1. Purpose and Scope
 
-This ethics protocol supports the planned study, **Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study**. It translates the methodological commitments in `03_protocol/protocol_v0.1.md` into practical safeguards for fieldwork, data handling, reporting, and the use of public evidence.
+This ethics protocol supports the planned study, **Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**. It translates the methodological commitments in `03_protocol/protocol_v0.1.md` into practical safeguards for fieldwork, data handling, reporting, and the use of public evidence.
 
 The research has two clearly separated components:
 

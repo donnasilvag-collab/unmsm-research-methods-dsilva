@@ -1,7 +1,7 @@
 # UNMSM Research Methods - Donna Silva
 
 **Author:** Donna Silva
-**Research topic:** *Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study.*
+**Research topic:** *Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas.*
 
 ## Purpose
 

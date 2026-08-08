@@ -2,7 +2,7 @@
 
 ## 10.1. Purpose and status
 
-This plan governs the data created or used in the study, *Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study*. It complements the research protocol in `03_protocol/` and the ethics protocol in `09_ethics/`.
+This plan governs the data created or used in the study, *Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas*. It complements the research protocol in `03_protocol/` and the ethics protocol in `09_ethics/`.
 
 The project currently has one active data component: a bounded public benchmark of 48 GitHub repositories documented in `05_pipeline/`. The survey, interviews, and authorized organizational-document review described in the research protocol are future components. No fieldwork data, personal data, confidential documents, proprietary source code, credentials, or incident records are stored in this public repository.
 

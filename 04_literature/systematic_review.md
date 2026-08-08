@@ -4,7 +4,7 @@
 
 The question guiding this preliminary systematic review is the following:
 
-**What recent and relevant evidence helps explain the influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability, with particular interest in Peruvian companies?**
+**What recent and relevant evidence helps explain the relationship between risk-management maturity and the effectiveness of secure-development controls, particularly access control, source code protection, and traceability, in Peruvian companies?**
 
 This formulation makes it possible to focus the review on four dimensions directly linked to the research problem: **risk management**, **access control**, **source code and development artifact protection**, and **software development traceability**.
 

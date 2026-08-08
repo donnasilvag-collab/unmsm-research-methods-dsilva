@@ -7,7 +7,7 @@ This document follows the reporting intent of Model Cards (Mitchell et al., 2019
 - **Developed by:** Donna Silva, UNMSM Doctoral Program in Deep Technologies.
 - **Date:** July 2026.
 - **Artifact type:** Parameterized descriptive analysis of publicly observable software-security signals.
-- **Research context:** *Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study.*
+- **Research context:** *Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas.*
 - **Implementation:** `05_pipeline/data/create_dataset.py` validates the public workbook. `05_pipeline/src/train.py` performs the seeded clustered-bootstrap comparison. `05_pipeline/src/run_experiments.py` records four runs in MLflow when the complete environment is installed.
 - **Versioned inputs:** `05_pipeline/data/raw/public_repo_security_peru_benchmark.xlsx`, `params.yaml`, `dvc.yaml`, and `dvc.lock`.
 - **Citation:** this repository, `05_pipeline/` and `07_model_card/`.

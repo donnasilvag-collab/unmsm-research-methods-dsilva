@@ -2,7 +2,7 @@
 
 ## 11.1. Audit purpose and boundary
 
-This report examines possible sources of bias in the public repository benchmark and in the planned mixed methods fieldwork for the study, *Influence of information security risk management on the effectiveness of access control, source code protection, and software development traceability in Peruvian companies: protocol for a mixed methods study*.
+This report examines possible sources of bias in the public repository benchmark and in the planned mixed methods fieldwork for the study, *Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas*.
 
 Conventional model bias audits use classifiers, protected attributes, favorable outcomes, and before-and-after fairness metrics. Those elements do not exist in the current project. `05_pipeline/` contains a descriptive comparison of public repository signals, not a predictive model, risk score, automated decision, or person-level classification. The appropriate audit therefore focuses on representation, selection, measurement, aggregation, and interpretation rather than applying demographic-parity or equalized-odds metrics without a valid denominator.
 
