@@ -17,7 +17,7 @@
 - [x] The operationalization matrix, four instrument files, screening log, quality appraisal, and PRISMA counts pass `src/validate_repository.py`.
 - [x] All project Python files compile, Markdown links resolve, and `git diff --check` reports no whitespace errors.
 - [x] No private fieldwork data, credentials, `.env` file, virtual environment, MLflow store, or DVC cache is staged for commit.
-- [x] A GitHub Actions workflow is defined to repeat Python, Markdown, PRISMA, pipeline, and bias-audit checks on pushes and pull requests.
+- [x] GitHub Actions run `31286606880` passed for commit `ad0e455`, repeating Python, Markdown, PRISMA, pipeline, and bias-audit checks on Linux.
 - [ ] The Docker image builds and completes the same preparation and experiment commands.
 
 ## Pending Docker verification
