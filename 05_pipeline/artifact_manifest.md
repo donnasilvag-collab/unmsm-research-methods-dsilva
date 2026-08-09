@@ -8,6 +8,13 @@
 | `params.yaml` | Defines seeds, bootstrap iterations, groups, dimensions, and clustering unit | Git | Included |
 | `src/train.py` | Produces one clustered-bootstrap descriptive comparison | Git | Executable |
 | `src/run_experiments.py` | Executes four seeded analyses and logs them in MLflow | Git + MLflow | Executable |
+| `src/generate_synthetic_fieldwork.py` | Creates deterministic, non-empirical records for scoring tests | Git | Executable; seed fixed by default |
+| `src/score_fieldwork.py` | Validates and scores the 32 survey items under the operationalization rules | Git | Executable in public synthetic or protected fieldwork environments |
+| `fieldwork/synthetic/survey_responses_synthetic.csv` | Tests the survey schema and controlled missing-data cases | Git artifact | Generated; synthetic only |
+| `fieldwork/synthetic/scored_responses_synthetic.csv` | Expected participant-level scoring output for synthetic records | Git artifact | Generated; not a research result |
+| `fieldwork/synthetic/organization_summary_synthetic.csv` | Tests aggregation and the minimum reporting threshold | Git artifact | Generated; synthetic only |
+| `fieldwork/synthetic/item_missingness_synthetic.csv` | Tests item-level missingness reporting | Git artifact | Generated; synthetic only |
+| `fieldwork/synthetic/scoring_metadata_synthetic.json` | Records the source hash, scope, counts, and output set | Git artifact | Generated deterministically |
 | `results/benchmark_summary_seed_*.csv` | Per-seed descriptive summaries and confidence intervals | Git artifact | Generated |
 | `results/seed_stability.csv` | Compares estimates across the four seeded runs | Git artifact | Generated |
 | `docs/mlflow_runs.png` | Visual record of the latest seeded comparison | Git artifact | Generated |
@@ -17,10 +24,11 @@
 | `../11_bias_audit/bias_audit_splits.csv` | Seed-by-dimension before-and-after interval comparison | Git artifact | Generated |
 | `../11_bias_audit/owner_influence_diagnostics.csv` | Anonymized leave-one-owner-out diagnostics | Git artifact | Generated |
 | `../11_bias_audit/bias_audit_summary.csv` | Dimension-level sensitivity decisions | Git artifact | Generated |
+| `../13_presentation/index.html` | Institutional research presentation | Git | Opens locally in a modern browser |
 | `../.github/workflows/repository-quality.yml` | Automated repository and reproducibility checks | GitHub Actions | Runs on pushes and pull requests |
 
 ## Data Boundary
 
 This pipeline must never contain names of participants, institutional documents, interview transcripts, private source code, access tokens, or company-internal control evidence. Those materials belong to the protected fieldwork workflow described in the protocol and require authorization before any analysis is performed.
 
-The present benchmark is public and repository-based. It is retained only as a transparent complement to the future mixed-methods evidence.
+The present benchmark is public and repository-based. It is retained only as a transparent complement to the future mixed-methods evidence. The synthetic scoring files are code fixtures, not observations, and must remain labeled as synthetic in every output.

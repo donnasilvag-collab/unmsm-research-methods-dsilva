@@ -1,0 +1,6 @@
+source,coverage_role,planned_query_scope,planned_export,status,evidence_required
+Scopus,Multidisciplinary citation coverage,Full three-block query plus a separate Peru and Latin America query,RIS and CSV,Planned,"Exact query, filters, date, result count, and unedited export"
+Web of Science Core Collection,Multidisciplinary citation and cited-reference coverage,Full three-block query plus a separate Peru and Latin America query,Plain text or RIS and CSV,Planned,"Exact query, indexes, filters, date, result count, and unedited export"
+IEEE Xplore,Engineering and software-security literature,Adapted three-block query across metadata and abstracts,RIS and CSV,Planned,"Exact query, filters, date, result count, and unedited export"
+ACM Digital Library,Computing and software-engineering literature,Adapted three-block query across titles abstracts and keywords,BibTeX and CSV,Planned,"Exact query, filters, date, result count, and unedited export"
+Semantic Scholar,Discovery and comparison with the course-stage search,Repeat and update the seed query with the thesis date,BibTeX and CSV,Planned,"Exact query, filters, date, result count, and unedited export"

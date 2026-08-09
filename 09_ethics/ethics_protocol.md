@@ -4,10 +4,11 @@
 
 This ethics protocol supports the planned study, **Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**. It translates the methodological commitments in `03_protocol/protocol_v1.0.md` into practical safeguards for fieldwork, data handling, reporting, and the use of public evidence.
 
-The research has two clearly separated components:
+The research has three clearly separated components:
 
 - **Planned mixed methods fieldwork:** a survey of approximately 50 to 80 software-development practitioners from 6 to 10 Peruvian organizations, followed by semistructured interviews with 10 to 15 voluntary key informants selected to explain relevant quantitative patterns.
 - **Public repository benchmark:** a bounded descriptive dataset of 48 public GitHub repositories. It uses repository-level metadata and observable security proxies only. It is not a substitute for fieldwork, does not include confidential organizational information, and does not support causal conclusions about companies or individuals.
+- **Synthetic scoring test:** 22 generated survey records with fictional codes and no source observations. This fixture verifies the scoring and suppression rules. It is not participant evidence and cannot support a research conclusion.
 
 The study may involve developers, technical leaders, DevOps practitioners, quality practitioners, and security practitioners. It also concerns the organizations in which they work because accounts of security practices can reveal operational details. For that reason, protecting people and organizations is part of the research design, not a final editing step.
 
@@ -18,6 +19,7 @@ No recruitment, survey, interview, or collection of non-public organizational ma
 | Source | Planned information | Ethical boundary |
 | --- | --- | --- |
 | Public repository benchmark | Public repository metadata, public organization information, visible workflow and history signals, and OpenSSF Scorecard results when available. | The benchmark uses only information already made public by repository owners. Results are descriptive, do not rank organizations, and are not combined with confidential fieldwork records. |
+| Synthetic scoring test | Generated values for the 32 substantive survey items and expected scoring outputs. | Every file is labeled as synthetic. The test contains no personal or organizational observations and cannot be interpreted as fieldwork. |
 | Structured survey | Voluntary responses on risk identification, evaluation, treatment, monitoring, access control, source code protection, and traceability practices. | The instrument will collect the minimum information needed for analysis. It will not request passwords, access tokens, source code, private URLs, incident evidence, or client information. |
 | Semistructured interviews | Participants' interpretations of controls, routines, adoption barriers, and differences between documented procedures and daily practice. | Interviews will not seek proprietary code, credentials, system configurations, vulnerabilities, incident details, or trade secrets. The researcher will redirect the conversation if such information is offered. |
 | Organizational documents | Voluntarily provided, non-confidential or redacted policies, guidelines, procedures, or other evidence relevant to the research questions. | Documents will be used only with explicit authorization and within the agreed scope. Sensitive material will not be uploaded to the public repository or used as an example that identifies an organization. |

@@ -9,6 +9,8 @@ This folder implements the reproducibility component of the study. It follows th
 
 The executable component analyzes a complementary, public benchmark of software repositories. It makes the data preparation and descriptive comparison reproducible; it does **not** test the relationships proposed for the fieldwork, estimate company-level risk-management maturity, or replace the planned mixed-methods study.
 
+A separate fieldwork module implements the scoring rules for the draft survey. Its committed input is synthetic and exists only to test the code before protected collection begins. The public benchmark and the synthetic survey test remain separate analytical paths.
+
 ## What Is Reproduced
 
 The source workbook contains 48 public GitHub repositories: 24 linked to organization profiles that publicly declare Peru and 24 international benchmark repositories. The analytical unit is one repository. The preparation script retains the publicly observable indicators and four documented proxy dimensions:
@@ -31,9 +33,14 @@ These are observability proxies, not direct measures of internal controls. A mis
 |   +-- raw/                      # Small public source workbook, tracked by Git
 |   +-- create_dataset.py          # Validates and derives the analysis-ready CSV
 |   `-- public_repo_security_benchmark.csv  # DVC output after `dvc repro`
++-- fieldwork/
+|   +-- README.md                 # Protected-data boundary and scoring instructions
+|   `-- synthetic/               # Generated test records and expected outputs
 +-- docs/                         # Reproducible run visualization
 +-- results/                      # Summary tables produced by the experiments
 +-- src/
+|   +-- generate_synthetic_fieldwork.py  # Creates deterministic test records
+|   +-- score_fieldwork.py        # Validates and scores the 32 survey items
 |   +-- train.py                  # Repository-level benchmark analysis
 |   `-- run_experiments.py        # Four seeded MLflow runs and summary artifacts
 +-- dvc.yaml                      # Data-preparation stage
@@ -78,6 +85,19 @@ To inspect the local experiment ledger, run:
 mlflow ui --backend-store-uri .\mlruns
 ```
 
+## Synthetic fieldwork scoring test
+
+Run the following commands from `05_pipeline/`:
+
+```powershell
+python src/generate_synthetic_fieldwork.py
+python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synthetic.csv --output-dir fieldwork/synthetic --synthetic
+```
+
+The scoring script applies the rules in `03_protocol/operationalization_matrix.md`. It requires both items for each risk-management dimension, at least five of seven risk dimensions for the overall maturity score, and at least four of six items for each control outcome. Missing answers remain missing. If any organization falls below the threshold in `params.yaml`, the script withholds the full organization breakdown to prevent reconstruction by subtraction.
+
+See [`fieldwork/README.md`](fieldwork/README.md) before using the script with authorized data. Real exports and scored files must stay in protected storage outside Git. The current module does not run correlations, regression, or psychometric validation because those analyses require approved fieldwork data and a frozen instrument.
+
 ## Docker Execution
 
 ```powershell
@@ -94,10 +114,10 @@ The container runs `dvc repro` and then executes the four seeded analyses. It do
 - **MLflow:** records the seed, bootstrap iterations, analysis scope, summary metrics, and output artifacts for each run.
 - **Docker:** fixes the execution environment defined in `requirements.txt`.
 - **Four-seed rule:** the pipeline runs seeds `13`, `21`, `42`, and `87` to check that the bootstrap intervals are not an artifact of one random draw.
-- **Continuous integration:** `.github/workflows/repository-quality.yml` checks Python compilation, Markdown links, PRISMA arithmetic, DOI coverage, pipeline regeneration, and bias-audit CSV outputs on pushes and pull requests.
+- **Continuous integration:** `.github/workflows/repository-quality.yml` checks Python compilation, Markdown links, PRISMA arithmetic, DOI coverage, public-pipeline regeneration, synthetic survey scoring, and bias-audit CSV outputs on pushes and pull requests.
 
 ## Limits and Responsible Use
 
-The workbook is a deliberately bounded public benchmark, not a probability sample of Peruvian companies. The location field is self-declared by public GitHub organization profiles; public repositories cannot reveal private governance processes; and repositories from the same organization are not independent observations. The workflow therefore avoids causal language, avoids imputing unavailable OpenSSF values as zero, and keeps the planned survey and interview evidence outside this public demonstration.
+The workbook is a deliberately bounded public benchmark, not a probability sample of Peruvian companies. The location field is self-declared by public GitHub organization profiles; public repositories cannot reveal private governance processes; and repositories from the same organization are not independent observations. The synthetic survey file is also not evidence. The workflow therefore avoids causal language, avoids imputing unavailable OpenSSF values as zero, and keeps the planned survey and interview evidence outside this public demonstration.
 
 See [artifact_manifest.md](artifact_manifest.md) and [reproducibility_checklist.md](reproducibility_checklist.md) for the expected artifacts and the recorded verification steps. Docker remains pending until the image can be built and executed in an environment with a Docker engine.

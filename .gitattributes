@@ -7,6 +7,9 @@
 *.lock text eol=crlf
 *.txt text eol=lf
 *.csv text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.svg text eol=lf
 *.dvc text eol=lf
 *.png binary
 *.pdf binary

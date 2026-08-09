@@ -24,7 +24,7 @@ AND ("access control" OR authorization OR traceability OR "source code" OR repos
 | Main concepts | Risk management, secure SDLC, access control, source-code or development-artifact protection, and traceability |
 | Context requirement | Direct software-development relevance and reasonable transferability to company practice |
 
-The broad query was intentionally retained because no single term consistently covers governance maturity and all three control outcomes. Search refinement for the thesis should add Scopus, Web of Science, IEEE Xplore, ACM Digital Library, and a preserved RIS or BibTeX export from every source.
+The broad query was intentionally retained because no single term consistently covers governance maturity and all three control outcomes. The prospective expansion is defined in [`thesis_search_protocol.md`](thesis_search_protocol.md) and [`database_search_plan.csv`](database_search_plan.csv). It adds Scopus, Web of Science, IEEE Xplore, ACM Digital Library, and a new Semantic Scholar search with preserved RIS, BibTeX, or CSV exports. That plan has not yet been executed and does not alter the course-stage PRISMA counts.
 
 ## 4.3. Eligibility criteria
 

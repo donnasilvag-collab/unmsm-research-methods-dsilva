@@ -1,0 +1,3 @@
+organization_code,organization_count,participant_count,reporting_scope,risk_management_maturity_eligible_n,risk_management_maturity_mean,access_control_effectiveness_eligible_n,access_control_effectiveness_mean,source_code_protection_eligible_n,source_code_protection_mean,development_traceability_eligible_n,development_traceability_mean
+ALL_PARTICIPANTS,4,22,synthetic demonstration only,22,3.1428571428571432,21,3.1507936507936503,21,2.9682539682539684,21,3.119047619047619
+ORGANIZATION_BREAKDOWN_WITHHELD,4,22,synthetic demonstration only,,,,,,,,

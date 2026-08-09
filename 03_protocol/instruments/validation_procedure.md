@@ -53,7 +53,7 @@ Write a scoring script before outcome analysis. Test it with synthetic records t
 - missing values never become zero;
 - the optional 0 to 100 transformation preserves ordering and does not create categories.
 
-The final codebook, scoring script, and synthetic tests will be versioned in the repository. Protected pilot and fieldwork data will not be committed.
+The reference scoring implementation and synthetic tests are versioned in [`05_pipeline/fieldwork/`](../../05_pipeline/fieldwork/README.md). They verify the current item schema, completeness rules, and missing-data handling. They do not establish reliability or validity. The final codebook and frozen scoring script will be confirmed after pilot review. Protected pilot and fieldwork data will not be committed.
 
 ## Step 7: freeze and approval
 

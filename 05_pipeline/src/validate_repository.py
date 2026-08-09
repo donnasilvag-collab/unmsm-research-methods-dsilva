@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
 from pathlib import Path
 from urllib.parse import unquote
@@ -23,9 +24,22 @@ REQUIRED_FILES = [
     "04_literature/screening_log.csv",
     "04_literature/quality_appraisal.csv",
     "04_literature/prisma_flow.csv",
+    "04_literature/thesis_search_protocol.md",
+    "04_literature/database_search_plan.csv",
+    "05_pipeline/fieldwork/README.md",
+    "05_pipeline/src/generate_synthetic_fieldwork.py",
+    "05_pipeline/src/score_fieldwork.py",
+    "05_pipeline/fieldwork/synthetic/survey_responses_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/scored_responses_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/organization_summary_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/item_missingness_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/scoring_metadata_synthetic.json",
     "11_bias_audit/bias_audit_summary.csv",
     "11_bias_audit/owner_influence_diagnostics.csv",
     "12_integrity/ai_use_policy.md",
+    "13_presentation/README.md",
+    "13_presentation/index.html",
+    "13_presentation/unmsm-logo.svg",
 ]
 LINK_PATTERN = re.compile(r"!?(?:\[[^\]]*\])\(([^)]+)\)")
 ITEM_PATTERN = re.compile(r"\| (RM\d{2}|AC\d{2}|SC\d{2}|TR\d{2}) \|")
@@ -153,6 +167,99 @@ def validate_quality(errors: list[str]) -> None:
             errors.append(f"Invalid quality rating for {row['record_id']}")
 
 
+def validate_search_plan(errors: list[str]) -> None:
+    rows = read_csv("04_literature/database_search_plan.csv")
+    expected_sources = {
+        "Scopus",
+        "Web of Science Core Collection",
+        "IEEE Xplore",
+        "ACM Digital Library",
+        "Semantic Scholar",
+    }
+    if {row["source"] for row in rows} != expected_sources:
+        errors.append("The prospective thesis search plan has missing or unexpected sources.")
+    if any(row["status"] != "Planned" for row in rows):
+        errors.append("An unexecuted thesis search source is not marked Planned.")
+
+
+def validate_fieldwork_scoring(errors: list[str]) -> None:
+    base = "05_pipeline/fieldwork/synthetic"
+    source = read_csv(f"{base}/survey_responses_synthetic.csv")
+    scored = read_csv(f"{base}/scored_responses_synthetic.csv")
+    summary = read_csv(f"{base}/organization_summary_synthetic.csv")
+    missingness = read_csv(f"{base}/item_missingness_synthetic.csv")
+    expected_items = {
+        *(f"RM{index:02d}" for index in range(1, 15)),
+        *(f"AC{index:02d}" for index in range(1, 7)),
+        *(f"SC{index:02d}" for index in range(1, 7)),
+        *(f"TR{index:02d}" for index in range(1, 7)),
+    }
+    if len(source) != 22 or len({row["organization_code"] for row in source}) != 4:
+        errors.append("Synthetic fieldwork input must contain 22 records in four organizations.")
+    if any(row.get("synthetic_record", "").lower() != "true" for row in source):
+        errors.append("Every synthetic fieldwork input row must be explicitly labeled.")
+    if not expected_items.issubset(source[0] if source else {}):
+        errors.append("Synthetic fieldwork input does not contain all 32 survey items.")
+    if len(scored) != len(source):
+        errors.append("Synthetic scored output does not preserve the input row count.")
+
+    score_columns = [
+        "risk_management_maturity",
+        "access_control_effectiveness",
+        "source_code_protection",
+        "development_traceability",
+    ]
+    for row in scored:
+        for column in score_columns:
+            value = row.get(column, "")
+            if value and not 1 <= float(value) <= 5:
+                errors.append(f"Synthetic score is outside 1 to 5: {column}")
+    first_record = next((row for row in scored if row["participant_code"] == "SYN_P001"), None)
+    if first_record is None or first_record["access_control_effectiveness"]:
+        errors.append("Synthetic missing-data case does not enforce the access-control rule.")
+
+    expected_summary_rows = {
+        "ALL_PARTICIPANTS",
+        "ORGANIZATION_BREAKDOWN_WITHHELD",
+    }
+    if {row["organization_code"] for row in summary} != expected_summary_rows:
+        errors.append("Synthetic organization summary has unexpected reporting groups.")
+    suppressed = next(
+        (
+            row
+            for row in summary
+            if row["organization_code"] == "ORGANIZATION_BREAKDOWN_WITHHELD"
+        ),
+        None,
+    )
+    if suppressed is None or any(suppressed[f"{column}_mean"] for column in score_columns):
+        errors.append("The synthetic small-group row does not suppress its score means.")
+    if len(missingness) != 32 or sum(int(row["missing_count"]) for row in missingness) != 10:
+        errors.append("Synthetic item-missingness output does not match the controlled cases.")
+
+    metadata_path = ROOT / base / "scoring_metadata_synthetic.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    if (
+        metadata.get("synthetic_data") is not True
+        or metadata.get("participant_count") != 22
+        or metadata.get("organization_count") != 4
+    ):
+        errors.append("Synthetic scoring metadata has an invalid scope or record count.")
+
+
+def validate_presentation(errors: list[str]) -> None:
+    presentation = (ROOT / "13_presentation/index.html").read_text(encoding="utf-8")
+    current_title = (
+        "Risk management maturity and effectiveness of secure development "
+        "controls in Peruvian companies"
+    )
+    previous_title = "Influence of information security risk management on the effectiveness"
+    if current_title not in presentation:
+        errors.append("The presentation does not use the current research title.")
+    if previous_title in presentation:
+        errors.append("The presentation still contains the previous research title.")
+
+
 def main() -> None:
     errors: list[str] = []
     validate_required_files(errors)
@@ -161,6 +268,9 @@ def main() -> None:
     validate_prisma(errors)
     validate_screening(errors)
     validate_quality(errors)
+    validate_search_plan(errors)
+    validate_fieldwork_scoring(errors)
+    validate_presentation(errors)
 
     if errors:
         details = "\n".join(f"- {error}" for error in errors)

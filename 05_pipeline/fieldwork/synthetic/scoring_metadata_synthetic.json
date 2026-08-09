@@ -1,0 +1,19 @@
+{
+  "input_file": "survey_responses_synthetic.csv",
+  "input_sha256": "e3196b52a70409db31b2d795003ebc6328ed218f41d5b52bab9ceca297c0a1cc",
+  "minimum_organization_size_for_reporting": 5,
+  "organization_count": 4,
+  "outputs": [
+    "scored_responses_synthetic.csv",
+    "organization_summary_synthetic.csv",
+    "item_missingness_synthetic.csv"
+  ],
+  "params_file": "params.yaml",
+  "params_sha256": "c03d668a931d03859caee8cc8d0a98e0c6e6827f4c49f1a08cb28e0d2bc020a1",
+  "participant_count": 22,
+  "score_range": [
+    1,
+    5
+  ],
+  "synthetic_data": true
+}

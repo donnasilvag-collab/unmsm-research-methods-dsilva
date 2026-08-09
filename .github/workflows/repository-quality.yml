@@ -31,6 +31,12 @@ jobs:
       - name: Compile Python sources
         run: python -m compileall -q 05_pipeline 11_bias_audit
 
+      - name: Reproduce synthetic fieldwork scoring
+        working-directory: 05_pipeline
+        run: |
+          python src/generate_synthetic_fieldwork.py
+          python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synthetic.csv --output-dir fieldwork/synthetic --synthetic
+
       - name: Validate research records and Markdown
         run: python 05_pipeline/src/validate_repository.py
 
@@ -54,6 +60,11 @@ jobs:
           05_pipeline/results/benchmark_summary_seed_42.csv
           05_pipeline/results/benchmark_summary_seed_87.csv
           05_pipeline/results/seed_stability.csv
+          05_pipeline/fieldwork/synthetic/survey_responses_synthetic.csv
+          05_pipeline/fieldwork/synthetic/scored_responses_synthetic.csv
+          05_pipeline/fieldwork/synthetic/organization_summary_synthetic.csv
+          05_pipeline/fieldwork/synthetic/item_missingness_synthetic.csv
+          05_pipeline/fieldwork/synthetic/scoring_metadata_synthetic.json
           11_bias_audit/bias_audit_splits.csv
           11_bias_audit/owner_influence_diagnostics.csv
           11_bias_audit/bias_audit_summary.csv

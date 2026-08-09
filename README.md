@@ -21,14 +21,17 @@ This repository brings together the main deliverables for the course *Research M
 - `01_paradigm/`: research paradigm justification.
 - `02_method/`: method comparison and methodological fit matrix.
 - `03_protocol/`: core research protocol, operationalization matrix, survey, interview guide, document-review form, and validation procedure.
-- `04_literature/`: preliminary systematic review, search and screening records, quality appraisal, gap analysis, and validated PRISMA diagram.
-- `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, with scripts, parameters, results, and reproducibility controls.
+- `04_literature/`: preliminary systematic review, search and screening records, quality appraisal, gap analysis, validated PRISMA diagram, and prospective search protocol for the thesis review.
+- `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, plus a synthetic test of the future survey-scoring rules.
 - `06_repro_audit/`: reproducibility audit of a relevant public AI and software-security experiment.
 - `07_model_card/`: analytical artifact card and datasheet for the public repository security benchmark.
 - `09_ethics/`: ethics protocol for the planned mixed methods fieldwork and the bounded public benchmark.
 - `10_data_mgmt/`: data management plan for public benchmark materials and planned fieldwork data.
 - `11_bias_audit/`: bias audit of the public benchmark and safeguards for the planned fieldwork.
 - `12_integrity/`: research-integrity records, AI-use policy, and literature-screening controls.
+- `13_presentation/`: institutional HTML presentation summarizing the research design, current evidence, limitations, and next steps.
+
+`03_protocol/protocol_v1.0.md` is the current protocol. Version `v0.1` is retained as history. A later version will be created only after genuine methodological feedback, instrument testing, or an approved protocol amendment.
 
 ## Study Focus
 
@@ -57,8 +60,18 @@ cd ..
 
 The final command compares naive and organization-aware uncertainty and performs a leave-one-owner-out sensitivity audit. Numerical outputs are written to `11_bias_audit/*.csv`; no company or repository ranking is produced.
 
+The scoring rules for the future survey can be tested without protected data:
+
+```powershell
+cd 05_pipeline
+python src/generate_synthetic_fieldwork.py
+python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synthetic.csv --output-dir fieldwork/synthetic --synthetic
+```
+
+These commands use 22 synthetic records. They verify the item schema, completeness rules, missing-value treatment, and suppression threshold. They do not validate the instrument or produce findings about Peruvian companies.
+
 Docker instructions are available in [`05_pipeline/README.md`](05_pipeline/README.md). Docker remains an unverified option until the image can be built and run in an available Docker environment.
 
 ## Research boundary
 
-The committed workbook is a bounded public-repository benchmark. It does not measure the internal risk-management maturity of a company and cannot answer the fieldwork question. Survey responses, interviews, consent records, organizational evidence, credentials, proprietary code, and security-sensitive information must remain outside Git and follow the ethics and data-management controls in this repository.
+The committed workbook is a bounded public-repository benchmark. It does not measure the internal risk-management maturity of a company and cannot answer the fieldwork question. The synthetic survey records test code only. Survey responses, interviews, consent records, organizational evidence, credentials, proprietary code, and security-sensitive information must remain outside Git and follow the ethics and data-management controls in this repository.

@@ -11,13 +11,18 @@
 - [x] `python src/run_experiments.py` completes seeds 13, 21, 42, and 87.
 - [x] Each MLflow run logs the seed, bootstrap iterations, scope note, summary metrics, and output artifacts.
 - [x] `results/seed_stability.csv`, the four seed summaries, and `docs/mlflow_runs.png` were regenerated.
+- [x] The synthetic fieldwork generator creates 22 labeled records with four controlled missing-data cases.
+- [x] The fieldwork scorer applies the 32-item rules and withholds the full organization breakdown when one synthetic group has fewer than five participants.
+- [x] The scoring metadata records the synthetic scope, source hash, participant count, organization count, and output set.
 - [x] The README states that the benchmark is descriptive and does not establish causal effects or internal company practices.
 - [x] Missing OpenSSF scores remain missing and are not converted to zero.
 - [x] `python 11_bias_audit/bias_audit.py` regenerates 16 interval records, 36 anonymized owner-influence records, four summary decisions, and the audit chart.
 - [x] The operationalization matrix, four instrument files, screening log, quality appraisal, and PRISMA counts pass `src/validate_repository.py`.
+- [x] The prospective thesis search plan and institutional HTML presentation pass the repository consistency checks.
 - [x] All project Python files compile, Markdown links resolve, and `git diff --check` reports no whitespace errors.
 - [x] No private fieldwork data, credentials, `.env` file, virtual environment, MLflow store, or DVC cache is staged for commit.
 - [x] GitHub Actions run `31286606880` passed for commit `ad0e455`, repeating Python, Markdown, PRISMA, pipeline, and bias-audit checks on Linux.
+- [ ] GitHub Actions have passed with the new synthetic fieldwork and presentation checks.
 - [ ] The Docker image builds and completes the same preparation and experiment commands.
 
 ## Pending Docker verification
@@ -34,6 +39,8 @@ docker run --rm unmsm-security-benchmark
 ```powershell
 .\.venv\Scripts\dvc.exe repro
 .\.venv\Scripts\python.exe src\run_experiments.py
+.\.venv\Scripts\python.exe src\generate_synthetic_fieldwork.py
+.\.venv\Scripts\python.exe src\score_fieldwork.py --input fieldwork\synthetic\survey_responses_synthetic.csv --output-dir fieldwork\synthetic --synthetic
 cd ..
 .\05_pipeline\.venv\Scripts\python.exe 11_bias_audit\bias_audit.py
 .\05_pipeline\.venv\Scripts\python.exe 05_pipeline\src\validate_repository.py

@@ -18,3 +18,73 @@ analysis:
 
 reporting:
   scope_note: Public repository benchmark; descriptive evidence only, not a causal or company-level estimate.
+
+fieldwork_scoring:
+  missing_tokens: ["", "NA", "N/A", "not applicable", "insufficient knowledge"]
+  minimum_risk_dimensions: 5
+  minimum_organization_size_for_reporting: 5
+  context_fields:
+    role_group:
+      - Software development
+      - Technical leadership
+      - DevOps or platform
+      - Quality or testing
+      - Information security
+      - Other relevant role
+    experience_group:
+      - Less than 2 years
+      - 2 to 5 years
+      - 6 to 10 years
+      - More than 10 years
+    company_size_group:
+      - 1 to 49
+      - 50 to 249
+      - 250 or more
+      - Prefer not to answer
+    delivery_approach:
+      - Agile
+      - DevOps or continuous delivery
+      - Hybrid
+      - Other
+      - Insufficient knowledge
+  dimensions:
+    governance_accountability:
+      construct: risk_management_maturity
+      items: [RM01, RM02]
+      minimum_answered: 2
+    risk_identification:
+      construct: risk_management_maturity
+      items: [RM03, RM04]
+      minimum_answered: 2
+    assessment_prioritization:
+      construct: risk_management_maturity
+      items: [RM05, RM06]
+      minimum_answered: 2
+    risk_treatment:
+      construct: risk_management_maturity
+      items: [RM07, RM08]
+      minimum_answered: 2
+    monitoring_review:
+      construct: risk_management_maturity
+      items: [RM09, RM10]
+      minimum_answered: 2
+    training_risk_culture:
+      construct: risk_management_maturity
+      items: [RM11, RM12]
+      minimum_answered: 2
+    learning_continuous_improvement:
+      construct: risk_management_maturity
+      items: [RM13, RM14]
+      minimum_answered: 2
+    access_control_effectiveness:
+      construct: secure_development_control
+      items: [AC01, AC02, AC03, AC04, AC05, AC06]
+      minimum_answered: 4
+    source_code_protection:
+      construct: secure_development_control
+      items: [SC01, SC02, SC03, SC04, SC05, SC06]
+      minimum_answered: 4
+    development_traceability:
+      construct: secure_development_control
+      items: [TR01, TR02, TR03, TR04, TR05, TR06]
+      minimum_answered: 4
