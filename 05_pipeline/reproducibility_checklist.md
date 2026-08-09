@@ -19,10 +19,12 @@
 - [x] `python 11_bias_audit/bias_audit.py` regenerates 16 interval records, 36 anonymized owner-influence records, four summary decisions, and the audit chart.
 - [x] The operationalization matrix, four instrument files, screening log, quality appraisal, and PRISMA counts pass `src/validate_repository.py`.
 - [x] The prospective thesis search plan and institutional HTML presentation pass the repository consistency checks.
+- [x] The environment, source manifest, data dictionary, quality checks, analysis report, public inspection guide, presentation evidence map, and reproduction record are documented in `docs/`.
 - [x] All project Python files compile, Markdown links resolve, and `git diff --check` reports no whitespace errors.
 - [x] No private fieldwork data, credentials, `.env` file, virtual environment, MLflow store, or DVC cache is staged for commit.
 - [x] GitHub Actions run `31286606880` passed for commit `ad0e455`, repeating Python, Markdown, PRISMA, pipeline, and bias-audit checks on Linux.
 - [x] GitHub Actions run `31294241279` passed for commit `2d5d905`, including the synthetic fieldwork and presentation checks.
+- [x] GitHub Actions run `31294320073` passed for commit `64ca91b`, confirming the expanded repository-quality workflow.
 - [ ] The Docker image builds and completes the same preparation and experiment commands.
 
 ## Pending Docker verification

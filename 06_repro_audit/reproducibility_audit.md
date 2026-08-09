@@ -8,6 +8,8 @@ This audit was conducted on the first arXiv version, submitted on 22 October 202
 
 The public source code, datasets, and installation instructions are available at [BugmakerCC/Trace](https://github.com/BugmakerCC/Trace). TRACE was selected because it evaluates an LLM-supported method for detecting access-control vulnerabilities in source-code repositories. This connects directly with the technical side of the present study: access control, source-code protection, repository artifacts, and traceability.
 
+The exact preprint snapshot, later journal record, associated artifact, and audit boundary are documented in [`paper_source.md`](paper_source.md).
+
 TRACE is not part of the frozen ten-paper corpus in `04_literature/`. That preliminary corpus was assembled before the journal publication was verified. The final literature review should reassess TRACE against the stated date range, eligibility criteria, and search protocol rather than adding it retrospectively without rerunning the screening record.
 
 ## 6.2. Reproducibility scorecard

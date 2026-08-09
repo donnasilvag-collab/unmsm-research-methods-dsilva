@@ -6,4 +6,4 @@ Open [`index.html`](index.html) in a modern browser. Use the left and right arro
 
 The 15 slides summarize the research problem, question, method, instruments, ethics, reproducibility plan, public benchmark, limitations, feasibility, and next steps. Public benchmark values are labeled as descriptive evidence. The presentation does not report fieldwork findings because participant recruitment and data collection have not begun.
 
-`unmsm-logo.svg` is the institutional visual used by the HTML file. Keep both files in the same directory when presenting without an internet connection.
+`assets/unmsm-logo.svg` is the institutional visual used by the HTML file. Keep the `assets/` folder beside `index.html` when presenting without an internet connection.

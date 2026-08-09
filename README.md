@@ -31,6 +31,8 @@ This repository brings together the main deliverables for the course *Research M
 - `12_integrity/`: research-integrity records, AI-use policy, and literature-screening controls.
 - `13_presentation/`: institutional HTML presentation summarizing the research design, current evidence, limitations, and next steps.
 
+The numbering follows the course delivery sequence. Checkpoint `08` is an integration point rather than a separate deliverable, so the repository does not create an empty placeholder folder. The twelve numbered folders therefore follow the same main structure as the reference repository while retaining the instruments and audit records required by this research design.
+
 `03_protocol/protocol_v1.0.md` is the current protocol. Version `v0.1` is retained as history. A later version will be created only after genuine methodological feedback, instrument testing, or an approved protocol amendment.
 
 ## Study Focus

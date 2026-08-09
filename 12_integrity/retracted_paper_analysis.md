@@ -4,6 +4,8 @@
 
 This exercise examines how a retraction should change literature screening, citation use, and dependent research decisions. It does not investigate the author or repeat the publisher's inquiry. The analysis is limited to the public article record, the publisher's retraction notice, the retained notice PDF, and a search of this repository.
 
+The authoritative DOI records, local evidence file, status-check date, and repository decision are summarized in [`retraction_source.md`](retraction_source.md).
+
 ## 12.2. Bibliographic record and timeline
 
 ### Retracted article

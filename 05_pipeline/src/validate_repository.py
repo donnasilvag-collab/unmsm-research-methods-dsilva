@@ -14,6 +14,20 @@ TITLE = (
     "Madurez de la gestión de riesgos y eficacia de los controles de "
     "desarrollo seguro en empresas peruanas"
 )
+EXPECTED_SECTIONS = {
+    "01_paradigm",
+    "02_method",
+    "03_protocol",
+    "04_literature",
+    "05_pipeline",
+    "06_repro_audit",
+    "07_model_card",
+    "09_ethics",
+    "10_data_mgmt",
+    "11_bias_audit",
+    "12_integrity",
+    "13_presentation",
+}
 REQUIRED_FILES = [
     "03_protocol/operationalization_matrix.md",
     "03_protocol/instruments/survey.md",
@@ -34,12 +48,22 @@ REQUIRED_FILES = [
     "05_pipeline/fieldwork/synthetic/organization_summary_synthetic.csv",
     "05_pipeline/fieldwork/synthetic/item_missingness_synthetic.csv",
     "05_pipeline/fieldwork/synthetic/scoring_metadata_synthetic.json",
+    "05_pipeline/docs/environment.md",
+    "05_pipeline/docs/quality_checks.md",
+    "05_pipeline/docs/source_manifest.csv",
+    "05_pipeline/docs/data_dictionary.csv",
+    "05_pipeline/docs/analysis_report.md",
+    "05_pipeline/docs/presentation_evidence.md",
+    "05_pipeline/docs/public_inspection_sample.md",
+    "05_pipeline/docs/reproduction_record.md",
+    "06_repro_audit/paper_source.md",
     "11_bias_audit/bias_audit_summary.csv",
     "11_bias_audit/owner_influence_diagnostics.csv",
     "12_integrity/ai_use_policy.md",
+    "12_integrity/retraction_source.md",
     "13_presentation/README.md",
     "13_presentation/index.html",
-    "13_presentation/unmsm-logo.svg",
+    "13_presentation/assets/unmsm-logo.svg",
 ]
 LINK_PATTERN = re.compile(r"!?(?:\[[^\]]*\])\(([^)]+)\)")
 ITEM_PATTERN = re.compile(r"\| (RM\d{2}|AC\d{2}|SC\d{2}|TR\d{2}) \|")
@@ -54,6 +78,50 @@ def validate_required_files(errors: list[str]) -> None:
     for relative_path in REQUIRED_FILES:
         if not (ROOT / relative_path).is_file():
             errors.append(f"Required file is missing: {relative_path}")
+
+
+def validate_structure(errors: list[str]) -> None:
+    actual_sections = {
+        path.name
+        for path in ROOT.iterdir()
+        if path.is_dir() and re.fullmatch(r"\d{2}_.+", path.name)
+    }
+    missing = EXPECTED_SECTIONS.difference(actual_sections)
+    unexpected = actual_sections.difference(EXPECTED_SECTIONS)
+    if missing:
+        errors.append(f"Numbered repository sections are missing: {sorted(missing)}")
+    if unexpected:
+        errors.append(f"Unexpected numbered repository sections exist: {sorted(unexpected)}")
+
+
+def validate_pipeline_docs(errors: list[str]) -> None:
+    sources = read_csv("05_pipeline/docs/source_manifest.csv")
+    expected_source_ids = {f"SRC{index:02d}" for index in range(1, 7)}
+    if {row.get("source_id") for row in sources} != expected_source_ids:
+        errors.append("The pipeline source manifest does not contain the six controlled sources.")
+
+    dictionary = read_csv("05_pipeline/docs/data_dictionary.csv")
+    documented_variables = {row.get("variable") for row in dictionary}
+    required_variables = {
+        "stratum",
+        "repository_url",
+        "risk_governance_observed",
+        "access_control_observed",
+        "source_code_protection_observed",
+        "traceability_observed",
+        "observed_overall",
+        "git_clone_status",
+    }
+    if not required_variables.issubset(documented_variables):
+        errors.append("The pipeline data dictionary omits a required analytical variable.")
+
+    analysis = (ROOT / "05_pipeline/docs/analysis_report.md").read_text(encoding="utf-8")
+    if "Fieldwork has not begun" not in analysis or "does not answer" not in analysis:
+        errors.append("The analysis report does not state its fieldwork boundary clearly.")
+
+    environment = (ROOT / "05_pipeline/docs/environment.md").read_text(encoding="utf-8")
+    if "Docker remains unverified" not in environment:
+        errors.append("The environment record does not preserve the pending Docker status.")
 
 
 def validate_markdown(errors: list[str]) -> None:
@@ -258,12 +326,18 @@ def validate_presentation(errors: list[str]) -> None:
         errors.append("The presentation does not use the current research title.")
     if previous_title in presentation:
         errors.append("The presentation still contains the previous research title.")
+    if 'src="unmsm-logo.svg"' in presentation:
+        errors.append("The presentation still uses the previous root-level logo path.")
+    if 'src="assets/unmsm-logo.svg"' not in presentation:
+        errors.append("The presentation does not reference its institutional asset folder.")
 
 
 def main() -> None:
     errors: list[str] = []
     validate_required_files(errors)
+    validate_structure(errors)
     validate_markdown(errors)
+    validate_pipeline_docs(errors)
     validate_survey(errors)
     validate_prisma(errors)
     validate_screening(errors)

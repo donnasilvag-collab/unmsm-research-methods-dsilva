@@ -18,6 +18,11 @@
 | `results/benchmark_summary_seed_*.csv` | Per-seed descriptive summaries and confidence intervals | Git artifact | Generated |
 | `results/seed_stability.csv` | Compares estimates across the four seeded runs | Git artifact | Generated |
 | `docs/mlflow_runs.png` | Visual record of the latest seeded comparison | Git artifact | Generated |
+| `docs/source_manifest.csv` and `docs/data_dictionary.csv` | Record source scope, provenance, variables, and interpretive limits | Git | Included and reviewed |
+| `docs/environment.md` and `docs/quality_checks.md` | Record the validated runtime and data checks | Git | Included and reviewed |
+| `docs/analysis_report.md` | Summarizes the bounded descriptive results and their limits | Git | Included and tied to generated CSV files |
+| `docs/presentation_evidence.md` | Maps presentation statements to repository evidence | Git | Included and reviewed |
+| `docs/public_inspection_sample.md` and `docs/reproduction_record.md` | Explain public inspection and separate confirmed from pending work | Git | Included and reviewed |
 | `mlruns/` | Local MLflow run metadata, metrics, parameters, and artifacts | Local MLflow store (ignored by Git) | Generated locally and inspectable; not committed |
 | `Dockerfile` and `requirements.txt` | Rebuild the execution environment | Git | Included |
 | `../11_bias_audit/bias_audit.py` | Compares row and owner-clustered uncertainty and runs leave-one-owner-out sensitivity analysis | Git | Executable after `dvc repro` |

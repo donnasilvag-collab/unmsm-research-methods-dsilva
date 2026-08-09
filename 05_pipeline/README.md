@@ -36,7 +36,7 @@ These are observability proxies, not direct measures of internal controls. A mis
 +-- fieldwork/
 |   +-- README.md                 # Protected-data boundary and scoring instructions
 |   `-- synthetic/               # Generated test records and expected outputs
-+-- docs/                         # Reproducible run visualization
++-- docs/                         # Environment, provenance, quality, results, and run evidence
 +-- results/                      # Summary tables produced by the experiments
 +-- src/
 |   +-- generate_synthetic_fieldwork.py  # Creates deterministic test records
@@ -121,3 +121,5 @@ The container runs `dvc repro` and then executes the four seeded analyses. It do
 The workbook is a deliberately bounded public benchmark, not a probability sample of Peruvian companies. The location field is self-declared by public GitHub organization profiles; public repositories cannot reveal private governance processes; and repositories from the same organization are not independent observations. The synthetic survey file is also not evidence. The workflow therefore avoids causal language, avoids imputing unavailable OpenSSF values as zero, and keeps the planned survey and interview evidence outside this public demonstration.
 
 See [artifact_manifest.md](artifact_manifest.md) and [reproducibility_checklist.md](reproducibility_checklist.md) for the expected artifacts and the recorded verification steps. Docker remains pending until the image can be built and executed in an environment with a Docker engine.
+
+The supporting records in [`docs/`](docs/) provide an English data dictionary, source manifest, environment record, quality checks, concise analysis report, public inspection guidance, presentation evidence map, and reproduction record. The workbook remains the authoritative row-level provenance source.
