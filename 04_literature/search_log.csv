@@ -1,0 +1,7 @@
+search_date,source,action,query_or_scope,records_input,records_output,evidence_retained,limitation
+2026-06-25,Semantic Scholar,Seed database search,"Boolean query recorded in systematic_review.md; years 2006-2025; English or Spanish",,31,"Query and aggregate count","Original 31-record export was not preserved"
+2026-06-25,Reference tracking and local corpus,Complementary identification,"Backward references and previously assembled local full texts",,12,"Local article corpus and aggregate count","Not a closed bibliographic database"
+2026-06-25,Combined records,Deduplication,"Title DOI and version comparison",43,36,"Aggregate PRISMA count","Record-level log was not preserved before title screening"
+2026-06-25,Title and abstract set,Eligibility screening,"Predefined topic and publication criteria",36,16,"Aggregate PRISMA count","Twenty excluded title and abstract records are not reconstructable from the retained export"
+2026-08-08,Full-text set,Decision validation,"Publication type relevance method detail and transferability",16,10,"screening_log.csv","Record-level evidence is complete from full-text assessment onward"
+2026-08-08,Publisher pages and DOI records,Status and identifier check,"Ten included studies and six excluded full texts",16,16,"DOI or stable identifier in screening_log.csv","Status is time-bound and must be rechecked before thesis submission"

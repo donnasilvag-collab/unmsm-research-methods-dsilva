@@ -54,7 +54,25 @@ The before-and-after audit tests one specific analytical risk: treating reposito
 
 The clustered intervals are wider in all four dimensions when averaged across seeds 13, 21, 42, and 87. The point estimates do not change. Wider intervals are not a worse result; they make the limited amount of independent organizational evidence more visible. This correction does not address selection bias, measurement bias, or the non-probabilistic comparison frame.
 
-`bias_audit.py` regenerates the 16 seed-by-dimension records in `bias_audit_splits.csv` and the comparison in `before_after_chart.png`. The chart is a before-and-after dependency correction, not a protected-group fairness intervention.
+The second diagnostic removes one Peru-stratum owner at a time and recalculates each point difference. Owner names are replaced with stable aliases in the output. The largest absolute and relative shift shows how strongly one organization can move the aggregate comparison.
+
+| Observed dimension | Most influential alias | Largest absolute shift | Largest relative shift | Sign changes | Sensitivity flag |
+| --- | --- | ---: | ---: | ---: | --- |
+| Risk governance | ORG08 | 1.004167 | 27.15% | 0 | Review owner sensitivity |
+| Access control | ORG08 | 0.486111 | 28.00% | 0 | Review owner sensitivity |
+| Source-code protection | ORG08 | 0.600000 | 32.32% | 0 | Review owner sensitivity |
+| Traceability | ORG07 | 0.595634 | 20.68% | 0 | Stable for bounded description |
+
+No leave-one-owner-out result changes the sign of a difference. However, three dimensions cross the project's 25% relative-shift review threshold. The threshold is a diagnostic rule chosen for this exercise, not a recognized fairness standard. Its purpose is to prevent a result from being described as stable when one owner materially affects its magnitude.
+
+`bias_audit.py` regenerates four outputs:
+
+- `bias_audit_splits.csv` contains 16 seed-by-dimension interval comparisons;
+- `owner_influence_diagnostics.csv` contains 36 leave-one-owner-out records;
+- `bias_audit_summary.csv` contains one decision row for each observed dimension;
+- `before_after_chart.png` displays interval inflation and owner influence together.
+
+The chart is a before-and-after dependency correction and sensitivity analysis, not a protected-group fairness intervention.
 
 ## 11.5. Bias-risk register for the public benchmark
 
@@ -69,7 +87,22 @@ The clustered intervals are wider in all four dimensions when averaged across se
 | Snapshot and history bias | The workbook records one extraction date and limited observed history. | A temporary change or older public history could be treated as a durable organizational practice. | Extraction date and collection method are documented. | Version any refresh separately and compare snapshots only with an explicit date and method note. |
 | Reputational harm | Named public repositories can invite unsupported conclusions about organizations. | Descriptive research could become an informal ranking or procurement signal. | The model card and ethics protocol prohibit ranking and operational use. | Report aggregate results and do not publish a league table of organizations or repositories. |
 
-## 11.6. Assessment of current controls
+## 11.6. Audit algorithm
+
+The executable exercise follows a fixed sequence:
+
+1. Read the DVC-generated benchmark and the parameters in `05_pipeline/params.yaml`.
+2. Verify that the Peru and International benchmark strata are present.
+3. Calculate the fixed difference in repository-level means for each of the four observed dimensions.
+4. For each seed and dimension, draw 2,000 bootstrap samples. The before method samples Peru repositories as independent rows. The after method samples Peru owners and retains the repositories contributed by each selected owner. Both methods resample International benchmark repositories at row level.
+5. Calculate percentile intervals and compare their widths. A larger clustered interval indicates that the row-level method understated uncertainty from repeated owners.
+6. Remove one Peru owner at a time. Recalculate each difference, its absolute shift, its relative shift, and whether its sign changes.
+7. Flag a dimension for review when any omission changes the sign or when the largest relative shift exceeds 25% of the full point estimate.
+8. Write the record-level outputs and chart. The script never exposes owner names in the influence files.
+
+This algorithm matches the current research object. It does not predict maturity, classify companies, or allocate a benefit. Applying a demographic fairness metric would require a different dataset, a defensible protected-group definition, a reference outcome, and separate ethical approval.
+
+## 11.7. Assessment of current controls
 
 The current public artifact does not need a model-level mitigation such as reweighing, threshold adjustment, or post-processing because it does not make a prediction. It does require design and analysis controls that reduce avoidable misinterpretation:
 
@@ -82,7 +115,11 @@ The current public artifact does not need a model-level mitigation such as rewei
 
 These controls reduce specific risks, but they do not turn the dataset into a representative sample or a direct measure of internal security practice. The numerical after table concerns dependence correction only. It is not evidence of improved demographic fairness, and it does not assess a decision model.
 
-## 11.7. Audit plan for the future fieldwork
+Three findings follow from the executable diagnostics. First, organization clustering matters because all clustered intervals are wider than the naive intervals. Second, no single owner reverses a point estimate, but one owner changes the magnitude of three dimensions enough to trigger review. Third, traceability is less sensitive under the stated rule, although it remains subject to the same coverage and measurement limits.
+
+The review flags do not justify deleting an owner or modifying the data. They require transparent reporting, aggregate rather than ranked presentation, and cautious interpretation. Removing a record because it weakens a preferred conclusion would create a new source of bias.
+
+## 11.8. Audit plan for the future fieldwork
 
 The protocol anticipates purposive recruitment of approximately 50 to 80 practitioners from 6 to 10 organizations, followed by interviews with 10 to 15 key informants. This approach can produce useful explanatory evidence, but access through professional networks, organization permissions, job role, seniority, company size, and geographic concentration can shape whose experience enters the study.
 
@@ -98,7 +135,9 @@ The study does not currently require demographic attributes such as race, ethnic
 | A quotation can identify a person or organization through combined details. | Perform disclosure review before reporting qualitative material. | Generalize, redact, aggregate, or withhold the quotation, as specified in `09_ethics/` and `10_data_mgmt/`. |
 | Missing responses differ by recruitment path or question topic. | Document item nonresponse and withdrawals without attempting to infer private reasons. | Report the missingness, avoid filling it with assumptions, and qualify any comparison affected by it. |
 
-## 11.8. Decision rules for interpretation and dissemination
+The fieldwork analysis will use the same principle at the correct unit. Participants are the unit of observation and companies are grouping units. With only 6 to 10 companies, quantitative inference will remain exploratory. The analysis will use company-clustered uncertainty as a sensitivity device and will repeat the primary associations after omitting one company at a time. A larger participant count within the same companies will not be treated as broader organizational evidence.
+
+## 11.9. Decision rules for interpretation and dissemination
 
 | Situation | Required decision |
 | --- | --- |
@@ -107,10 +146,33 @@ The study does not currently require demographic attributes such as race, ethnic
 | A fieldwork subgroup has few participants or could reveal an organization. | Suppress or generalize the subgroup result and avoid identifiable quotation. |
 | A recruitment pathway excludes a relevant perspective. | Record the limitation and do not generalize the result to that excluded perspective. |
 | A future analysis introduces a predictive model or an automated recommendation. | Pause the analysis and prepare a separate model, privacy, validation, and fairness assessment before deployment or dissemination. |
+| A leave-one-owner-out shift exceeds 25% or changes sign. | Retain the data, flag the sensitivity, inspect the contribution, and narrow the claim. Do not remove the owner without a documented data-quality reason. |
+| Clustered intervals are materially wider than row-level intervals. | Use the clustered result and explain why row independence was not credible. |
 
-## 11.9. Limits of this audit
+## 11.10. Reproduction
+
+From the repository root, run:
+
+```powershell
+cd 05_pipeline
+dvc repro
+cd ..
+.\05_pipeline\.venv\Scripts\python.exe 11_bias_audit\bias_audit.py
+```
+
+On macOS or Linux with the requirements installed, the final command is:
+
+```bash
+python 11_bias_audit/bias_audit.py
+```
+
+The audit uses seeds 13, 21, 42, and 87. A reproducibility check should compare the generated CSV files with the committed versions. Minor rendering differences in the PNG can occur across operating systems and font libraries, so the CSV files are the numerical record.
+
+## 11.11. Limits of this audit
 
 This audit does not measure discrimination against protected groups because the current artifact contains no person-level outcome, protected attribute, or model decision. It also does not establish that a public repository signal is biased in any specific direction. It identifies the conditions under which the signal can be misunderstood or unevenly available.
+
+The owner-clustered bootstrap still has only nine Peru-stratum owners. Bootstrap percentiles and the 25% sensitivity threshold should therefore be read as diagnostics, not calibrated population inference. The International benchmark also lacks an organization identifier suitable for parallel clustering, which makes the before-and-after comparison asymmetrical. This limitation is retained rather than hidden in the code.
 
 The future fieldwork review cannot be completed until recruitment, consent, and collection occur. Its purpose is to make the checks and decision points visible before access patterns harden into an unexamined sample. The audit must be updated when the fieldwork instruments, recruitment route, and approved data environment are finalized.
 

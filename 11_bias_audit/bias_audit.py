@@ -1,8 +1,8 @@
-"""Compare naive and owner-clustered uncertainty estimates for the benchmark.
+"""Audit dependence and owner influence in the public repository benchmark.
 
-The public benchmark is descriptive and contains no person-level decision or
-protected attribute. The before-and-after comparison therefore addresses
-repository dependence, not demographic fairness or predictive performance.
+The benchmark has no classifier, protected attribute, or person-level decision.
+The appropriate algorithm compares naive and owner-clustered uncertainty, then
+tests whether one Peru-stratum owner dominates a descriptive difference.
 """
 
 from __future__ import annotations
@@ -19,8 +19,11 @@ ROOT = Path(__file__).resolve().parents[1]
 PIPELINE = ROOT / "05_pipeline"
 INPUT = PIPELINE / "data" / "public_repo_security_benchmark.csv"
 PARAMS = PIPELINE / "params.yaml"
-OUTPUT_CSV = Path(__file__).with_name("bias_audit_splits.csv")
+OUTPUT_SPLITS = Path(__file__).with_name("bias_audit_splits.csv")
+OUTPUT_INFLUENCE = Path(__file__).with_name("owner_influence_diagnostics.csv")
+OUTPUT_SUMMARY = Path(__file__).with_name("bias_audit_summary.csv")
 OUTPUT_CHART = Path(__file__).with_name("before_after_chart.png")
+RELATIVE_SHIFT_REVIEW_THRESHOLD = 0.25
 
 
 def bootstrap_intervals(
@@ -31,7 +34,7 @@ def bootstrap_intervals(
     iterations: int,
     seed: int,
 ) -> tuple[tuple[float, float], tuple[float, float]]:
-    """Return naive row-level and owner-clustered 95% bootstrap intervals."""
+    """Return naive row and owner-clustered 95% bootstrap intervals."""
     naive_rng, clustered_rng, benchmark_rng = [
         np.random.default_rng(child) for child in np.random.SeedSequence(seed).spawn(3)
     ]
@@ -63,13 +66,108 @@ def bootstrap_intervals(
         clustered_differences[index] = clustered_peru_mean - benchmark_mean
 
     naive_interval = tuple(np.quantile(naive_differences, [0.025, 0.975]))
-    clustered_interval = tuple(
-        np.quantile(clustered_differences, [0.025, 0.975])
-    )
+    clustered_interval = tuple(np.quantile(clustered_differences, [0.025, 0.975]))
     return naive_interval, clustered_interval
 
 
-def run_audit() -> pd.DataFrame:
+def owner_influence(
+    peru: pd.DataFrame,
+    benchmark: pd.DataFrame,
+    dimensions: list[str],
+    cluster_column: str,
+) -> pd.DataFrame:
+    """Calculate leave-one-owner-out influence without publishing owner names."""
+    owners = sorted(peru[cluster_column].dropna().unique())
+    aliases = {owner: f"ORG{index:02d}" for index, owner in enumerate(owners, start=1)}
+    rows: list[dict[str, float | bool | str]] = []
+
+    for dimension in dimensions:
+        benchmark_mean = float(benchmark[dimension].mean())
+        full_difference = float(peru[dimension].mean() - benchmark_mean)
+        denominator = max(abs(full_difference), np.finfo(float).eps)
+        for owner in owners:
+            reduced = peru.loc[peru[cluster_column] != owner]
+            reduced_difference = float(reduced[dimension].mean() - benchmark_mean)
+            shift = reduced_difference - full_difference
+            sign_flip = bool(
+                full_difference != 0
+                and reduced_difference != 0
+                and np.sign(full_difference) != np.sign(reduced_difference)
+            )
+            rows.append(
+                {
+                    "dimension": dimension,
+                    "omitted_owner_alias": aliases[owner],
+                    "full_point_difference": full_difference,
+                    "leave_one_owner_out_difference": reduced_difference,
+                    "absolute_shift": abs(shift),
+                    "relative_shift": abs(shift) / denominator,
+                    "sign_flip": sign_flip,
+                    "remaining_owner_count": len(owners) - 1,
+                }
+            )
+
+    result = pd.DataFrame(rows)
+    result.to_csv(
+        OUTPUT_INFLUENCE,
+        index=False,
+        float_format="%.6f",
+        lineterminator="\n",
+    )
+    return result
+
+
+def build_summary(splits: pd.DataFrame, influence: pd.DataFrame) -> pd.DataFrame:
+    """Combine interval and leave-one-owner-out diagnostics by dimension."""
+    rows: list[dict[str, float | int | str]] = []
+    for dimension, dimension_splits in splits.groupby("dimension", sort=False):
+        dimension_influence = influence.loc[influence["dimension"] == dimension]
+        most_influential = dimension_influence.loc[
+            dimension_influence["absolute_shift"].idxmax()
+        ]
+        naive_width = float(dimension_splits["naive_ci_width"].mean())
+        clustered_width = float(dimension_splits["clustered_ci_width"].mean())
+        max_relative_shift = float(dimension_influence["relative_shift"].max())
+        sign_flips = int(dimension_influence["sign_flip"].sum())
+        requires_review = (
+            sign_flips > 0 or max_relative_shift > RELATIVE_SHIFT_REVIEW_THRESHOLD
+        )
+        rows.append(
+            {
+                "dimension": dimension,
+                "point_difference": float(
+                    dimension_splits["point_difference"].iloc[0]
+                ),
+                "mean_naive_ci_width": naive_width,
+                "mean_clustered_ci_width": clustered_width,
+                "clustered_to_naive_width_ratio": clustered_width / naive_width,
+                "most_influential_owner_alias": most_influential[
+                    "omitted_owner_alias"
+                ],
+                "max_absolute_leave_one_owner_out_shift": float(
+                    most_influential["absolute_shift"]
+                ),
+                "max_relative_leave_one_owner_out_shift": max_relative_shift,
+                "leave_one_owner_out_sign_flips": sign_flips,
+                "sensitivity_flag": (
+                    "review_owner_sensitivity"
+                    if requires_review
+                    else "stable_for_bounded_description"
+                ),
+            }
+        )
+
+    result = pd.DataFrame(rows)
+    result.to_csv(
+        OUTPUT_SUMMARY,
+        index=False,
+        float_format="%.6f",
+        lineterminator="\n",
+    )
+    return result
+
+
+def run_audit() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     if not INPUT.exists():
         raise FileNotFoundError(
             f"{INPUT} is missing. Run 'dvc repro' in 05_pipeline first."
@@ -85,9 +183,10 @@ def run_audit() -> pd.DataFrame:
     if peru.empty or benchmark.empty:
         raise ValueError("Both documented strata must be present.")
 
+    dimensions = list(analysis["dimensions"])
     rows: list[dict[str, float | int | str]] = []
     for seed in analysis["seeds"]:
-        for dimension in analysis["dimensions"]:
+        for dimension in dimensions:
             naive, clustered = bootstrap_intervals(
                 peru=peru,
                 benchmark=benchmark,
@@ -124,79 +223,105 @@ def run_audit() -> pd.DataFrame:
                 }
             )
 
-    result = pd.DataFrame(rows)
-    result.to_csv(
-        OUTPUT_CSV,
+    splits = pd.DataFrame(rows)
+    splits.to_csv(
+        OUTPUT_SPLITS,
         index=False,
         float_format="%.6f",
         lineterminator="\n",
     )
-    return result
-
-
-def write_chart(result: pd.DataFrame) -> None:
-    plot_data = (
-        result.groupby("dimension", sort=False)[
-            ["naive_ci_width", "clustered_ci_width"]
-        ]
-        .mean()
-        .reset_index()
+    influence = owner_influence(
+        peru=peru,
+        benchmark=benchmark,
+        dimensions=dimensions,
+        cluster_column=analysis["peru_cluster_column"],
     )
-    labels = (
-        plot_data["dimension"]
-        .str.replace("_observed", "", regex=False)
+    summary = build_summary(splits, influence)
+    return splits, influence, summary
+
+
+def readable_dimension(series: pd.Series) -> pd.Series:
+    return (
+        series.str.replace("_observed", "", regex=False)
         .str.replace("_", " ", regex=False)
         .str.title()
     )
-    positions = np.arange(len(plot_data))
+
+
+def write_chart(summary: pd.DataFrame) -> None:
+    labels = readable_dimension(summary["dimension"])
+    positions = np.arange(len(summary))
     width = 0.34
 
-    figure, axis = plt.subplots(figsize=(12, 7))
+    figure, axes = plt.subplots(1, 2, figsize=(15, 7))
     figure.patch.set_facecolor("#F7F3EA")
-    axis.set_facecolor("#F7F3EA")
-    axis.bar(
+    for axis in axes:
+        axis.set_facecolor("#F7F3EA")
+        axis.spines[["top", "right"]].set_visible(False)
+        axis.grid(axis="y", color="#D8D0C2", linewidth=0.8)
+        axis.set_axisbelow(True)
+
+    axes[0].bar(
         positions - width / 2,
-        plot_data["naive_ci_width"],
+        summary["mean_naive_ci_width"],
         width,
         label="Naive row bootstrap",
         color="#A3A3A3",
     )
-    axis.bar(
+    axes[0].bar(
         positions + width / 2,
-        plot_data["clustered_ci_width"],
+        summary["mean_clustered_ci_width"],
         width,
         label="Owner-clustered bootstrap",
         color="#7A1831",
     )
-    axis.set_xticks(positions, labels, rotation=12, ha="right")
-    axis.set_ylabel("Mean 95% confidence-interval width across four seeds")
-    axis.set_title(
-        "Uncertainty before and after correcting repository dependence",
-        loc="left",
+    axes[0].set_xticks(positions, labels, rotation=18, ha="right")
+    axes[0].set_ylabel("Mean 95% interval width across four seeds")
+    axes[0].set_title("A. Dependence correction", loc="left", weight="bold")
+    axes[0].legend(frameon=False, loc="upper right")
+
+    axes[1].bar(
+        positions,
+        summary["max_relative_leave_one_owner_out_shift"],
+        color="#C49A45",
+    )
+    axes[1].axhline(
+        RELATIVE_SHIFT_REVIEW_THRESHOLD,
+        color="#7A1831",
+        linestyle=":",
+        linewidth=2,
+        label="Project review threshold (25%)",
+    )
+    axes[1].set_xticks(positions, labels, rotation=18, ha="right")
+    axes[1].set_ylabel("Largest relative point-estimate shift")
+    axes[1].set_title("B. Leave-one-owner-out sensitivity", loc="left", weight="bold")
+    axes[1].legend(frameon=False, loc="upper right")
+
+    figure.suptitle(
+        "Bias audit of the public repository benchmark",
+        x=0.06,
+        ha="left",
+        fontsize=18,
         weight="bold",
     )
-    axis.legend(frameon=False, loc="upper right")
-    axis.spines[["top", "right"]].set_visible(False)
-    axis.grid(axis="y", color="#D8D0C2", linewidth=0.8)
-    axis.set_axisbelow(True)
     figure.text(
         0.01,
         0.01,
-        "Descriptive public-repository benchmark; not a protected-group fairness intervention.",
+        "Descriptive observability benchmark. The 25% flag is a review trigger, not a fairness standard.",
         color="#554E45",
         fontsize=9,
     )
-    figure.tight_layout(rect=(0, 0.04, 1, 1))
-    figure.savefig(OUTPUT_CHART, dpi=100)
+    figure.tight_layout(rect=(0, 0.04, 1, 0.94))
+    figure.savefig(OUTPUT_CHART, dpi=120)
     plt.close(figure)
 
 
 def main() -> None:
-    result = run_audit()
-    write_chart(result)
+    splits, influence, summary = run_audit()
+    write_chart(summary)
     print(
-        f"Wrote {len(result)} audit rows to {OUTPUT_CSV.name} "
-        f"and refreshed {OUTPUT_CHART.name}."
+        f"Wrote {len(splits)} interval rows, {len(influence)} owner diagnostics, "
+        f"and {len(summary)} summary rows."
     )
 
 

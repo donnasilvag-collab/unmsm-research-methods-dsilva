@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">PRISMA flow for the preliminary systematic review</title>
+  <desc id="desc">Forty-three records were identified. After deduplication and screening, ten studies were included.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f3ea; }
+      .title { font: 700 42px Georgia, serif; fill: #24211d; }
+      .subtitle { font: 22px Georgia, serif; fill: #5b534a; }
+      .phase { font: 700 22px Georgia, serif; fill: #7a1831; letter-spacing: 1px; }
+      .box { fill: #ffffff; stroke: #7a1831; stroke-width: 4; rx: 18; }
+      .exclude { fill: #efe7dd; stroke: #6c655e; stroke-width: 3; rx: 18; }
+      .included { fill: #7a1831; stroke: #7a1831; stroke-width: 4; rx: 18; }
+      .text { font: 25px Georgia, serif; fill: #24211d; text-anchor: middle; }
+      .small { font: 20px Georgia, serif; fill: #4f4942; text-anchor: middle; }
+      .white { font: 700 27px Georgia, serif; fill: #ffffff; text-anchor: middle; }
+      .arrow { stroke: #7a1831; stroke-width: 5; fill: none; marker-end: url(#head); }
+      .side-arrow { stroke: #6c655e; stroke-width: 4; fill: none; marker-end: url(#head-gray); }
+      .foot { font: 18px Georgia, serif; fill: #5b534a; }
+    </style>
+    <marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a1831"/>
+    </marker>
+    <marker id="head-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6c655e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1100"/>
+  <rect x="0" y="0" width="24" height="1100" fill="#7a1831"/>
+  <text class="title" x="90" y="75">PRISMA 2020 flow</text>
+  <text class="subtitle" x="90" y="112">Preliminary systematic review, validated 8 August 2026</text>
+
+  <text class="phase" x="95" y="205">IDENTIFICATION</text>
+  <rect class="box" x="340" y="150" width="500" height="120"/>
+  <text class="text" x="590" y="197">Primary-source records</text>
+  <text class="text" x="590" y="236">n = 31</text>
+
+  <rect class="box" x="940" y="150" width="500" height="120"/>
+  <text class="small" x="1190" y="197">Reference tracking and local corpus</text>
+  <text class="text" x="1190" y="236">n = 12</text>
+
+  <path class="arrow" d="M590 270 V315 H790 V350"/>
+  <path class="arrow" d="M1190 270 V315 H790 V350"/>
+  <rect class="box" x="540" y="350" width="500" height="100"/>
+  <text class="text" x="790" y="393">Total records identified</text>
+  <text class="text" x="790" y="430">n = 43</text>
+
+  <text class="phase" x="95" y="535">SCREENING</text>
+  <path class="arrow" d="M790 450 V510"/>
+  <rect class="box" x="540" y="510" width="500" height="100"/>
+  <text class="small" x="790" y="553">Records screened after deduplication</text>
+  <text class="text" x="790" y="590">n = 36</text>
+
+  <path class="side-arrow" d="M1040 560 H1125"/>
+  <rect class="exclude" x="1125" y="500" width="380" height="120"/>
+  <text class="small" x="1315" y="548">Duplicates or redundant</text>
+  <text class="small" x="1315" y="579">versions removed: n = 7</text>
+
+  <path class="arrow" d="M790 610 V675"/>
+  <rect class="box" x="540" y="675" width="500" height="100"/>
+  <text class="text" x="790" y="718">Full texts assessed for eligibility</text>
+  <text class="text" x="790" y="755">n = 16</text>
+
+  <path class="side-arrow" d="M540 725 H435"/>
+  <rect class="exclude" x="65" y="665" width="370" height="120"/>
+  <text class="small" x="250" y="713">Title and abstract records</text>
+  <text class="small" x="250" y="744">excluded: n = 20</text>
+
+  <text class="phase" x="95" y="900">INCLUDED</text>
+  <path class="arrow" d="M790 775 V850"/>
+  <rect class="included" x="540" y="850" width="500" height="120"/>
+  <text class="white" x="790" y="902">Studies included in</text>
+  <text class="white" x="790" y="940">qualitative synthesis: n = 10</text>
+
+  <path class="side-arrow" d="M1040 725 H1125"/>
+  <rect class="exclude" x="1125" y="665" width="380" height="120"/>
+  <text class="small" x="1315" y="713">Full texts excluded with</text>
+  <text class="small" x="1315" y="744">recorded reasons: n = 6</text>
+
+  <text class="foot" x="90" y="1042">Course-stage review. Full-text decisions and DOI checks are recorded in screening_log.csv.</text>
+  <text class="foot" x="90" y="1072">The complete 43-record database export was not retained and must be recreated for the thesis review.</text>
+</svg>

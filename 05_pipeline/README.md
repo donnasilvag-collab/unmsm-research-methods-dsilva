@@ -64,6 +64,14 @@ This produces:
 - `docs/mlflow_runs.png`, a visual summary of the latest run;
 - `mlruns/`, local MLflow metadata with parameters, metrics, and result artifacts.
 
+From the repository root, reproduce the complementary bias audit after the pipeline has prepared the data:
+
+```powershell
+.\05_pipeline\.venv\Scripts\python.exe 11_bias_audit\bias_audit.py
+```
+
+The audit compares row-level and owner-clustered bootstrap intervals and performs a leave-one-owner-out sensitivity analysis. It writes three numerical CSV files and one chart in `11_bias_audit/`. The algorithm uses organization aliases in its influence outputs and does not rank repositories or companies.
+
 To inspect the local experiment ledger, run:
 
 ```powershell
@@ -86,9 +94,10 @@ The container runs `dvc repro` and then executes the four seeded analyses. It do
 - **MLflow:** records the seed, bootstrap iterations, analysis scope, summary metrics, and output artifacts for each run.
 - **Docker:** fixes the execution environment defined in `requirements.txt`.
 - **Four-seed rule:** the pipeline runs seeds `13`, `21`, `42`, and `87` to check that the bootstrap intervals are not an artifact of one random draw.
+- **Continuous integration:** `.github/workflows/repository-quality.yml` checks Python compilation, Markdown links, PRISMA arithmetic, DOI coverage, pipeline regeneration, and bias-audit CSV outputs on pushes and pull requests.
 
 ## Limits and Responsible Use
 
 The workbook is a deliberately bounded public benchmark, not a probability sample of Peruvian companies. The location field is self-declared by public GitHub organization profiles; public repositories cannot reveal private governance processes; and repositories from the same organization are not independent observations. The workflow therefore avoids causal language, avoids imputing unavailable OpenSSF values as zero, and keeps the planned survey and interview evidence outside this public demonstration.
 
-See [artifact_manifest.md](artifact_manifest.md) and [reproducibility_checklist.md](reproducibility_checklist.md) for the expected artifacts and the final verification steps.
+See [artifact_manifest.md](artifact_manifest.md) and [reproducibility_checklist.md](reproducibility_checklist.md) for the expected artifacts and the recorded verification steps. Docker remains pending until the image can be built and executed in an environment with a Docker engine.

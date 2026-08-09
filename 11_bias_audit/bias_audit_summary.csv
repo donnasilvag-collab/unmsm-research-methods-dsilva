@@ -1,0 +1,5 @@
+dimension,point_difference,mean_naive_ci_width,mean_clustered_ci_width,clustered_to_naive_width_ratio,most_influential_owner_alias,max_absolute_leave_one_owner_out_shift,max_relative_leave_one_owner_out_shift,leave_one_owner_out_sign_flips,sensitivity_flag
+risk_governance_observed,-3.697917,3.365039,5.049860,1.500684,ORG08,1.004167,0.271549,0,review_owner_sensitivity
+access_control_observed,-1.736111,1.858073,2.490877,1.340570,ORG08,0.486111,0.280000,0,review_owner_sensitivity
+source_code_protection_observed,-1.856342,1.979381,2.737715,1.383117,ORG08,0.600000,0.323216,0,review_owner_sensitivity
+traceability_observed,-2.880254,2.224056,3.372842,1.516527,ORG07,0.595634,0.206799,0,stable_for_bounded_description

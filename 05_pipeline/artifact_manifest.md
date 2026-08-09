@@ -13,6 +13,11 @@
 | `docs/mlflow_runs.png` | Visual record of the latest seeded comparison | Git artifact | Generated |
 | `mlruns/` | Local MLflow run metadata, metrics, parameters, and artifacts | Local MLflow store (ignored by Git) | Generated locally and inspectable; not committed |
 | `Dockerfile` and `requirements.txt` | Rebuild the execution environment | Git | Included |
+| `../11_bias_audit/bias_audit.py` | Compares row and owner-clustered uncertainty and runs leave-one-owner-out sensitivity analysis | Git | Executable after `dvc repro` |
+| `../11_bias_audit/bias_audit_splits.csv` | Seed-by-dimension before-and-after interval comparison | Git artifact | Generated |
+| `../11_bias_audit/owner_influence_diagnostics.csv` | Anonymized leave-one-owner-out diagnostics | Git artifact | Generated |
+| `../11_bias_audit/bias_audit_summary.csv` | Dimension-level sensitivity decisions | Git artifact | Generated |
+| `../.github/workflows/repository-quality.yml` | Automated repository and reproducibility checks | GitHub Actions | Runs on pushes and pull requests |
 
 ## Data Boundary
 

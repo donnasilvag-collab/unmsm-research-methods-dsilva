@@ -1,0 +1,11 @@
+record_id,direct_relevance,method_transparency,evidence_basis,reproducibility_trace,transferability,total,rating,rationale
+S01,2,2,2,1,2,9,High,"Transparent systematic review with broad construct coverage; complete replication materials were not identified"
+S02,2,2,2,1,2,9,High,"Systematic mapping method and agile relevance are clear; evidence trace is sufficient but not fully executable from the article alone"
+S03,2,2,2,1,2,9,High,"Recent case-based quantitative baseline with direct measurement relevance; transfer to Peru still requires testing"
+S04,2,2,1,1,2,8,High,"Clear framework and measurement contribution; empirical support is narrower than the review studies"
+S05,2,2,2,1,1,8,High,"Direct access-control experiment with clear method; participant setting limits organizational transferability"
+S06,2,1,1,1,2,7,Moderate,"Authoritative traceability synthesis and agenda; not designed as a reproducible systematic review"
+S07,2,2,1,1,2,8,High,"Explicit secure agile process with relevant evaluation; evidence does not estimate organizational maturity"
+S08,2,1,1,0,2,6,Moderate,"Direct cultural relevance but short workshop report limits method and evidence trace"
+S09,2,2,1,1,2,8,High,"Detailed process comparison with illustrative case evidence; frameworks require contemporary interpretation"
+S10,2,2,1,1,1,7,Moderate,"Rigorous foundational model-driven approach; narrower and older than the organizational field question"

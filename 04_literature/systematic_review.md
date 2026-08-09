@@ -1,25 +1,14 @@
-# Preliminary Systematic Literature Review
+# Preliminary systematic literature review
 
-## 4.1. Review Question
+## 4.1. Review question
 
-The question guiding this preliminary systematic review is the following:
+**What evidence helps explain the relationship between information security risk-management maturity and the effectiveness of access control, source-code protection, and software-development traceability?**
 
-**What recent and relevant evidence helps explain the relationship between risk-management maturity and the effectiveness of secure-development controls, particularly access control, source code protection, and traceability, in Peruvian companies?**
+The review supports construct definition and instrument design for the study *Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas*. It is a course-stage systematic review, not the final thesis review.
 
-This formulation makes it possible to focus the review on four dimensions directly linked to the research problem: **risk management**, **access control**, **source code and development artifact protection**, and **software development traceability**.
+## 4.2. Search strategy
 
-## 4.2. Search Strategy
-
-| Field | Value |
-| --- | --- |
-| **Primary source** | Semantic Scholar |
-| **Complementary support** | Manual review of cited references and previously assembled local corpus |
-| **Seed search date** | June 25, 2026 |
-| **Coverage period** | 2006-2025 |
-| **Languages** | English and Spanish |
-| **Prioritized document type** | Peer-reviewed journal articles, conference papers, and systematic or mapping reviews |
-
-**Boolean query used in the seed search:**
+The seed search was conducted on 25 June 2026. Semantic Scholar was the primary discovery source. Backward reference tracking and the local article corpus supplied complementary records. The date, source, count, and evidence retained for each search action appear in [`search_log.csv`](search_log.csv).
 
 ```text
 ("software security" OR "secure software development" OR "secure SDLC" OR SSDLC OR DevSecOps OR DevOps)
@@ -27,86 +16,118 @@ AND ("risk management" OR "security risks" OR "threat modeling" OR "vulnerabilit
 AND ("access control" OR authorization OR traceability OR "source code" OR repository)
 ```
 
-The search was designed as a **seed mini-review**, following the logic developed in the course literature review unit. For that reason, in addition to the primary source, backward reference tracking was used to avoid overlooking foundational studies that remain relevant to the problem.
+| Field | Decision |
+| --- | --- |
+| Publication period | 2006 to 2025 |
+| Languages | English or Spanish |
+| Eligible formats | Peer-reviewed journal articles, conference papers, systematic reviews, and mapping reviews |
+| Main concepts | Risk management, secure SDLC, access control, source-code or development-artifact protection, and traceability |
+| Context requirement | Direct software-development relevance and reasonable transferability to company practice |
 
-## 4.3. Inclusion and Exclusion Criteria
+The broad query was intentionally retained because no single term consistently covers governance maturity and all three control outcomes. Search refinement for the thesis should add Scopus, Web of Science, IEEE Xplore, ACM Digital Library, and a preserved RIS or BibTeX export from every source.
 
-**Inclusion criteria:**
+## 4.3. Eligibility criteria
 
-- Publications between **2006 and 2025**.
-- Studies in English or Spanish with full text available.
-- Peer-reviewed journal articles and conference papers directly related to at least one dimension of the study: risk management, secure development, access control, traceability, or protection of development artifacts.
-- Systematic reviews, mapping reviews, empirical studies, comparative frameworks, and methodological works with a clear contribution to the secure software development life cycle.
-- Studies whose contribution is transferable to the context of Peruvian software development companies, even when they are not situated in Peru.
+### Inclusion
 
-**Exclusion criteria:**
+- Full text was available in English or Spanish.
+- The work was published from 2006 through 2025 in an eligible peer-reviewed format.
+- The study addressed at least one predefined construct and maintained a clear connection to software-development practice.
+- The method and contribution could be assessed from the available text.
+- The findings offered empirical, methodological, or theoretical support transferable to the proposed field study.
 
-- Studies focused only on network security, cryptography, or perimeter security without a clear connection to the software development life cycle.
-- Preprints, technical notes, or gray literature without academic peer review.
-- Studies that are overly specific to a domain with low transferability to the central problem.
-- Duplicate texts, preliminary versions, or works with insufficient methodological clarity.
+### Exclusion
 
-## 4.4. PRISMA 2020 Structure
+- Duplicate or superseded record.
+- Preprint or gray literature without confirmed peer review.
+- Network, cryptographic, or domain-specific security work without sufficient connection to the study constructs.
+- Review or article with insufficient method detail to determine how evidence was located, selected, or analyzed.
+- Narrow technical comparison that did not inform risk-management maturity or the effectiveness of the selected controls.
 
-### Preliminary Flow of the Seed Search
+## 4.4. Screening and PRISMA validation
 
-| Phase | n |
-| --- | ---: |
-| Records identified in the primary search | 31 |
-| Additional records from reference tracking and local corpus | 12 |
-| **Total identified** | **43** |
-| Duplicates or redundant versions removed | 7 |
-| Records screened by title and abstract | 36 |
-| Excluded at title and abstract stage | 20 |
-| Full texts assessed for eligibility | 16 |
-| Excluded after full-text reading | 6 |
-| **Studies included in the qualitative synthesis** | **10** |
+| Phase | n | Arithmetic check |
+| --- | ---: | --- |
+| Primary-source records | 31 |  |
+| Records from reference tracking and local corpus | 12 |  |
+| Total identified | 43 | 31 + 12 = 43 |
+| Duplicates or redundant versions removed | 7 | 43 - 7 = 36 |
+| Title and abstract records screened | 36 |  |
+| Excluded at title and abstract | 20 | 36 - 20 = 16 |
+| Full texts assessed | 16 |  |
+| Excluded after full-text assessment | 6 | 16 - 6 = 10 |
+| Studies included in qualitative synthesis | 10 | Validated |
 
-### Main Reasons for Exclusion
+The machine-readable counts are in [`prisma_flow.csv`](prisma_flow.csv), and the record-level full-text decisions are in [`screening_log.csv`](screening_log.csv). The updated diagram is available as [`prisma_diagram.png`](prisma_diagram.png) and [`prisma_diagram.svg`](prisma_diagram.svg).
 
-- Outside the focus of the study: general security without a sufficient link to SDLC, access control, traceability, or risk management.
-- Excessively restricted focus with low transferability.
-- Lack of academic peer review or insufficient methodological detail.
+Regenerate the PNG from the recorded counts with `python 04_literature/render_prisma.py` after installing the pipeline requirements.
 
-**Note:** this flow corresponds to a **preliminary PRISMA draft** prepared for the present course delivery. The counts should be revalidated when the final search is carried out using a closed and unique database for the final version of the review.
+The validation completed on 8 August 2026 confirmed the arithmetic, full-text decisions, DOI values, and publication status of the ten included studies. The original export containing every one of the 43 identification records was not preserved. For that reason, the present evidence trail is reproducible from full-text assessment onward, while the initial identification counts remain a documented legacy of the June search. The final thesis search must preserve complete database exports and deduplication decisions.
 
-The diagram corresponding to this flow is presented in **`prisma_diagram.png`** within the same folder.
+### Full-text exclusions
 
-## 4.5. The 10 Prioritized Studies
+| Record | Decision reason |
+| --- | --- |
+| Zhong (2023), *A Survey of Prevent and Detect Access Control Vulnerabilities* | arXiv preprint without confirmed peer review at screening. |
+| Chen et al. (2025), *TRACE: Securing Smart Contract Repository Against Access Control Vulnerability* | arXiv preprint and smart-contract-specific intervention with limited transferability to the organizational question. |
+| Odera, Otieno, and Ounza (2023), *Security Risks in the Software Development Lifecycle: A Review* | Review method did not provide enough reproducible search and selection detail for this synthesis. |
+| Otieno, Odera, and Ounza (2023), *Theory and Practice in Secure Software Development Lifecycle: A Comprehensive Survey* | Broad narrative coverage overlapped with included reviews and did not document a reproducible selection method. |
+| Kolisnichenko, Kolomytsev, and Nosok (2021), *Software Security Risk Management in DevOps Methodology* | Three-page comparison of five risk methods on one illustrative web application did not examine organizational maturity or the selected outcomes. |
+| Mahomedov (2025), *Information Security Challenges in an Enterprise-Grade Software Development Lifecycle* | Narrative review with insufficient search and selection detail for reproducible inclusion. |
 
-| No. | Prioritized study | Main focus | Reason for prioritization |
+## 4.5. Included studies
+
+| ID | Study | DOI | Contribution to this study |
 | --- | --- | --- | --- |
-| 1 | **Khan, R. A., Khan, S. U., Khan, H. U., and Ilyas, M. (2022). _Systematic Literature Review on Security Risks and Its Practices in Secure Software Development_. IEEE Access, 10, 5456-5481.** | Risks and secure development practices | This is the most valuable synthetic reference for the problem because it organizes risks and practices across the SDLC and provides a broad basis for justifying the variables and dimensions of the study. |
-| 2 | **Valdes-Rodriguez, Y., Hochstetter-Diez, J., Diaz-Arancibia, J., and Cadena-Martinez, R. (2023). _Towards the Integration of Security Practices in Agile Software Development: A Systematic Mapping Review_. Applied Sciences, 13, 4578.** | Security integration in agile contexts | This study is central because it connects secure development with agile environments, where tensions often appear between speed, control discipline, and security maturity. |
-| 3 | **Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., and Tong, L.-I. (2025). _Establishing Performance Baselines for Secure Software Development_. IET Information Security, 2025, 6139424.** | Metrics and performance baselines | It offers a recent perspective on how to measure secure development capabilities, which is useful for translating risk management into observable indicators. |
-| 4 | **Humayun, M., Jhanjhi, N., Almufareh, M. F., and Khalil, M. I. (2022). _Security Threat and Vulnerability Assessment and Measurement in Secure Software Development_. Computers, Materials & Continua, 71(3), 5039-5059.** | Threat and vulnerability assessment | It strengthens the dimension of threat assessment and measurement within the SDLC and supports the quantifiable part of the study. |
-| 5 | **Basin, D., Guarnizo, J., Krstic, S., Nguyen, H., and Ochoa, M. (2023). _Is Modeling Access Control Worth It?_ In _Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23)_.** | Access control | This is one of the studies most directly aligned with the access control dimension, and it compares implementation approaches using empirical evidence. |
-| 6 | **Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mader, P., and Zisman, A. (2014). _Software Traceability: Trends and Future Directions_. In _Future of Software Engineering, FOSE 2014 Proceedings_ (pp. 55-69).** | Traceability | It functions as an anchor reference for the traceability dimension and helps justify traceability as a strategic capability, not merely as a documentation practice. |
-| 7 | **Othmane, L. B., Angin, P., Weffers, H., and Bhargava, B. (2014). _Extending the Agile Development Process to Develop Acceptably Secure Software_. IEEE Transactions on Dependable and Secure Computing, 11(6), 497-509.** | Secure development in agile processes | It is useful for explaining how security can be integrated without breaking the iterative logic of agile or continuous delivery teams. |
-| 8 | **Sanchez-Gordon, M.-L., and Colomo-Palacios, R. (2020). _Security as Culture: A Systematic Literature Review of DevSecOps_. In _Proceedings of the IEEE/ACM 42nd International Conference on Software Engineering Workshops_ (pp. 266-269).** | DevSecOps culture | It complements the technical view with an organizational and cultural dimension, which is especially relevant for explaining why equivalent controls may produce different outcomes. |
-| 9 | **De Win, B., Scandariato, R., Buyens, K., Gregoire, J., and Joosen, W. (2009). _On the Secure Software Development Process: CLASP, SDL and Touchpoints Compared_. Information and Software Technology, 51(7), 1152-1171.** | Processes and secure development frameworks | It provides an early but still valuable comparison among secure development frameworks and supports the process and governance dimension. |
-| 10 | **Basin, D. A., Doser, J., and Lodderstedt, T. (2006). _Model Driven Security: From UML Models to Access Control Infrastructures_. ACM Transactions on Software Engineering and Methodology, 15(1), 39-91.** | Access design and formalization | Although more foundational, it remains highly useful for the access dimension because it shows how control policies can be translated systematically into technical infrastructure. |
+| S01 | Khan, R. A., Khan, S. U., Khan, H. U., and Ilyas, M. (2022). Systematic literature review on security risks and its practices in secure software development. *IEEE Access, 10*, 5456-5481. | [10.1109/ACCESS.2022.3140181](https://doi.org/10.1109/ACCESS.2022.3140181) | Organizes security risks and practices across the SDLC and supports the broad construct map. |
+| S02 | Valdes-Rodriguez, Y., Hochstetter-Diez, J., Diaz-Arancibia, J., and Cadena-Martinez, R. (2023). Towards the integration of security practices in agile software development: A systematic mapping review. *Applied Sciences, 13*, 4578. | [10.3390/app13074578](https://doi.org/10.3390/app13074578) | Documents integration barriers and practices in agile settings. |
+| S03 | Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., and Tong, L.-I. (2025). Establishing performance baselines for secure software development. *IET Information Security, 2025*, 6139424. | [10.1049/ise2/6139424](https://doi.org/10.1049/ise2/6139424) | Connects proactive awareness and reactive risk management with measurable secure-development performance. |
+| S04 | Humayun, M., Jhanjhi, N., Almufareh, M. F., and Khalil, M. I. (2022). Security threat and vulnerability assessment and measurement in secure software development. *Computers, Materials & Continua, 71*(3), 5039-5059. | [10.32604/cmc.2022.019289](https://doi.org/10.32604/cmc.2022.019289) | Supports threat assessment and measurement within the SDLC. |
+| S05 | Basin, D., Guarnizo, J., Krstic, S., Nguyen, H., and Ochoa, M. (2023). Is modeling access control worth it? In *Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security*. | [10.1145/3576915.3623196](https://doi.org/10.1145/3576915.3623196) | Provides empirical evidence for the access-control dimension and implementation choices. |
+| S06 | Cleland-Huang, J., Gotel, O. C. Z., Hayes, J. H., Mader, P., and Zisman, A. (2014). Software traceability: Trends and future directions. In *Proceedings of the Future of Software Engineering* (pp. 55-69). | [10.1145/2593882.2593891](https://doi.org/10.1145/2593882.2593891) | Establishes traceability as an assurance and governance capability. |
+| S07 | Othmane, L. B., Angin, P., Weffers, H., and Bhargava, B. (2014). Extending the agile development process to develop acceptably secure software. *IEEE Transactions on Dependable and Secure Computing, 11*(6), 497-509. | [10.1109/TDSC.2014.2298011](https://doi.org/10.1109/TDSC.2014.2298011) | Shows how security activities can be integrated into iterative development. |
+| S08 | Sanchez-Gordon, M.-L., and Colomo-Palacios, R. (2020). Security as culture: A systematic literature review of DevSecOps. In *Proceedings of the IEEE/ACM 42nd International Conference on Software Engineering Workshops* (pp. 266-269). | [10.1145/3387940.3392233](https://doi.org/10.1145/3387940.3392233) | Supports the organizational and cultural explanation required in the qualitative phase. |
+| S09 | De Win, B., Scandariato, R., Buyens, K., Gregoire, J., and Joosen, W. (2009). On the secure software development process: CLASP, SDL and Touchpoints compared. *Information and Software Technology, 51*(7), 1152-1171. | [10.1016/j.infsof.2008.01.010](https://doi.org/10.1016/j.infsof.2008.01.010) | Compares secure-development processes and their governance implications. |
+| S10 | Basin, D. A., Doser, J., and Lodderstedt, T. (2006). Model driven security: From UML models to access control infrastructures. *ACM Transactions on Software Engineering and Methodology, 15*(1), 39-91. | [10.1145/1125808.1125810](https://doi.org/10.1145/1125808.1125810) | Provides foundational support for systematic translation of access policy into technical controls. |
 
-## 4.6. Initial Synthesis of Findings
+## 4.6. Quality appraisal
 
-The preliminary review reveals five broad patterns. First, the literature agrees that security is still incorporated too frequently at a late stage, even though there is already ample evidence of the cost of that decision. Second, risk management appears as a central organizing axis of secure development, yet many publications focus more on frameworks and practices than on empirical evidence of their actual effectiveness. Third, the **access control** dimension is represented in the literature, although most studies focus on modeling, vulnerability detection, or particular environments rather than on its integrated relationship with organizational risk management.
+Each included study was assessed on five criteria scored from 0 to 2: direct relevance, method transparency, evidence basis, reproducibility or evidence trace, and transferability to the proposed study. Totals from 8 to 10 are classified as high, 5 to 7 as moderate, and 0 to 4 as contextual only. This project-specific appraisal supports transparent weighting of a mixed evidence base; it is not presented as a validated risk-of-bias instrument.
 
-Fourth, **traceability** is well supported as an assurance and governance capability, but in the reviewed literature it is less connected to security metrics applied to Peruvian software development companies or to comparable organizational contexts. Fifth, the most recent work on DevSecOps and secure SDLC insists that human and cultural factors remain a persistent barrier to consolidating secure practices, even when tools or frameworks are already available.
+| ID | Relevance | Method | Evidence | Trace | Transferability | Total | Rating |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| S01 | 2 | 2 | 2 | 1 | 2 | 9 | High |
+| S02 | 2 | 2 | 2 | 1 | 2 | 9 | High |
+| S03 | 2 | 2 | 2 | 1 | 2 | 9 | High |
+| S04 | 2 | 2 | 1 | 1 | 2 | 8 | High |
+| S05 | 2 | 2 | 2 | 1 | 1 | 8 | High |
+| S06 | 2 | 1 | 1 | 1 | 2 | 7 | Moderate |
+| S07 | 2 | 2 | 1 | 1 | 2 | 8 | High |
+| S08 | 2 | 1 | 1 | 0 | 2 | 6 | Moderate |
+| S09 | 2 | 2 | 1 | 1 | 2 | 8 | High |
+| S10 | 2 | 2 | 1 | 1 | 1 | 7 | Moderate |
 
-## 4.7. Gaps that Justify the Study
+Detailed scores and short rationales are in [`quality_appraisal.csv`](quality_appraisal.csv). No included study provides direct evidence from Peruvian companies, and no single study measures the full relationship proposed in the protocol.
 
-- The literature offers extensive discussion of secure SDLC, but less evidence directly connecting the **maturity of risk management** with concrete outcomes in **access control**, **code protection**, and **traceability**.
-- There are more studies on frameworks, models, or best practices than on how those practices actually work within Peruvian software development companies or in comparable organizational contexts with real operational constraints.
-- The dimension of **source code and development artifact protection** appears less developed than access control or general secure SDLC practices.
-- Contextual gaps remain for Latin American organizations and, more specifically, for Peruvian software development companies.
+## 4.7. Synthesis
 
-## 4.8. Methodological Support References
+The evidence supports four conclusions relevant to the protocol. Security practices are often unevenly integrated across the SDLC, especially where delivery pressure and role separation place security late in the process. Risk management offers a way to prioritize secure-development work, but the reviewed studies usually examine frameworks, individual practices, or technical outcomes rather than the association between organizational maturity and sustained control effectiveness.
 
-The following references are not part of the ten prioritized studies, but they support the methodological construction of the review:
+Access control and traceability have established technical and process foundations. Source-code protection appears across secure build, review, dependency, and artifact practices, but it is rarely analyzed as one organizational outcome. The literature also shows that tools cannot explain consistent adoption on their own. Governance, role clarity, training, and working culture affect whether a documented control becomes routine practice.
 
-- Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., and others. (2021). *The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews*. BMJ, 372, n71.
-- Kitchenham, B., and Brereton, P. (2013). *A Systematic Review of Systematic Review Process Research in Software Engineering*. Information and Software Technology, 55, 2049-2075.
+These findings support an explanatory sequential mixed methods design. The survey can estimate exploratory associations among the predefined constructs, while interviews and authorized document review can examine why formal and observed practices differ.
+
+## 4.8. Research gap and limits
+
+The review found no included study that jointly measures risk-management maturity, access-control effectiveness, source-code protection, and development traceability in Peruvian companies. Evidence from Latin American software organizations is also limited in the selected set. This is a contextual and integration gap, not proof that no relevant study exists outside the current search.
+
+The present review has four limits. It began with one primary discovery source, lacks a preserved export for all initial records, includes only ten studies for the course exercise, and uses a project-specific quality appraisal. The thesis review must broaden database coverage, register the protocol before screening, preserve every record and exclusion decision, use duplicate screening on a documented sample, and rerun publication-status checks immediately before submission.
+
+## 4.9. Methodological references
+
+- Kitchenham, B., and Brereton, P. (2013). A systematic review of systematic review process research in software engineering. *Information and Software Technology, 55*(12), 2049-2075. https://doi.org/10.1016/j.infsof.2013.07.010
+- Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., and others. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. *BMJ, 372*, n71. https://doi.org/10.1136/bmj.n71
 
 ---
 
-**AI support statement:** AI tools were used to help organize the draft, review the wording, and structure the synthesis. The study selection, interpretation of the gaps, and methodological organization of the mini-review are the author's own work.
+**AI support statement:** AI tools assisted with record organization, DOI cross-checking, formatting, and language review. Donna Silva reviewed the full-text decisions, approved the appraisal judgments, and remains responsible for the synthesis and its limits.

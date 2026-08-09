@@ -1,0 +1,59 @@
+name: Repository quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: 05_pipeline/requirements.txt
+
+      - name: Install pinned dependencies
+        run: python -m pip install -r 05_pipeline/requirements.txt
+
+      - name: Compile Python sources
+        run: python -m compileall -q 05_pipeline 11_bias_audit
+
+      - name: Validate research records and Markdown
+        run: python 05_pipeline/src/validate_repository.py
+
+      - name: Reproduce DVC data stage
+        working-directory: 05_pipeline
+        run: dvc repro
+
+      - name: Reproduce MLflow experiment summaries
+        working-directory: 05_pipeline
+        run: python src/run_experiments.py
+
+      - name: Reproduce bias audit
+        run: python 11_bias_audit/bias_audit.py
+
+      - name: Compare reproducible numerical outputs
+        run: >-
+          git diff --exit-code --
+          05_pipeline/dvc.lock
+          05_pipeline/results/benchmark_summary_seed_13.csv
+          05_pipeline/results/benchmark_summary_seed_21.csv
+          05_pipeline/results/benchmark_summary_seed_42.csv
+          05_pipeline/results/benchmark_summary_seed_87.csv
+          05_pipeline/results/seed_stability.csv
+          11_bias_audit/bias_audit_splits.csv
+          11_bias_audit/owner_influence_diagnostics.csv
+          11_bias_audit/bias_audit_summary.csv

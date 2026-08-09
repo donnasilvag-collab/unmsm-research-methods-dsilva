@@ -1,5 +1,7 @@
 # Research Protocol (v0.1)
 
+> **Superseded draft:** This file preserves the initial protocol for version history. Use [`protocol_v1.0.md`](protocol_v1.0.md), the operationalization matrix, and the instruments folder for the current study design.
+
 ## 3.1. Title
 
 **Madurez de la gestión de riesgos y eficacia de los controles de desarrollo seguro en empresas peruanas**
@@ -28,7 +30,7 @@ This problem is relevant for both academic and practical reasons. On the academi
 
 The preliminary review suggests four consistent ideas. First, secure software development still struggles to integrate security across the entire life cycle instead of treating it as a late or reactive activity. Second, risk management plays a central role in agile and DevOps settings, where operational speed can increase exposure in the absence of clear governance. Third, control effectiveness depends not only on tools or policies, but also on factors such as organizational culture, training, leadership, and operational discipline. Fourth, there remains a need for studies that combine measurement and interpretation to explain why some organizations turn risk management into effective practice while others achieve only superficial adoption.
 
-In this line of work, Khan et al. (2022) argue that many organizations still do not integrate security consistently across software development. Kolisnichenko et al. (2022) maintain that risk management must cut across all stages of DevOps to prevent operational acceleration from increasing exposure. Valdes-Rodriguez et al. (2023) show that incorporating security practices into agile environments remains an important challenge. Finally, Tsai et al. (2025) propose performance baselines for secure software development that connect proactive and reactive security management with stronger outcomes.
+In this line of work, Khan et al. (2022) argue that many organizations still do not integrate security consistently across software development. Kolisnichenko et al. (2021) maintain that risk management must cut across all stages of DevOps to prevent operational acceleration from increasing exposure. Valdes-Rodriguez et al. (2023) show that incorporating security practices into agile environments remains an important challenge. Finally, Tsai et al. (2025) propose performance baselines for secure software development that connect proactive and reactive security management with stronger outcomes.
 
 ## 3.5. Research Questions and Objectives
 
@@ -127,7 +129,7 @@ The study is methodologically feasible, but it depends on two critical condition
 
 Khan, R. A., Khan, S. U., Khan, H. U., and Ilyas, M. (2022). *Systematic Literature Review on Security Risks and Its Practices in Secure Software Development*. IEEE Access, 10, 5456-5481.
 
-Kolisnichenko, O., Kolomytsev, M., and Nosok, S. (2022). *Software Security Risk Management in DEVOPS Methodology*. Theoretical and Applied Cybersecurity, 3(1).
+Kolisnichenko, O., Kolomytsev, M., and Nosok, S. (2021). *Software Security Risk Management in DEVOPS Methodology*. Theoretical and Applied Cybersecurity, 3(1), 75-77. https://doi.org/10.20535/tacs.2664-29132021.1.251316
 
 Tsai, Y.-T., Wang, C.-H., Chang, Y.-C., and Tong, L.-I. (2025). *Establishing Performance Baselines for Secure Software Development*. IET Information Security, 2025, 6139424.
 
