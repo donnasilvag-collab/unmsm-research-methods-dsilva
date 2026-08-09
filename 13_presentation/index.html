@@ -1441,7 +1441,7 @@
           <div class="process-step reveal" style="--delay: 8"><strong>Integration</strong><span>Joint interpretation explains, qualifies, or questions the patterns.</span></div>
         </div>
         <div class="analysis-grid">
-          <div class="card reveal" style="--delay: 4"><h3>Quantitative analysis</h3><p>Descriptive statistics, instrument consistency, correlations, comparisons, and regression when assumptions permit.</p></div>
+          <div class="card reveal" style="--delay: 4"><h3>Quantitative analysis</h3><p>Scoring, Spearman associations, organization-clustered intervals, and bounded regression when the decision rules are met.</p></div>
           <div class="card reveal" style="--delay: 5"><h3>Qualitative analysis</h3><p>Documented coding, thematic analysis, divergent cases, and organizational conditions.</p></div>
           <div class="card reveal" style="--delay: 6"><h3>Inferential limit</h3><p>A cross-sectional association cannot establish causality. The analysis will account for dependence within organizations.</p></div>
         </div>
@@ -1449,10 +1449,30 @@
       <footer class="slide-footer"><span>Integration occurs during qualitative sampling and final interpretation</span><span>07</span></footer>
     </section>
 
+    <section class="slide dense" data-title="Analytical algorithm">
+      <header class="slide-header">
+        <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
+        <span class="slide-kicker">07 · Analytical algorithm</span>
+      </header>
+      <div class="slide-body">
+        <span class="eyebrow reveal">Prespecified quantitative sequence</span>
+        <h2 class="presentation-title reveal" style="--delay: 1">The analysis tests three predefined associations without treating them as causal effects</h2>
+        <div class="pipeline">
+          <div class="reveal" style="--delay: 2"><small>01</small><strong>Score</strong><span>Thirty-two survey items produce risk maturity and three control outcomes under minimum-completeness rules.</span></div>
+          <div class="reveal" style="--delay: 3"><small>02</small><strong>Associate</strong><span>Spearman rho estimates the three predefined participant-level relationships.</span></div>
+          <div class="reveal" style="--delay: 4"><small>03</small><strong>Respect clusters</strong><span>A 2,000-iteration bootstrap resamples whole organizations for 95% intervals.</span></div>
+          <div class="reveal" style="--delay: 5"><small>04</small><strong>Adjust carefully</strong><span>Three linear models add no more than two prespecified covariates and use clustered standard errors.</span></div>
+          <div class="reveal" style="--delay: 6"><small>05</small><strong>Test and integrate</strong><span>Leave-one-organization-out sensitivity precedes the mixed methods joint display.</span></div>
+        </div>
+        <div class="scope-note reveal" style="--delay: 7; margin-top: 1rem"><strong>Decision rule:</strong> regression requires at least 50 scale-eligible participants from at least six organizations. The 64-record implementation is entirely synthetic and verifies code only.</div>
+      </div>
+      <footer class="slide-footer"><span>The algorithm estimates exploratory associations, not causality or national prevalence</span><span>08</span></footer>
+    </section>
+
     <section class="slide" data-title="Participants and instruments">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">07 · Participants and instruments</span>
+        <span class="slide-kicker">08 · Participants and instruments</span>
       </header>
       <div class="slide-body">
         <span class="eyebrow reveal">Fieldwork plan</span>
@@ -1470,13 +1490,13 @@
         </div>
         <div class="scope-note reveal" style="--delay: 6; margin-top: 1rem"><strong>Population:</strong> developers, technical leads, DevOps professionals, quality staff, and security staff in companies with formal software development operations in Peru.</div>
       </div>
-      <footer class="slide-footer"><span>Purposive, nonprobability sampling with interpretation limited to that scope</span><span>08</span></footer>
+      <footer class="slide-footer"><span>Purposive, nonprobability sampling with interpretation limited to that scope</span><span>09</span></footer>
     </section>
 
     <section class="slide dense" data-title="Ethics and data management">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">08 · Ethics and data management</span>
+        <span class="slide-kicker">09 · Ethics and data management</span>
       </header>
       <div class="slide-body">
         <span class="eyebrow reveal">Foreseeable risks and safeguards</span>
@@ -1493,13 +1513,13 @@
           <div><strong>Data not requested</strong><span>Credentials, proprietary source code, secrets, vulnerabilities, and incident details.</span></div>
         </div>
       </div>
-      <footer class="slide-footer"><span>Recruitment will begin only after the applicable ethical or institutional review is confirmed · Law No. 29733</span><span>09</span></footer>
+      <footer class="slide-footer"><span>Recruitment will begin only after the applicable ethical or institutional review is confirmed · Law No. 29733</span><span>10</span></footer>
     </section>
 
     <section class="slide" data-title="Reproducible architecture">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">09 · Reproducible architecture</span>
+        <span class="slide-kicker">10 · Reproducible architecture</span>
       </header>
       <div class="slide-body">
         <span class="eyebrow reveal">From source file to verifiable result</span>
@@ -1509,22 +1529,22 @@
           <div class="reveal" style="--delay: 3"><small>02</small><strong>DVC</strong><span>Declares the transformation from the source workbook to the analytical CSV.</span></div>
           <div class="reveal" style="--delay: 4"><small>03</small><strong>Python</strong><span>Validates fields, scales, composition, and duplicates before analysis.</span></div>
           <div class="reveal" style="--delay: 5"><small>04</small><strong>MLflow</strong><span>Records seeds, parameters, metrics, and artifacts for each run.</span></div>
-          <div class="reveal" style="--delay: 6"><small>05</small><strong>Docker</strong><span>Defines dependencies and the isolated execution environment.</span></div>
+          <div class="reveal" style="--delay: 6"><small>05</small><strong>Docker</strong><span>Defines the planned isolated environment; build verification remains pending.</span></div>
         </div>
         <div class="proof-strip reveal" style="--delay: 7">
           <div><strong>48</strong><span>records rebuilt with <code>dvc repro</code></span></div>
           <div><strong>4</strong><span>seeds: 13, 21, 42, and 87</span></div>
           <div><strong>2,000</strong><span>bootstrap iterations per seed</span></div>
-          <div><strong>0</strong><span>pending changes after a clean-clone test</span></div>
+          <div><strong>CI</strong><span>repository-quality workflow passed on Linux</span></div>
         </div>
       </div>
-      <footer class="slide-footer"><span>The README, manifest, checklist, datasheet, and analysis card document the workflow</span><span>10</span></footer>
+      <footer class="slide-footer"><span>The README, manifest, checklist, datasheet, and analysis card document the workflow</span><span>11</span></footer>
     </section>
 
     <section class="slide" data-title="Public benchmark">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">10 · Public benchmark</span>
+        <span class="slide-kicker">11 · Public benchmark</span>
       </header>
       <div class="slide-body">
         <span class="eyebrow reveal">Complementary methodological demonstration</span>
@@ -1543,13 +1563,13 @@
         </div>
         <div class="scope-note reveal" style="--delay: 7; margin-top: 1rem"><strong>Methodological boundary:</strong> these dimensions are proxies for public observability. They do not measure a company's internal maturity and cannot replace fieldwork.</div>
       </div>
-      <footer class="slide-footer"><span>Public snapshot dated July 31, 2026</span><span>11</span></footer>
+      <footer class="slide-footer"><span>Public snapshot dated July 31, 2026</span><span>12</span></footer>
     </section>
 
     <section class="slide" data-title="Benchmark results">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">11 · Descriptive results</span>
+        <span class="slide-kicker">12 · Descriptive results</span>
       </header>
       <div class="slide-body two-column">
         <div>
@@ -1571,13 +1591,13 @@
           <div class="scope-note reveal" style="--delay: 6; margin-top: 1.4rem"><strong>Main result:</strong> the benchmark identifies consistent descriptive differences in public signals. It does not prove a causal relationship, represent every Peruvian company, or support rankings.</div>
         </div>
       </div>
-      <footer class="slide-footer"><span>The doctoral hypothesis must be tested with survey data, interviews, and authorized evidence</span><span>12</span></footer>
+      <footer class="slide-footer"><span>The doctoral hypothesis must be tested with survey data, interviews, and authorized evidence</span><span>13</span></footer>
     </section>
 
     <section class="slide" data-title="Bias and limitations">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">12 · Bias, limitations, and integrity</span>
+        <span class="slide-kicker">13 · Bias, limitations, and integrity</span>
       </header>
       <div class="slide-body two-column">
         <div>
@@ -1598,13 +1618,13 @@
           <div class="card reveal" style="--delay: 5"><h3>Integrity</h3><p>AI use is disclosed, the student verifies each decision, and retracted references are excluded using documented evidence.</p></div>
         </div>
       </div>
-      <footer class="slide-footer"><span>The benchmark is neither a predictive model nor an assessment of demographic fairness</span><span>13</span></footer>
+      <footer class="slide-footer"><span>The benchmark is neither a predictive model nor an assessment of demographic fairness</span><span>14</span></footer>
     </section>
 
     <section class="slide dense" data-title="Feasibility and challenges">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>UNMSM</span></div>
-        <span class="slide-kicker">13 · Feasibility and challenges</span>
+        <span class="slide-kicker">14 · Feasibility and challenges</span>
       </header>
       <div class="slide-body">
         <span class="eyebrow reveal">Challenges that shape feasibility</span>
@@ -1622,13 +1642,13 @@
           <div class="challenge-card reveal" style="--delay: 6"><strong>Limited generalizability</strong><p>Conclusions will be limited to the participants and organizations observed.</p></div>
         </div>
       </div>
-      <footer class="slide-footer"><span>Feasibility depends on a focused population and clear confidentiality rules</span><span>14</span></footer>
+      <footer class="slide-footer"><span>Feasibility depends on a focused population and clear confidentiality rules</span><span>15</span></footer>
     </section>
 
     <section class="slide closing dense" data-title="Conclusions and future work">
       <header class="slide-header">
         <div class="unmsm-lockup"><img src="assets/unmsm-logo.svg" alt=""><span>Universidad Nacional Mayor de San Marcos</span></div>
-        <span class="slide-kicker">14 · Conclusions and next steps</span>
+        <span class="slide-kicker">15 · Conclusions and next steps</span>
       </header>
       <div class="slide-body">
         <span class="eyebrow reveal">Conclusion and future improvements</span>
@@ -1641,14 +1661,14 @@
         </div>
         <p class="lead reveal" style="--delay: 6; margin: 1rem 0 0; color: var(--gold-light)"><strong>Expected contribution:</strong> explain which organizational conditions are associated with more consistent security controls during software development.</p>
       </div>
-      <footer class="slide-footer"><span>Donna Silva · Universidad Nacional Mayor de San Marcos</span><span>15</span></footer>
+      <footer class="slide-footer"><span>Donna Silva · Universidad Nacional Mayor de San Marcos</span><span>16</span></footer>
     </section>
   </main>
 
   <div class="hint">← → navigate · F full screen</div>
   <nav class="controls" aria-label="Presentation controls">
     <button id="previous" type="button" aria-label="Previous slide">←</button>
-    <span class="slide-count" aria-live="polite"><span id="current">01</span> / <span id="total">15</span></span>
+    <span class="slide-count" aria-live="polite"><span id="current">01</span> / <span id="total">16</span></span>
     <button id="next" type="button" aria-label="Next slide">→</button>
     <button id="fullscreen" type="button" aria-label="Enter full screen">⛶</button>
   </nav>

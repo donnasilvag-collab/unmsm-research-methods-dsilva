@@ -16,4 +16,4 @@ This map links statements in the institutional presentation to repository eviden
 | Sensitive fieldwork data will remain outside Git | `09_ethics/ethics_protocol.md` and `10_data_mgmt/data_management_plan.md` | Safeguard defined before collection |
 | Fieldwork findings are not yet available | `03_protocol/protocol_v1.0.md` and `13_presentation/README.md` | Must be stated during presentation |
 
-The public benchmark and synthetic survey fixture may be described as methodological results. Neither may be presented as evidence that answers the main research question.
+The public benchmark may be described as a bounded methodological result. Both synthetic fieldwork fixtures are software demonstrations. None of these three components may be presented as evidence that answers the main research question.

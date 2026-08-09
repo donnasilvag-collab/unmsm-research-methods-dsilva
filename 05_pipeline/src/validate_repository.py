@@ -446,6 +446,18 @@ def validate_presentation(errors: list[str]) -> None:
         errors.append("The presentation still uses the previous root-level logo path.")
     if 'src="assets/unmsm-logo.svg"' not in presentation:
         errors.append("The presentation does not reference its institutional asset folder.")
+    if presentation.count('<section class="slide') != 16:
+        errors.append("The presentation must contain 16 slides.")
+    if presentation.count("unmsm-logo") != 16:
+        errors.append("Each presentation slide must include the institutional logo.")
+    if "The analysis tests three predefined associations" not in presentation:
+        errors.append("The presentation does not explain the analytical algorithm.")
+    if "The 64-record implementation is entirely synthetic" not in presentation:
+        errors.append("The presentation does not state the synthetic-analysis boundary.")
+
+    guide = (ROOT / "13_presentation/README.md").read_text(encoding="utf-8")
+    if "The deck contains 16 slides" not in guide or "### Slide 16:" not in guide:
+        errors.append("The presentation guide does not cover all 16 slides.")
 
 
 def main() -> None:
