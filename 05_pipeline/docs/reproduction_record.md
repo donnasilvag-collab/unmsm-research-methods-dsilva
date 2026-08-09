@@ -2,11 +2,13 @@
 
 The detailed checklist is maintained in [`../reproducibility_checklist.md`](../reproducibility_checklist.md). This shorter record separates confirmed execution from pending work.
 
-## Confirmed on 8 August 2026
+## Confirmed through 9 August 2026
 
 - DVC reported that the data stage was up to date.
 - Four MLflow-backed seeded analyses completed.
 - The synthetic survey fixture and scoring outputs regenerated deterministically.
+- The 64-record synthetic analysis fixture regenerated with eight synthetic organizations.
+- Spearman intervals, three exploratory regressions, and the joint display regenerated from labeled synthetic inputs.
 - The owner-clustered bias audit regenerated its numerical outputs and chart.
 - Repository validation, Python compilation, Markdown-link checks, and whitespace checks passed.
 - GitHub Actions completed the expanded workflow successfully on Windows-independent Linux infrastructure.

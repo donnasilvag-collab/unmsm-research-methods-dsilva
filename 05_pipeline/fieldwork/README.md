@@ -33,6 +33,26 @@ python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synth
 
 The first command always produces the same 22 synthetic records with four controlled missing-data cases. Three synthetic organizations meet the reporting threshold and one does not. The second command writes participant scores, an overall summary, item missingness, and deterministic metadata. When any organization is below the threshold in `params.yaml`, the script withholds the full organization breakdown. This prevents readers from reconstructing the small group's mean by subtracting the reported organizations from the overall result.
 
+## Reproduce the synthetic association demonstration
+
+The 22-record fixture above tests scoring and suppression. A separate fixture exercises the planned association analysis with 64 synthetic participants distributed across eight synthetic organizations:
+
+```powershell
+python src/generate_synthetic_analysis.py
+python src/score_fieldwork.py --input fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv --output-dir fieldwork/synthetic/association_demo --synthetic
+python src/analyze_synthetic_fieldwork.py --synthetic
+```
+
+The third command produces:
+
+- `spearman_correlations_synthetic.csv`, with organization-clustered bootstrap intervals;
+- `exploratory_regressions_synthetic.csv`, with three linear models and organization-clustered standard errors;
+- `regression_diagnostics_synthetic.csv`, with model-fit and influence checks;
+- `integration_joint_display_synthetic.csv`, which combines quantitative output with fictitious interview and documentary patterns;
+- `analysis_report_synthetic.md` and `analysis_metadata_synthetic.json`, which state the scope and preserve input hashes.
+
+The generator deliberately creates a relationship between maturity and the three outcomes so the analysis path can be tested. Positive coefficients are therefore expected by construction. Every record, narrative, document pattern, output, and metadata file is labeled synthetic. None of these values is evidence about Peruvian companies, instrument validity, or a population association.
+
 ## Use with authorized fieldwork data
 
 Real survey exports must remain in protected storage outside this repository. Run the script in that environment and direct the output to a protected location:

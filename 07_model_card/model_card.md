@@ -14,6 +14,8 @@ This document follows the reporting intent of Model Cards (Mitchell et al., 2019
 
 No classifier, risk score, or decision threshold is produced. The filename `train.py` is a course-template convention; the script calculates descriptive group comparisons and confidence intervals.
 
+The separate directory `05_pipeline/fieldwork/synthetic/association_demo/` is outside the public benchmark artifact described by this card. It fits three regressions to generated scores only to test the planned fieldwork code. Those models are neither trained research models nor evidence about a study population.
+
 ## Intended use
 
 The benchmark has two purposes. First, it provides a transparent public example for testing the Git, DVC, MLflow, and Docker workflow before any confidential fieldwork begins. Second, it describes how selected public repository signals differ between the Peru stratum and an international comparison stratum at the extraction date.

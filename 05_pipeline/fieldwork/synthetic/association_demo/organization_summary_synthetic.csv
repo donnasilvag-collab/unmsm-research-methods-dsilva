@@ -1,0 +1,10 @@
+organization_code,organization_count,participant_count,reporting_scope,risk_management_maturity_eligible_n,risk_management_maturity_mean,access_control_effectiveness_eligible_n,access_control_effectiveness_mean,source_code_protection_eligible_n,source_code_protection_mean,development_traceability_eligible_n,development_traceability_mean
+ALL_PARTICIPANTS,8,64,synthetic demonstration only,64,3.0413,64,3.1016,64,2.8021,64,2.9948
+SYN_ANALYSIS_ORG_01,1,8,synthetic demonstration only,8,1.8393,8,2.3542,8,2.2708,8,2.1042
+SYN_ANALYSIS_ORG_02,1,8,synthetic demonstration only,8,2.5625,8,2.6458,8,2.3958,8,2.4583
+SYN_ANALYSIS_ORG_03,1,8,synthetic demonstration only,8,2.7054,8,2.9375,8,2.6875,8,2.7083
+SYN_ANALYSIS_ORG_04,1,8,synthetic demonstration only,8,2.9911,8,3.1250,8,2.6250,8,3.1042
+SYN_ANALYSIS_ORG_05,1,8,synthetic demonstration only,8,2.8929,8,3.0208,8,2.8542,8,2.9375
+SYN_ANALYSIS_ORG_06,1,8,synthetic demonstration only,8,3.5000,8,3.5417,8,3.0417,8,3.2292
+SYN_ANALYSIS_ORG_07,1,8,synthetic demonstration only,8,3.7946,8,3.5000,8,3.1250,8,3.6667
+SYN_ANALYSIS_ORG_08,1,8,synthetic demonstration only,8,4.0446,8,3.6875,8,3.4167,8,3.7500

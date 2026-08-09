@@ -106,6 +106,8 @@ The qualitative phase will use thematic analysis. Two coding passes will disting
 
 The public repository analysis in `05_pipeline/` is a descriptive methodological benchmark based on visible GitHub signals. It is not part of the protected participant dataset, does not measure internal company security maturity, and cannot support national, causal, or organization-level conclusions. An absent public signal means only that the control was not observed in the bounded public source.
 
+The pipeline also contains a separate synthetic association demonstration with 64 generated participant records, eight generated organizations, and fictitious interview and document patterns. It exercises the planned Spearman, regression, and joint-display code only. The constructed signal, coefficients, intervals, p-values, and integration assessments are not pilot data, do not satisfy an ethical or methodological fieldwork requirement, and cannot be reported as findings.
+
 ## 3.7. Ethical considerations
 
 The study may involve sensitive descriptions of internal security practices. Participation will be voluntary and based on informed consent. Recruitment will avoid managerial pressure, and withdrawal will be possible without penalty. The study will not request proprietary source code, credentials, private repository addresses, security configurations, vulnerability details, trade secrets, or incident evidence.

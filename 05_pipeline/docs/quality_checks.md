@@ -39,6 +39,24 @@ The survey-scoring fixture is separate from the public repository benchmark. It 
 
 The fixture verifies schema and scoring behavior only. It does not validate the survey, estimate reliability, or provide evidence about Peruvian companies.
 
+## Synthetic association fixture
+
+A second fixture contains 64 generated participants in eight generated organizations. It meets the protocol's numerical thresholds only so that the planned analysis branches can run during software testing. The following checks apply:
+
+| Check | Verified design |
+| --- | --- |
+| Synthetic participant records | 64 |
+| Synthetic organizations | 8, with 8 records each |
+| Substantive survey items | 32 |
+| Primary Spearman associations | 3 |
+| Clustered bootstrap iterations | 2,000 per association |
+| Exploratory linear models | 3 |
+| Predictors per model | Maturity plus two synthetic context covariates |
+| Model diagnostic records | 3 |
+| Joint-display rows | 3 |
+
+The generator intentionally links maturity and outcome values. The evidence file contains fictitious interview and document patterns. The analysis script requires `--synthetic`, rejects unlabeled rows, records source hashes, and writes a scope warning into every output. These controls prevent a successful code test from being presented as empirical evidence.
+
 ## Commands
 
 ```powershell
@@ -46,6 +64,9 @@ dvc repro
 python src/run_experiments.py
 python src/generate_synthetic_fieldwork.py
 python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synthetic.csv --output-dir fieldwork/synthetic --synthetic
+python src/generate_synthetic_analysis.py
+python src/score_fieldwork.py --input fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv --output-dir fieldwork/synthetic/association_demo --synthetic
+python src/analyze_synthetic_fieldwork.py --synthetic
 cd ..
 .\05_pipeline\.venv\Scripts\python.exe 11_bias_audit\bias_audit.py
 .\05_pipeline\.venv\Scripts\python.exe 05_pipeline\src\validate_repository.py

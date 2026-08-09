@@ -1,6 +1,6 @@
 # Reproducibility checklist
 
-**Verification date:** 8 August 2026
+**Verification date:** 9 August 2026
 
 **Environment:** Windows PowerShell, Python 3.12 virtual environment, dependencies pinned in `requirements.txt`
 
@@ -14,6 +14,12 @@
 - [x] The synthetic fieldwork generator creates 22 labeled records with four controlled missing-data cases.
 - [x] The fieldwork scorer applies the 32-item rules and withholds the full organization breakdown when one synthetic group has fewer than five participants.
 - [x] The scoring metadata records the synthetic scope, source hash, participant count, organization count, and output set.
+- [x] The synthetic analysis generator creates 64 labeled participants in eight labeled organizations and three fictitious integration records.
+- [x] The synthetic analysis produces three Spearman correlations with 2,000-iteration organization-clustered intervals.
+- [x] Three exploratory linear models use maturity plus no more than two context covariates and organization-clustered standard errors.
+- [x] Model diagnostics record fit, condition number, Cook's distance, and studentized residual checks for each synthetic outcome.
+- [x] The joint display integrates each quantitative output with explicitly fictitious interview and documentary patterns.
+- [x] Every synthetic analytical CSV, report, and metadata record states that it is not a research finding.
 - [x] The README states that the benchmark is descriptive and does not establish causal effects or internal company practices.
 - [x] Missing OpenSSF scores remain missing and are not converted to zero.
 - [x] `python 11_bias_audit/bias_audit.py` regenerates 16 interval records, 36 anonymized owner-influence records, four summary decisions, and the audit chart.
@@ -43,6 +49,9 @@ docker run --rm unmsm-security-benchmark
 .\.venv\Scripts\python.exe src\run_experiments.py
 .\.venv\Scripts\python.exe src\generate_synthetic_fieldwork.py
 .\.venv\Scripts\python.exe src\score_fieldwork.py --input fieldwork\synthetic\survey_responses_synthetic.csv --output-dir fieldwork\synthetic --synthetic
+.\.venv\Scripts\python.exe src\generate_synthetic_analysis.py
+.\.venv\Scripts\python.exe src\score_fieldwork.py --input fieldwork\synthetic\association_demo\survey_responses_analysis_synthetic.csv --output-dir fieldwork\synthetic\association_demo --synthetic
+.\.venv\Scripts\python.exe src\analyze_synthetic_fieldwork.py --synthetic
 cd ..
 .\05_pipeline\.venv\Scripts\python.exe 11_bias_audit\bias_audit.py
 .\05_pipeline\.venv\Scripts\python.exe 05_pipeline\src\validate_repository.py

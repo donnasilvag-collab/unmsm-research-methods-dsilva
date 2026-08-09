@@ -1,0 +1,4 @@
+synthetic_data,outcome,eligible_participants,organization_count,r_squared,adjusted_r_squared,condition_number,maximum_cooks_distance,maximum_absolute_studentized_residual,diagnostic_scope
+True,access_control_effectiveness,64,8,0.6986872531,0.6836216158,22.07298097,0.08245204443,2.68064815,Synthetic software check only; fieldwork requires a fresh diagnostic review.
+True,source_code_protection,64,8,0.5615050236,0.5395802748,22.07298097,0.09857387284,2.248996874,Synthetic software check only; fieldwork requires a fresh diagnostic review.
+True,development_traceability,64,8,0.7736932993,0.7623779642,22.07298097,0.1071737274,2.37314658,Synthetic software check only; fieldwork requires a fresh diagnostic review.

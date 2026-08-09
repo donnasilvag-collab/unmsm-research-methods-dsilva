@@ -72,6 +72,17 @@ python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synth
 
 These commands use 22 synthetic records. They verify the item schema, completeness rules, missing-value treatment, and suppression threshold. They do not validate the instrument or produce findings about Peruvian companies.
 
+The planned association and mixed methods integration can also be exercised with a separate 64-record, eight-organization synthetic fixture:
+
+```powershell
+cd 05_pipeline
+python src/generate_synthetic_analysis.py
+python src/score_fieldwork.py --input fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv --output-dir fieldwork/synthetic/association_demo --synthetic
+python src/analyze_synthetic_fieldwork.py --synthetic
+```
+
+This demonstration produces Spearman correlations, organization-clustered bootstrap intervals, three exploratory regressions, and a joint display with fictitious qualitative and documentary evidence. The generator creates the association deliberately. Every output is labeled synthetic and none is a finding about the study population.
+
 Docker instructions are available in [`05_pipeline/README.md`](05_pipeline/README.md). Docker remains an unverified option until the image can be built and run in an available Docker environment.
 
 ## Research boundary

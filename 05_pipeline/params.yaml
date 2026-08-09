@@ -88,3 +88,27 @@ fieldwork_scoring:
       construct: secure_development_control
       items: [TR01, TR02, TR03, TR04, TR05, TR06]
       minimum_answered: 4
+
+synthetic_analysis_demo:
+  synthetic_data: true
+  participant_count: 64
+  organization_count: 8
+  minimum_eligible_participants: 50
+  minimum_organizations: 6
+  bootstrap_iterations: 2000
+  seed: 20260809
+  explanatory_variable: risk_management_maturity
+  outcomes:
+    - access_control_effectiveness
+    - source_code_protection
+    - development_traceability
+  covariate_mappings:
+    experience_group:
+      Less than 2 years: 1
+      2 to 5 years: 2
+      6 to 10 years: 3
+      More than 10 years: 4
+    company_size_group:
+      1 to 49: 1
+      50 to 249: 2
+      250 or more: 3

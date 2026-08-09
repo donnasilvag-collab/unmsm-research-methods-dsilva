@@ -1,0 +1,4 @@
+outcome,synthetic_interview_pattern,synthetic_document_pattern,synthetic_integration_assessment,synthetic_evidence
+access_control_effectiveness,Fictitious participants describe clearer access reviews when ownership and escalation duties are explicit.,Fictitious review records show partly consistent approval and access-removal evidence.,Illustrative convergence with qualifications,true
+source_code_protection,Fictitious participants describe stronger repository protection when secure-change checks are part of routine delivery.,Fictitious repository procedures show uneven evidence for secret scanning and dependency review.,Illustrative partial convergence,true
+development_traceability,"Fictitious participants connect traceability with disciplined links among requests, reviews, tests, and deployments.",Fictitious audit samples show that links are easier to retrieve when workflow responsibilities are defined.,Illustrative convergence,true

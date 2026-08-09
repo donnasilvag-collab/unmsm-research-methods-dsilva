@@ -36,6 +36,9 @@ jobs:
         run: |
           python src/generate_synthetic_fieldwork.py
           python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synthetic.csv --output-dir fieldwork/synthetic --synthetic
+          python src/generate_synthetic_analysis.py
+          python src/score_fieldwork.py --input fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv --output-dir fieldwork/synthetic/association_demo --synthetic
+          python src/analyze_synthetic_fieldwork.py --synthetic
 
       - name: Validate research records and Markdown
         run: python 05_pipeline/src/validate_repository.py
@@ -65,6 +68,18 @@ jobs:
           05_pipeline/fieldwork/synthetic/organization_summary_synthetic.csv
           05_pipeline/fieldwork/synthetic/item_missingness_synthetic.csv
           05_pipeline/fieldwork/synthetic/scoring_metadata_synthetic.json
+          05_pipeline/fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/integration_evidence_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/scored_responses_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/organization_summary_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/item_missingness_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/scoring_metadata_synthetic.json
+          05_pipeline/fieldwork/synthetic/association_demo/spearman_correlations_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/exploratory_regressions_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/regression_diagnostics_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/integration_joint_display_synthetic.csv
+          05_pipeline/fieldwork/synthetic/association_demo/analysis_report_synthetic.md
+          05_pipeline/fieldwork/synthetic/association_demo/analysis_metadata_synthetic.json
           11_bias_audit/bias_audit_splits.csv
           11_bias_audit/owner_influence_diagnostics.csv
           11_bias_audit/bias_audit_summary.csv

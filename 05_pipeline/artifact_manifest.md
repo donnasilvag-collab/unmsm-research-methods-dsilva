@@ -10,11 +10,14 @@
 | `src/run_experiments.py` | Executes four seeded analyses and logs them in MLflow | Git + MLflow | Executable |
 | `src/generate_synthetic_fieldwork.py` | Creates deterministic, non-empirical records for scoring tests | Git | Executable; seed fixed by default |
 | `src/score_fieldwork.py` | Validates and scores the 32 survey items under the operationalization rules | Git | Executable in public synthetic or protected fieldwork environments |
+| `src/generate_synthetic_analysis.py` | Creates 64 synthetic participants, eight synthetic organizations, and fictitious integration evidence | Git | Executable; synthetic seed fixed in `params.yaml` |
+| `src/analyze_synthetic_fieldwork.py` | Runs Spearman correlations, clustered intervals, three exploratory regressions, and a joint display | Git | Executable only with the `--synthetic` safeguard |
 | `fieldwork/synthetic/survey_responses_synthetic.csv` | Tests the survey schema and controlled missing-data cases | Git artifact | Generated; synthetic only |
 | `fieldwork/synthetic/scored_responses_synthetic.csv` | Expected participant-level scoring output for synthetic records | Git artifact | Generated; not a research result |
 | `fieldwork/synthetic/organization_summary_synthetic.csv` | Tests aggregation and the minimum reporting threshold | Git artifact | Generated; synthetic only |
 | `fieldwork/synthetic/item_missingness_synthetic.csv` | Tests item-level missingness reporting | Git artifact | Generated; synthetic only |
 | `fieldwork/synthetic/scoring_metadata_synthetic.json` | Records the source hash, scope, counts, and output set | Git artifact | Generated deterministically |
+| `fieldwork/synthetic/association_demo/` | Contains the separate synthetic analytical input, scored data, evidence, numerical outputs, joint display, report, and metadata | Git artifact | Generated deterministically; not a research result |
 | `results/benchmark_summary_seed_*.csv` | Per-seed descriptive summaries and confidence intervals | Git artifact | Generated |
 | `results/seed_stability.csv` | Compares estimates across the four seeded runs | Git artifact | Generated |
 | `docs/mlflow_runs.png` | Visual record of the latest seeded comparison | Git artifact | Generated |

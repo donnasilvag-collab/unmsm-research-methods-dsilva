@@ -1,0 +1,25 @@
+{
+  "input_file": "scored_responses_synthetic.csv",
+  "input_sha256": "8d02afe8d1b17d80c3f31582dcf3e7f6af98dad840ad27d0d2ef0e435de33ef8",
+  "integration_evidence_file": "integration_evidence_synthetic.csv",
+  "integration_evidence_sha256": "123e409e5a0c8b3095092a0617509d66fb118d8d306a1ed3f59f64e62dc606af",
+  "methods": [
+    "Spearman correlation",
+    "organization-clustered bootstrap interval",
+    "linear regression with organization-clustered standard errors",
+    "mixed methods joint display"
+  ],
+  "organization_count": 8,
+  "outputs": [
+    "spearman_correlations_synthetic.csv",
+    "exploratory_regressions_synthetic.csv",
+    "regression_diagnostics_synthetic.csv",
+    "integration_joint_display_synthetic.csv",
+    "analysis_report_synthetic.md"
+  ],
+  "params_file": "params.yaml",
+  "params_sha256": "a7f3b58e605c46f992c672e1779378839ee70b53aaeee6df4007793ae2ea1de6",
+  "participant_count": 64,
+  "scope_note": "Synthetic methodological demonstration only; not a research finding.",
+  "synthetic_data": true
+}

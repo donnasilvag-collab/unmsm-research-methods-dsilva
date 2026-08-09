@@ -1,0 +1,65 @@
+participant_code,organization_code,role_group,experience_group,company_size_group,delivery_approach,synthetic_record,RM01,RM02,RM03,RM04,RM05,RM06,RM07,RM08,RM09,RM10,RM11,RM12,RM13,RM14,AC01,AC02,AC03,AC04,AC05,AC06,SC01,SC02,SC03,SC04,SC05,SC06,TR01,TR02,TR03,TR04,TR05,TR06
+SYN_ANALYSIS_P001,SYN_ANALYSIS_ORG_01,Software development,Less than 2 years,1 to 49,DevOps or continuous delivery,true,2,2,1,1,1,2,1,1,1,3,3,2,1,2,3,2,2,3,2,3,2,4,2,2,1,3,2,4,2,1,3,2
+SYN_ANALYSIS_P002,SYN_ANALYSIS_ORG_01,Technical leadership,2 to 5 years,1 to 49,Hybrid,true,1,2,3,3,2,2,2,4,1,1,4,2,3,2,3,1,2,3,1,4,3,3,3,4,2,3,4,2,2,2,3,3
+SYN_ANALYSIS_P003,SYN_ANALYSIS_ORG_01,DevOps or platform,6 to 10 years,1 to 49,Agile,true,2,2,1,1,2,2,1,1,1,1,1,2,1,2,1,2,3,3,3,2,1,3,2,1,3,3,1,2,2,2,3,1
+SYN_ANALYSIS_P004,SYN_ANALYSIS_ORG_01,Quality or testing,More than 10 years,1 to 49,DevOps or continuous delivery,true,1,2,2,2,1,1,2,2,1,1,2,2,1,2,1,1,2,3,2,1,2,2,2,1,2,3,2,2,1,1,1,1
+SYN_ANALYSIS_P005,SYN_ANALYSIS_ORG_01,Information security,Less than 2 years,1 to 49,Hybrid,true,1,1,2,2,1,2,2,1,1,1,2,1,2,1,2,4,1,2,3,3,2,2,2,2,2,1,3,3,2,2,2,2
+SYN_ANALYSIS_P006,SYN_ANALYSIS_ORG_01,Software development,2 to 5 years,1 to 49,Agile,true,4,3,1,2,3,3,2,2,3,3,2,2,3,4,4,2,4,3,1,3,3,3,4,4,2,2,3,2,2,2,3,3
+SYN_ANALYSIS_P007,SYN_ANALYSIS_ORG_01,Technical leadership,6 to 10 years,1 to 49,DevOps or continuous delivery,true,3,3,1,2,1,1,1,2,2,3,1,1,2,2,2,1,3,3,1,4,1,3,1,2,2,2,3,1,1,2,1,3
+SYN_ANALYSIS_P008,SYN_ANALYSIS_ORG_01,DevOps or platform,More than 10 years,1 to 49,Hybrid,true,3,2,1,3,2,2,2,3,2,2,2,1,1,1,2,3,3,3,1,2,2,1,2,1,3,3,2,2,1,3,2,2
+SYN_ANALYSIS_P009,SYN_ANALYSIS_ORG_02,Quality or testing,Less than 2 years,50 to 249,Hybrid,true,3,2,4,2,3,2,2,3,3,2,2,2,3,2,4,4,4,3,2,2,2,3,3,2,2,2,2,3,2,2,3,2
+SYN_ANALYSIS_P010,SYN_ANALYSIS_ORG_02,Information security,2 to 5 years,50 to 249,Agile,true,3,2,4,3,2,3,3,3,2,2,2,2,3,4,1,4,4,2,3,3,2,2,3,3,3,3,3,2,3,4,3,2
+SYN_ANALYSIS_P011,SYN_ANALYSIS_ORG_02,Software development,6 to 10 years,50 to 249,DevOps or continuous delivery,true,1,2,1,2,2,2,2,1,2,2,3,2,3,2,2,3,3,3,3,1,3,1,1,2,3,3,2,2,3,1,1,4
+SYN_ANALYSIS_P012,SYN_ANALYSIS_ORG_02,Technical leadership,More than 10 years,50 to 249,Hybrid,true,2,2,1,3,3,2,2,2,1,2,2,2,3,4,2,2,2,4,2,2,4,1,3,2,4,2,2,2,1,2,1,2
+SYN_ANALYSIS_P013,SYN_ANALYSIS_ORG_02,DevOps or platform,Less than 2 years,50 to 249,Agile,true,2,2,3,3,3,3,4,3,2,1,2,3,3,3,2,1,3,3,3,3,3,3,2,3,3,2,3,2,1,3,4,2
+SYN_ANALYSIS_P014,SYN_ANALYSIS_ORG_02,Quality or testing,2 to 5 years,50 to 249,DevOps or continuous delivery,true,2,2,2,4,3,3,2,3,3,3,2,4,3,3,3,3,2,1,2,4,3,2,1,3,2,2,2,3,3,3,3,3
+SYN_ANALYSIS_P015,SYN_ANALYSIS_ORG_02,Information security,6 to 10 years,50 to 249,Hybrid,true,4,2,3,5,2,5,2,3,3,3,2,2,3,3,3,4,3,1,2,3,3,3,2,2,1,2,3,2,2,3,4,4
+SYN_ANALYSIS_P016,SYN_ANALYSIS_ORG_02,Software development,More than 10 years,50 to 249,Agile,true,2,3,2,3,3,2,2,3,2,4,2,2,4,4,3,2,3,3,3,2,3,3,2,2,2,2,1,2,2,3,3,3
+SYN_ANALYSIS_P017,SYN_ANALYSIS_ORG_03,Technical leadership,Less than 2 years,250 or more,Agile,true,3,3,3,4,3,3,3,4,4,3,4,3,3,4,4,3,3,4,4,3,2,2,3,4,3,1,3,4,3,2,4,3
+SYN_ANALYSIS_P018,SYN_ANALYSIS_ORG_03,DevOps or platform,2 to 5 years,250 or more,DevOps or continuous delivery,true,3,4,3,3,4,3,4,4,4,4,2,4,3,4,3,3,4,3,3,3,3,5,4,4,2,3,4,3,4,3,4,3
+SYN_ANALYSIS_P019,SYN_ANALYSIS_ORG_03,Quality or testing,6 to 10 years,250 or more,Hybrid,true,2,3,2,3,3,4,3,4,3,4,3,3,3,4,3,3,2,4,3,1,3,4,3,2,5,4,3,2,2,2,3,3
+SYN_ANALYSIS_P020,SYN_ANALYSIS_ORG_03,Information security,More than 10 years,250 or more,Agile,true,2,2,2,1,3,2,1,2,2,2,2,2,3,1,3,2,2,3,1,3,2,1,2,1,3,1,2,3,3,3,1,3
+SYN_ANALYSIS_P021,SYN_ANALYSIS_ORG_03,Software development,Less than 2 years,250 or more,DevOps or continuous delivery,true,2,2,3,2,2,3,2,3,3,3,2,3,2,2,3,3,3,2,5,1,2,3,5,2,3,2,1,2,2,2,3,2
+SYN_ANALYSIS_P022,SYN_ANALYSIS_ORG_03,Technical leadership,2 to 5 years,250 or more,Hybrid,true,3,2,2,2,2,2,3,2,3,4,3,1,3,3,4,3,3,3,3,3,3,2,4,2,2,1,2,2,3,3,4,3
+SYN_ANALYSIS_P023,SYN_ANALYSIS_ORG_03,DevOps or platform,6 to 10 years,250 or more,Agile,true,2,3,1,1,2,2,1,1,2,2,2,1,1,1,2,2,3,1,3,2,3,4,2,1,2,2,3,1,2,1,3,1
+SYN_ANALYSIS_P024,SYN_ANALYSIS_ORG_03,Quality or testing,More than 10 years,250 or more,DevOps or continuous delivery,true,1,3,4,4,3,3,4,3,4,2,2,4,4,4,4,4,3,4,3,4,3,3,2,3,4,2,4,4,4,2,4,2
+SYN_ANALYSIS_P025,SYN_ANALYSIS_ORG_04,Information security,Less than 2 years,1 to 49,DevOps or continuous delivery,true,4,4,5,3,3,4,3,4,3,4,3,4,3,3,2,3,3,3,3,3,2,4,4,3,2,3,3,2,3,4,3,4
+SYN_ANALYSIS_P026,SYN_ANALYSIS_ORG_04,Software development,2 to 5 years,1 to 49,Hybrid,true,3,2,3,3,3,5,2,2,3,3,5,3,3,4,3,2,2,2,4,5,3,2,4,3,4,3,3,3,3,4,3,3
+SYN_ANALYSIS_P027,SYN_ANALYSIS_ORG_04,Technical leadership,6 to 10 years,1 to 49,Agile,true,2,2,1,3,3,2,2,3,2,2,2,3,3,3,3,3,2,3,2,2,1,2,2,1,1,3,2,1,2,3,2,3
+SYN_ANALYSIS_P028,SYN_ANALYSIS_ORG_04,DevOps or platform,More than 10 years,1 to 49,DevOps or continuous delivery,true,3,3,3,3,2,1,3,2,3,3,4,3,3,2,3,4,4,4,2,3,2,2,2,3,3,3,4,3,3,4,3,3
+SYN_ANALYSIS_P029,SYN_ANALYSIS_ORG_04,Quality or testing,Less than 2 years,1 to 49,Hybrid,true,4,4,3,2,3,4,4,2,2,2,3,3,3,3,4,1,4,5,4,3,2,2,2,3,2,3,4,3,3,3,4,3
+SYN_ANALYSIS_P030,SYN_ANALYSIS_ORG_04,Information security,2 to 5 years,1 to 49,Agile,true,2,3,3,3,2,4,2,2,3,2,2,3,2,3,3,4,4,3,4,4,3,3,2,3,3,3,3,2,3,4,3,4
+SYN_ANALYSIS_P031,SYN_ANALYSIS_ORG_04,Software development,6 to 10 years,1 to 49,DevOps or continuous delivery,true,3,4,3,3,4,4,4,4,3,3,4,3,4,3,3,3,4,3,4,3,3,3,3,1,2,2,3,4,3,4,2,3
+SYN_ANALYSIS_P032,SYN_ANALYSIS_ORG_04,Technical leadership,More than 10 years,1 to 49,Hybrid,true,4,3,2,3,3,3,3,3,4,2,4,2,3,4,3,3,3,1,4,3,4,4,3,2,3,3,4,4,4,3,4,1
+SYN_ANALYSIS_P033,SYN_ANALYSIS_ORG_05,DevOps or platform,Less than 2 years,50 to 249,Hybrid,true,1,3,2,2,3,3,3,3,1,2,2,2,2,1,3,3,3,3,1,3,3,2,1,2,1,2,2,3,3,1,2,3
+SYN_ANALYSIS_P034,SYN_ANALYSIS_ORG_05,Quality or testing,2 to 5 years,50 to 249,Agile,true,3,2,1,1,2,2,1,2,2,2,2,1,2,2,2,2,1,2,3,2,3,1,2,3,3,2,2,4,1,2,1,2
+SYN_ANALYSIS_P035,SYN_ANALYSIS_ORG_05,Information security,6 to 10 years,50 to 249,DevOps or continuous delivery,true,4,3,4,4,4,3,4,5,4,5,4,2,3,4,2,3,4,5,5,4,1,3,3,3,3,4,3,4,3,5,3,5
+SYN_ANALYSIS_P036,SYN_ANALYSIS_ORG_05,Software development,More than 10 years,50 to 249,Hybrid,true,3,4,3,3,4,4,3,4,4,4,3,4,4,3,5,3,4,3,5,4,2,4,4,4,3,2,3,4,3,1,3,4
+SYN_ANALYSIS_P037,SYN_ANALYSIS_ORG_05,Technical leadership,Less than 2 years,50 to 249,Agile,true,3,2,4,1,4,3,3,3,3,2,4,2,3,3,2,4,3,3,1,3,4,3,4,2,3,3,5,4,1,3,5,4
+SYN_ANALYSIS_P038,SYN_ANALYSIS_ORG_05,DevOps or platform,2 to 5 years,50 to 249,DevOps or continuous delivery,true,2,3,3,2,3,2,4,3,2,4,3,3,3,3,2,3,3,3,3,3,2,3,3,3,3,4,4,2,1,3,2,2
+SYN_ANALYSIS_P039,SYN_ANALYSIS_ORG_05,Quality or testing,6 to 10 years,50 to 249,Hybrid,true,4,4,4,3,4,3,3,4,3,3,4,3,4,4,3,2,4,4,4,4,4,4,4,3,4,4,3,4,4,5,3,2
+SYN_ANALYSIS_P040,SYN_ANALYSIS_ORG_05,Information security,More than 10 years,50 to 249,Agile,true,4,3,2,4,2,2,2,2,3,3,2,2,3,2,3,3,3,2,2,3,3,2,3,3,3,2,2,3,3,3,3,3
+SYN_ANALYSIS_P041,SYN_ANALYSIS_ORG_06,Software development,Less than 2 years,250 or more,Agile,true,4,3,3,3,3,4,4,4,4,4,3,3,4,5,5,4,3,3,3,5,3,3,2,3,4,3,2,2,3,3,4,2
+SYN_ANALYSIS_P042,SYN_ANALYSIS_ORG_06,Technical leadership,2 to 5 years,250 or more,DevOps or continuous delivery,true,4,4,5,3,5,3,4,5,4,4,4,3,3,3,4,5,5,4,4,4,3,4,3,2,4,3,4,4,3,3,3,5
+SYN_ANALYSIS_P043,SYN_ANALYSIS_ORG_06,DevOps or platform,6 to 10 years,250 or more,Hybrid,true,3,4,4,3,4,4,2,4,3,3,3,3,3,4,3,3,3,3,3,4,5,2,5,2,2,5,3,2,5,3,3,2
+SYN_ANALYSIS_P044,SYN_ANALYSIS_ORG_06,Quality or testing,More than 10 years,250 or more,Agile,true,4,3,3,5,4,4,2,4,4,5,5,5,4,3,4,3,5,5,4,4,3,3,3,4,4,3,2,4,4,4,4,3
+SYN_ANALYSIS_P045,SYN_ANALYSIS_ORG_06,Information security,Less than 2 years,250 or more,DevOps or continuous delivery,true,3,3,3,4,4,3,3,3,4,4,3,4,3,3,2,3,4,4,4,2,1,3,3,3,3,3,4,3,2,5,2,3
+SYN_ANALYSIS_P046,SYN_ANALYSIS_ORG_06,Software development,2 to 5 years,250 or more,Hybrid,true,3,3,3,3,3,3,2,3,3,4,3,3,3,3,2,4,3,2,3,3,3,3,4,2,2,3,3,3,3,5,4,2
+SYN_ANALYSIS_P047,SYN_ANALYSIS_ORG_06,Technical leadership,6 to 10 years,250 or more,Agile,true,4,4,3,3,3,4,3,2,3,4,2,5,5,3,4,4,4,3,2,2,5,4,2,4,5,2,2,3,2,4,3,4
+SYN_ANALYSIS_P048,SYN_ANALYSIS_ORG_06,DevOps or platform,More than 10 years,250 or more,DevOps or continuous delivery,true,4,4,3,4,3,3,3,4,3,4,3,3,3,4,4,4,4,3,4,3,2,1,2,3,3,2,4,3,3,4,4,3
+SYN_ANALYSIS_P049,SYN_ANALYSIS_ORG_07,Quality or testing,Less than 2 years,1 to 49,DevOps or continuous delivery,true,3,3,5,3,4,3,3,5,4,3,3,4,3,3,3,3,3,3,4,2,2,5,5,2,4,4,3,4,3,3,2,5
+SYN_ANALYSIS_P050,SYN_ANALYSIS_ORG_07,Information security,2 to 5 years,1 to 49,Hybrid,true,5,3,4,4,4,3,4,4,4,4,4,4,4,3,3,4,3,4,4,3,3,3,3,4,1,3,4,4,3,4,4,5
+SYN_ANALYSIS_P051,SYN_ANALYSIS_ORG_07,Software development,6 to 10 years,1 to 49,Agile,true,3,3,3,3,3,3,4,2,4,3,2,3,4,4,5,3,3,4,4,3,3,3,3,3,4,2,4,4,5,2,4,3
+SYN_ANALYSIS_P052,SYN_ANALYSIS_ORG_07,Technical leadership,More than 10 years,1 to 49,DevOps or continuous delivery,true,3,4,3,4,4,4,5,4,5,4,3,4,4,3,3,4,5,3,5,5,3,3,3,2,4,2,3,4,4,3,3,4
+SYN_ANALYSIS_P053,SYN_ANALYSIS_ORG_07,DevOps or platform,Less than 2 years,1 to 49,Hybrid,true,4,5,3,4,4,3,3,4,5,3,4,3,3,5,3,3,2,3,4,2,3,4,2,4,4,3,3,4,3,5,2,4
+SYN_ANALYSIS_P054,SYN_ANALYSIS_ORG_07,Quality or testing,2 to 5 years,1 to 49,Agile,true,3,3,3,3,2,4,3,4,3,5,3,1,2,4,3,3,1,4,3,2,1,2,3,2,1,3,2,2,4,4,3,3
+SYN_ANALYSIS_P055,SYN_ANALYSIS_ORG_07,Information security,6 to 10 years,1 to 49,DevOps or continuous delivery,true,5,5,5,5,4,5,4,5,5,5,3,4,5,4,3,5,4,5,3,4,3,4,3,4,2,4,3,4,5,4,3,3
+SYN_ANALYSIS_P056,SYN_ANALYSIS_ORG_07,Software development,More than 10 years,1 to 49,Hybrid,true,5,5,5,4,4,5,5,5,5,4,5,4,4,4,4,5,5,3,3,5,4,5,4,5,2,4,4,5,5,5,4,5
+SYN_ANALYSIS_P057,SYN_ANALYSIS_ORG_08,Technical leadership,Less than 2 years,50 to 249,Hybrid,true,3,3,5,4,3,4,3,4,4,4,4,3,4,3,3,5,5,3,5,3,3,3,3,3,2,3,4,5,4,4,4,3
+SYN_ANALYSIS_P058,SYN_ANALYSIS_ORG_08,DevOps or platform,2 to 5 years,50 to 249,Agile,true,4,5,4,4,4,5,4,5,5,5,5,5,5,4,3,3,4,2,4,4,3,3,4,3,4,3,3,4,4,5,5,3
+SYN_ANALYSIS_P059,SYN_ANALYSIS_ORG_08,Quality or testing,6 to 10 years,50 to 249,DevOps or continuous delivery,true,5,5,5,5,5,5,5,5,5,5,5,4,5,5,4,5,4,5,4,5,5,5,3,4,5,4,3,5,3,4,5,5
+SYN_ANALYSIS_P060,SYN_ANALYSIS_ORG_08,Information security,More than 10 years,50 to 249,Hybrid,true,5,4,3,5,5,4,5,4,4,4,4,4,5,3,5,4,4,2,5,4,5,4,4,3,4,3,4,4,5,5,3,4
+SYN_ANALYSIS_P061,SYN_ANALYSIS_ORG_08,Software development,Less than 2 years,50 to 249,Agile,true,4,2,2,2,2,3,3,4,3,4,3,3,4,3,1,3,3,3,3,2,4,2,4,3,2,3,4,3,4,4,1,2
+SYN_ANALYSIS_P062,SYN_ANALYSIS_ORG_08,Technical leadership,2 to 5 years,50 to 249,DevOps or continuous delivery,true,4,5,4,4,4,5,5,5,5,4,4,5,4,5,5,3,4,5,4,4,2,3,5,4,4,4,4,4,5,5,4,3
+SYN_ANALYSIS_P063,SYN_ANALYSIS_ORG_08,DevOps or platform,6 to 10 years,50 to 249,Hybrid,true,3,4,2,5,4,4,3,2,5,3,3,4,4,4,4,3,2,3,4,3,2,3,3,2,3,1,2,3,2,3,4,3
+SYN_ANALYSIS_P064,SYN_ANALYSIS_ORG_08,Quality or testing,More than 10 years,50 to 249,Agile,true,4,5,4,4,3,4,4,5,3,5,3,3,4,4,3,5,4,4,4,3,5,2,4,4,5,4,4,3,4,3,4,4

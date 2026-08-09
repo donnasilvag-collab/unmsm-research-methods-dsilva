@@ -1,0 +1,4 @@
+synthetic_data,outcome,eligible_participants,organization_count,spearman_rho,spearman_p_value_unadjusted,cluster_bootstrap_ci_95_lower,cluster_bootstrap_ci_95_upper,bootstrap_iterations,scope_note
+True,access_control_effectiveness,64,8,0.8456760313,1.466832045e-18,0.6370122254,0.9069597122,2000,Synthetic methodological demonstration only; not a research finding.
+True,source_code_protection,64,8,0.7265135291,1.081812658e-11,0.5744453394,0.7886926523,2000,Synthetic methodological demonstration only; not a research finding.
+True,development_traceability,64,8,0.862057799,5.841718782e-20,0.6619644738,0.9199785486,2000,Synthetic methodological demonstration only; not a research finding.

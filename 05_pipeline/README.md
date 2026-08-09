@@ -35,11 +35,13 @@ These are observability proxies, not direct measures of internal controls. A mis
 |   `-- public_repo_security_benchmark.csv  # DVC output after `dvc repro`
 +-- fieldwork/
 |   +-- README.md                 # Protected-data boundary and scoring instructions
-|   `-- synthetic/               # Generated test records and expected outputs
+|   `-- synthetic/               # Scoring fixture and synthetic association demonstration
 +-- docs/                         # Environment, provenance, quality, results, and run evidence
 +-- results/                      # Summary tables produced by the experiments
 +-- src/
 |   +-- generate_synthetic_fieldwork.py  # Creates deterministic test records
+|   +-- generate_synthetic_analysis.py   # Creates the 64-record analysis demonstration
+|   +-- analyze_synthetic_fieldwork.py   # Runs Spearman, regression, and joint integration
 |   +-- score_fieldwork.py        # Validates and scores the 32 survey items
 |   +-- train.py                  # Repository-level benchmark analysis
 |   `-- run_experiments.py        # Four seeded MLflow runs and summary artifacts
@@ -96,7 +98,19 @@ python src/score_fieldwork.py --input fieldwork/synthetic/survey_responses_synth
 
 The scoring script applies the rules in `03_protocol/operationalization_matrix.md`. It requires both items for each risk-management dimension, at least five of seven risk dimensions for the overall maturity score, and at least four of six items for each control outcome. Missing answers remain missing. If any organization falls below the threshold in `params.yaml`, the script withholds the full organization breakdown to prevent reconstruction by subtraction.
 
-See [`fieldwork/README.md`](fieldwork/README.md) before using the script with authorized data. Real exports and scored files must stay in protected storage outside Git. The current module does not run correlations, regression, or psychometric validation because those analyses require approved fieldwork data and a frozen instrument.
+See [`fieldwork/README.md`](fieldwork/README.md) before using the script with authorized data. Real exports and scored files must stay in protected storage outside Git. The 22-record scoring fixture does not run correlations, regression, or psychometric validation. The separate demonstration below exercises analysis code with a larger generated dataset but does not authorize or stand in for real fieldwork.
+
+## Synthetic association and integration demonstration
+
+The repository also exercises the planned analytical sequence with a second, clearly separated synthetic fixture:
+
+```powershell
+python src/generate_synthetic_analysis.py
+python src/score_fieldwork.py --input fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv --output-dir fieldwork/synthetic/association_demo --synthetic
+python src/analyze_synthetic_fieldwork.py --synthetic
+```
+
+This fixture contains 64 generated participants in eight generated organizations. It runs the three prespecified Spearman associations, 2,000-iteration organization-clustered bootstrap intervals, three exploratory linear regressions, and a mixed methods joint display based on fictitious interview and documentary patterns. The signal is deliberately constructed to test the code. Its estimates and p-values are not fieldwork findings and cannot be used to characterize Peruvian companies.
 
 ## Docker Execution
 
@@ -105,7 +119,7 @@ docker build -t unmsm-security-benchmark .
 docker run --rm unmsm-security-benchmark
 ```
 
-The container runs `dvc repro` and then executes the four seeded analyses. It does not require credentials or network access because the small, public workbook is included in the repository.
+The container is configured to run `dvc repro`, the four seeded public-benchmark analyses, both synthetic generators, both scoring paths, and the synthetic association demonstration. It does not require credentials or network access because the small public workbook and all generated fixtures are self-contained. Docker remains unverified until these commands complete in an environment with a Docker engine.
 
 ## Reproducibility Controls
 

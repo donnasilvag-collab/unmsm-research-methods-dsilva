@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -42,12 +43,27 @@ REQUIRED_FILES = [
     "04_literature/database_search_plan.csv",
     "05_pipeline/fieldwork/README.md",
     "05_pipeline/src/generate_synthetic_fieldwork.py",
+    "05_pipeline/src/generate_synthetic_analysis.py",
+    "05_pipeline/src/analyze_synthetic_fieldwork.py",
     "05_pipeline/src/score_fieldwork.py",
     "05_pipeline/fieldwork/synthetic/survey_responses_synthetic.csv",
     "05_pipeline/fieldwork/synthetic/scored_responses_synthetic.csv",
     "05_pipeline/fieldwork/synthetic/organization_summary_synthetic.csv",
     "05_pipeline/fieldwork/synthetic/item_missingness_synthetic.csv",
     "05_pipeline/fieldwork/synthetic/scoring_metadata_synthetic.json",
+    "05_pipeline/fieldwork/synthetic/association_demo/survey_responses_analysis_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/integration_evidence_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/scored_responses_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/organization_summary_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/item_missingness_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/scoring_metadata_synthetic.json",
+    "05_pipeline/fieldwork/synthetic/association_demo/spearman_correlations_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/exploratory_regressions_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/regression_diagnostics_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/integration_joint_display_synthetic.csv",
+    "05_pipeline/fieldwork/synthetic/association_demo/analysis_report_synthetic.md",
+    "05_pipeline/fieldwork/synthetic/association_demo/analysis_metadata_synthetic.json",
+    "05_pipeline/fieldwork/synthetic/association_demo/README.md",
     "05_pipeline/docs/environment.md",
     "05_pipeline/docs/quality_checks.md",
     "05_pipeline/docs/source_manifest.csv",
@@ -96,9 +112,9 @@ def validate_structure(errors: list[str]) -> None:
 
 def validate_pipeline_docs(errors: list[str]) -> None:
     sources = read_csv("05_pipeline/docs/source_manifest.csv")
-    expected_source_ids = {f"SRC{index:02d}" for index in range(1, 7)}
+    expected_source_ids = {f"SRC{index:02d}" for index in range(1, 8)}
     if {row.get("source_id") for row in sources} != expected_source_ids:
-        errors.append("The pipeline source manifest does not contain the six controlled sources.")
+        errors.append("The pipeline source manifest does not contain the seven controlled sources.")
 
     dictionary = read_csv("05_pipeline/docs/data_dictionary.csv")
     documented_variables = {row.get("variable") for row in dictionary}
@@ -315,6 +331,106 @@ def validate_fieldwork_scoring(errors: list[str]) -> None:
         errors.append("Synthetic scoring metadata has an invalid scope or record count.")
 
 
+def validate_synthetic_analysis(errors: list[str]) -> None:
+    base = "05_pipeline/fieldwork/synthetic/association_demo"
+    source = read_csv(f"{base}/survey_responses_analysis_synthetic.csv")
+    evidence = read_csv(f"{base}/integration_evidence_synthetic.csv")
+    scored = read_csv(f"{base}/scored_responses_synthetic.csv")
+    correlations = read_csv(f"{base}/spearman_correlations_synthetic.csv")
+    regressions = read_csv(f"{base}/exploratory_regressions_synthetic.csv")
+    diagnostics = read_csv(f"{base}/regression_diagnostics_synthetic.csv")
+    integration = read_csv(f"{base}/integration_joint_display_synthetic.csv")
+    outcomes = {
+        "access_control_effectiveness",
+        "source_code_protection",
+        "development_traceability",
+    }
+
+    if len(source) != 64 or len({row["organization_code"] for row in source}) != 8:
+        errors.append("Synthetic analysis input must contain 64 records in eight organizations.")
+    if any(row.get("synthetic_record", "").lower() != "true" for row in source):
+        errors.append("Every synthetic analysis input row must be explicitly labeled.")
+    if len(scored) != 64 or any(
+        row.get("synthetic_record", "").lower() != "true" for row in scored
+    ):
+        errors.append("Synthetic analysis scoring output has an invalid size or label.")
+
+    if len(evidence) != 3 or {row["outcome"] for row in evidence} != outcomes:
+        errors.append("Synthetic integration evidence must contain the three outcomes.")
+    if any(row.get("synthetic_evidence", "").lower() != "true" for row in evidence):
+        errors.append("Every synthetic integration evidence row must be explicitly labeled.")
+
+    if len(correlations) != 3 or {row["outcome"] for row in correlations} != outcomes:
+        errors.append("Synthetic Spearman output must contain the three primary associations.")
+    for row in correlations:
+        if row.get("synthetic_data", "").lower() != "true":
+            errors.append("A synthetic Spearman result is not labeled synthetic.")
+        if int(row["bootstrap_iterations"]) != 2000:
+            errors.append("A synthetic Spearman result has an unexpected bootstrap count.")
+        rho = float(row["spearman_rho"])
+        lower = float(row["cluster_bootstrap_ci_95_lower"])
+        upper = float(row["cluster_bootstrap_ci_95_upper"])
+        if not -1 <= lower <= rho <= upper <= 1:
+            errors.append(f"Synthetic Spearman interval is invalid for {row['outcome']}.")
+
+    expected_terms = {
+        "const",
+        "risk_management_maturity",
+        "experience_ordinal",
+        "company_size_ordinal",
+    }
+    if len(regressions) != 12 or {row["outcome"] for row in regressions} != outcomes:
+        errors.append("Synthetic regression output must contain three four-term models.")
+    for outcome in outcomes:
+        terms = {row["term"] for row in regressions if row["outcome"] == outcome}
+        if terms != expected_terms:
+            errors.append(f"Synthetic regression terms are invalid for {outcome}.")
+    if any(row.get("synthetic_data", "").lower() != "true" for row in regressions):
+        errors.append("A synthetic regression result is not labeled synthetic.")
+
+    if len(diagnostics) != 3 or {row["outcome"] for row in diagnostics} != outcomes:
+        errors.append("Synthetic regression diagnostics must contain the three outcomes.")
+    if any(row.get("synthetic_data", "").lower() != "true" for row in diagnostics):
+        errors.append("A synthetic regression diagnostic is not labeled synthetic.")
+    if any("fieldwork requires" not in row["diagnostic_scope"] for row in diagnostics):
+        errors.append("A synthetic regression diagnostic lacks its fieldwork boundary.")
+
+    if len(integration) != 3 or {row["outcome"] for row in integration} != outcomes:
+        errors.append("Synthetic joint display must contain the three outcomes.")
+    if any(row.get("synthetic_data", "").lower() != "true" for row in integration):
+        errors.append("A joint-display row is not labeled synthetic.")
+    if any("generated for testing" not in row["interpretive_boundary"] for row in integration):
+        errors.append("A joint-display row lacks its synthetic interpretive boundary.")
+
+    metadata = json.loads((ROOT / base / "analysis_metadata_synthetic.json").read_text(encoding="utf-8"))
+    expected_outputs = {
+        "spearman_correlations_synthetic.csv",
+        "exploratory_regressions_synthetic.csv",
+        "regression_diagnostics_synthetic.csv",
+        "integration_joint_display_synthetic.csv",
+        "analysis_report_synthetic.md",
+    }
+    if (
+        metadata.get("synthetic_data") is not True
+        or metadata.get("participant_count") != 64
+        or metadata.get("organization_count") != 8
+        or len(metadata.get("methods", [])) != 4
+        or set(metadata.get("outputs", [])) != expected_outputs
+    ):
+        errors.append("Synthetic analysis metadata has an invalid scope or count.")
+    source_path = ROOT / base / "scored_responses_synthetic.csv"
+    evidence_path = ROOT / base / "integration_evidence_synthetic.csv"
+    if metadata.get("input_sha256") != hashlib.sha256(source_path.read_bytes()).hexdigest():
+        errors.append("Synthetic analysis metadata has an invalid scored-input hash.")
+    if metadata.get("integration_evidence_sha256") != hashlib.sha256(
+        evidence_path.read_bytes()
+    ).hexdigest():
+        errors.append("Synthetic analysis metadata has an invalid integration-evidence hash.")
+    report = (ROOT / base / "analysis_report_synthetic.md").read_text(encoding="utf-8")
+    if "SYNTHETIC DATA ONLY. THESE VALUES ARE NOT RESEARCH FINDINGS." not in report:
+        errors.append("Synthetic analysis report lacks the required warning.")
+
+
 def validate_presentation(errors: list[str]) -> None:
     presentation = (ROOT / "13_presentation/index.html").read_text(encoding="utf-8")
     current_title = (
@@ -344,6 +460,7 @@ def main() -> None:
     validate_quality(errors)
     validate_search_plan(errors)
     validate_fieldwork_scoring(errors)
+    validate_synthetic_analysis(errors)
     validate_presentation(errors)
 
     if errors:

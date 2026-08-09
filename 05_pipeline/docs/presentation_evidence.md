@@ -12,6 +12,7 @@ This map links statements in the institutional presentation to repository eviden
 | The public benchmark is reproducible | `05_pipeline/dvc.yaml`, `params.yaml`, `results/`, and `reproducibility_checklist.md` | Reproduced locally and in GitHub Actions |
 | Public signals were lower in the Peru stratum in all four dimensions | `05_pipeline/results/seed_stability.csv` | Descriptive benchmark result only |
 | Organization dependence changes uncertainty | `11_bias_audit/bias_audit_report.md` and generated CSV files | Executable audit complete |
+| Spearman, regression, and mixed methods integration code can run | `05_pipeline/fieldwork/synthetic/association_demo/` | Synthetic software demonstration only; not a fieldwork finding |
 | Sensitive fieldwork data will remain outside Git | `09_ethics/ethics_protocol.md` and `10_data_mgmt/data_management_plan.md` | Safeguard defined before collection |
 | Fieldwork findings are not yet available | `03_protocol/protocol_v1.0.md` and `13_presentation/README.md` | Must be stated during presentation |
 
