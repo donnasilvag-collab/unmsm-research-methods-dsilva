@@ -10,7 +10,7 @@ Current publisher status: **retracted**.
 
 Chen, S. (2024). Retraction note: The design of network security protection trust management system based on an improved hidden Markov model. *EURASIP Journal on Information Security, 2024*, Article 18. https://doi.org/10.1186/s13635-024-00167-2
 
-Springer Nature published the notice on 13 May 2024. The publisher states that the Editor-in-Chief no longer has confidence in the article's results and conclusions after an investigation of the guest-edited issue. The status was checked again on 8 August 2026.
+Springer Nature published the notice on 13 May 2024. The publisher states that the Editor-in-Chief no longer has confidence in the article's results and conclusions after an investigation of the guest-edited issue. The status was checked again on 9 August 2026.
 
 ## Preserved evidence
 

@@ -65,6 +65,8 @@ dvc repro
 python src/run_experiments.py
 ```
 
+On Windows, clone the repository to a short path, such as `C:\research\dsilva`, before creating `.venv`. A deeply nested parent path can prevent compiled SciPy or statsmodels extensions from loading and produce a `file name or extension is too long` error. If that occurs, use a shorter clone path and recreate the virtual environment.
+
 This produces:
 
 - `data/public_repo_security_benchmark.csv`, the validated analysis-ready dataset;

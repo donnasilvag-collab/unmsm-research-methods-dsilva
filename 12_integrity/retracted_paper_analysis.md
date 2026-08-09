@@ -20,7 +20,7 @@ Chen, S. (2024). Retraction note: The design of network security protection trus
 | --- | --- | --- |
 | 23 November 2023 | Original article published | Publisher record linked from the retraction notice |
 | 13 May 2024 | Retraction notice published | Springer Nature version of record |
-| 8 August 2026 | DOI status and repository dependencies checked | Publisher page, retained notice PDF, and repository-wide search |
+| 9 August 2026 | DOI status and repository dependencies checked | Publisher page, retained notice PDF, and repository-wide search |
 
 A publisher-issued copy of the notice is preserved in [`retraction_note_network_security_trust_management.pdf`](retraction_note_network_security_trust_management.pdf). The DOI links are the authoritative status records; the local PDF is supporting evidence for the course repository.
 
@@ -55,7 +55,7 @@ The first reason is sufficient. The second records the topic decision that would
 
 ## 12.6. Dependency analysis
 
-The repository was searched on 8 August 2026 for the article title, author, original DOI, and retraction DOI. The local integrity file and retained notice were excluded from the dependency count because they document the case rather than use the article as evidence.
+The repository was searched on 9 August 2026 for the article title, author, original DOI, and retraction DOI. The local integrity file and retained notice were excluded from the dependency count because they document the case rather than use the article as evidence.
 
 | Research component | Dependent claim found | Required correction |
 | --- | --- | --- |
@@ -124,7 +124,7 @@ The systematic-review files now implement these controls through `04_literature/
 | --- | --- |
 | Original DOI | 10.1186/s13635-023-00146-z |
 | Retraction DOI | 10.1186/s13635-024-00167-2 |
-| Status checked | 8 August 2026 |
+| Status checked | 9 August 2026 |
 | Authoritative evidence | Springer Nature retraction notice |
 | Literature decision | Exclude from the evidence base |
 | Permitted use | Research-integrity case only |
@@ -135,7 +135,7 @@ The systematic-review files now implement these controls through `04_literature/
 
 The publisher notice gives a publication-level decision, not a complete technical or institutional investigation. The analysis did not inspect confidential editorial records, reproduce the hidden Markov model, or assess the author's intent. It also cannot guarantee that every external database displays the status consistently.
 
-The repository check is dated. A clean result on 8 August 2026 does not replace later status checks before thesis submission or publication. The correct response to new information is to update the dependency record and the affected research outputs.
+The repository check is dated. A clean result on 9 August 2026 does not replace later status checks before thesis submission or publication. The correct response to new information is to update the dependency record and the affected research outputs.
 
 ## References
 

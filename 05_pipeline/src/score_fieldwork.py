@@ -225,7 +225,9 @@ def main() -> None:
         "outputs": [scored_path.name, summary_path.name, missingness_path.name],
     }
     metadata_path.write_text(
-        json.dumps(metadata, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(metadata, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
     print(f"Scored {len(scored)} records. Outputs written to {args.output_dir}.")
 

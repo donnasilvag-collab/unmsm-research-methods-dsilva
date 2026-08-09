@@ -22,7 +22,7 @@ This repository brings together the main deliverables for the course *Research M
 - `02_method/`: method comparison and methodological fit matrix.
 - `03_protocol/`: core research protocol, operationalization matrix, survey, interview guide, document-review form, and validation procedure.
 - `04_literature/`: preliminary systematic review, search and screening records, quality appraisal, gap analysis, validated PRISMA diagram, and prospective search protocol for the thesis review.
-- `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, plus a synthetic test of the future survey-scoring rules.
+- `05_pipeline/`: executable Git + DVC + MLflow + Docker pipeline based on a bounded public repository benchmark, plus separate synthetic tests of the future survey scoring and analysis rules.
 - `06_repro_audit/`: reproducibility audit of a relevant public AI and software-security experiment.
 - `07_model_card/`: analytical artifact card and datasheet for the public repository security benchmark.
 - `09_ethics/`: ethics protocol for the planned mixed methods fieldwork and the bounded public benchmark.

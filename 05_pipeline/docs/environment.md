@@ -1,6 +1,6 @@
 # Validated execution environment
 
-This record describes the environment used for the repository checks on 8 August 2026. It is evidence of one successful local execution, not a claim that every compatible platform has been tested.
+This record describes the environment used for the repository checks on 9 August 2026. It is evidence of one successful local execution, not a claim that every compatible platform has been tested.
 
 | Component | Validated value |
 | --- | --- |
@@ -20,6 +20,8 @@ This record describes the environment used for the repository checks on 8 August
 | Compute path | CPU only; no GPU is required |
 
 The dependencies are pinned in [`../requirements.txt`](../requirements.txt). The GitHub Actions workflow also passed on Linux with Python 3.12, which checks that the documented commands are not limited to the local Windows path.
+
+The local course workspace has a deeply nested path. Windows could not load a compiled statsmodels extension when the virtual environment was addressed through that full path, so the complete synthetic analysis was also executed through a temporary short-path junction. The junction changed only the access path, not the repository files, Python environment, parameters, or outputs. A short clone path avoids this operating-system limitation.
 
 Docker remains unverified because no Docker engine was available in the local review environment. The repository therefore keeps the Docker item open rather than presenting the container as tested.
 

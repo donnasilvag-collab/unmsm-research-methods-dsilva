@@ -8,7 +8,7 @@ The local file [`trace_2510.19254v1.pdf`](trace_2510.19254v1.pdf) is the exact p
 
 ## Later publication record
 
-The Singapore Management University institutional record lists an accepted journal version published in 2026 in *IEEE Transactions on Software Engineering*, pages 1 to 14, DOI [10.1109/TSE.2026.3660900](https://doi.org/10.1109/TSE.2026.3660900). The record was checked on 8 August 2026.
+The Singapore Management University institutional record lists an accepted journal version published in 2026 in *IEEE Transactions on Software Engineering*, pages 1 to 14, DOI [10.1109/TSE.2026.3660900](https://doi.org/10.1109/TSE.2026.3660900). The record was checked on 9 August 2026.
 
 ## Associated artifact
 

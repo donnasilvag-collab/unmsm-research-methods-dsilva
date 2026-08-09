@@ -28,9 +28,7 @@
 - [x] The environment, source manifest, data dictionary, quality checks, analysis report, public inspection guide, presentation evidence map, and reproduction record are documented in `docs/`.
 - [x] All project Python files compile, Markdown links resolve, and `git diff --check` reports no whitespace errors.
 - [x] No private fieldwork data, credentials, `.env` file, virtual environment, MLflow store, or DVC cache is staged for commit.
-- [x] GitHub Actions run `31286606880` passed for commit `ad0e455`, repeating Python, Markdown, PRISMA, pipeline, and bias-audit checks on Linux.
-- [x] GitHub Actions run `31294241279` passed for commit `2d5d905`, including the synthetic fieldwork and presentation checks.
-- [x] GitHub Actions run `31294320073` passed for commit `64ca91b`, confirming the expanded repository-quality workflow.
+- [x] The main-branch [`Repository quality`](https://github.com/donnasilvag-collab/unmsm-research-methods-dsilva/actions/workflows/repository-quality.yml) workflow has passed on Linux, repeating Python compilation, Markdown and PRISMA validation, DVC and MLflow regeneration, both synthetic fieldwork paths, presentation checks, and the bias audit.
 - [ ] The Docker image builds and completes the same preparation and experiment commands.
 
 ## Pending Docker verification

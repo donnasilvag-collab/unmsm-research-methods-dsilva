@@ -403,7 +403,9 @@ def write_report(
         "",
         "Real analysis remains conditional on expert review, cognitive testing, pilot testing, ethics or institutional approval, recruitment, and a dated freeze of the analytical choices.",
     ]
-    destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    destination.write_text(
+        "\n".join(lines) + "\n", encoding="utf-8", newline="\n"
+    )
 
 
 def main() -> None:
@@ -466,6 +468,7 @@ def main() -> None:
     metadata_path.write_text(
         json.dumps(metadata, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     print(
         "Completed the synthetic-only Spearman, regression, and integration "
