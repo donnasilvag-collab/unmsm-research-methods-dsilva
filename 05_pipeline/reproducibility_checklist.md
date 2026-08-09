@@ -22,7 +22,7 @@
 - [x] All project Python files compile, Markdown links resolve, and `git diff --check` reports no whitespace errors.
 - [x] No private fieldwork data, credentials, `.env` file, virtual environment, MLflow store, or DVC cache is staged for commit.
 - [x] GitHub Actions run `31286606880` passed for commit `ad0e455`, repeating Python, Markdown, PRISMA, pipeline, and bias-audit checks on Linux.
-- [ ] GitHub Actions have passed with the new synthetic fieldwork and presentation checks.
+- [x] GitHub Actions run `31294241279` passed for commit `2d5d905`, including the synthetic fieldwork and presentation checks.
 - [ ] The Docker image builds and completes the same preparation and experiment commands.
 
 ## Pending Docker verification
